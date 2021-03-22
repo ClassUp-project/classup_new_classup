@@ -29,7 +29,7 @@
 
             <!-- Page Content -->
             <main>
-                
+                home
             </main>
         </div>
     </body>
