@@ -72,3 +72,7 @@ Route::get('/eleves/', 'App\Http\Controllers\EleveController@index')->name('dash
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
