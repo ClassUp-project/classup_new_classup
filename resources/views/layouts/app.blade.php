@@ -29,7 +29,7 @@
 
             <!-- Page Content -->
             <main>
-                home
+                @yield('content')
             </main>
         </div>
     </body>

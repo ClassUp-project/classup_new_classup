@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\AccueilEleve;
+use App\Models\Utilisateur;
 use App\Profile;
-use App\User;
+
 use Illuminate\Http\Request;
 
 
@@ -39,7 +40,7 @@ class HomeController extends Controller
     }
 
 
-    public function user(User $user)
+    public function user(Utilisateur $user)
     {
 
        $user=auth()->user()->profile;
