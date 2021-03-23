@@ -9,11 +9,16 @@ class Dropzone extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'original',
+        'thumbnail'
+    ];
+
     protected $guarded=[];
 
     protected $table = 'dropzone';
 
-    public $timestamps = false;
+    //public $timestamps = false;
 
     protected $primaryKey = 'iddropzone';
 
@@ -23,35 +28,16 @@ class Dropzone extends Model
 
     public function path(){
 
-        return url('/files' .$this->id);
+        return url('/dropzone' .$this->iddropzone);
      }
 
 
 
      public function uploadForFile(){
 
-        return $this->belongsToMany(User::class,'image_upload_user','image_upload_id');
+        return $this->belongsToMany(\App\Models\Utilisateur::class,'dropzone_iddropzone');
     }
 
-    public function avatar(){
-
-        return $this->belongsToMany(\App\Customer::class);
-    }
-
-    public function admin(){
-
-        return $this->belongsTo(AccueilAdmin::class);
-    }
-
-    public function Classe()
-    {
-        return $this->hasMany(\App\Reception::class,'image_upload_user','image_upload_id');
-    }
-
-    public function imageToProfClasse()
-    {
-        return $this->hasMany(\App\ClasseMatiere::class);
-    }
 
 
 
