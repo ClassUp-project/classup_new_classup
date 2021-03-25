@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\AccueilEleve;
+use App\Models\Dropzone;
 use App\Models\Utilisateur;
 use App\Profile;
 
@@ -32,11 +33,13 @@ class HomeController extends Controller
 
         $questionnaires = auth()->user()->questionnaires;
 
+        $documents = Dropzone::all();
+
         $teacher = auth()->user()->adminProfesseur;
 
         $student = auth()->user()->student;
 
-        return view('home', compact('questionnaires', 'student', 'teacher'));
+        return view('home', compact('questionnaires', 'student', 'teacher', 'documents'));
     }
 
 

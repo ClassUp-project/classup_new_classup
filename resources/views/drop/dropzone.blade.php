@@ -38,10 +38,10 @@
 
 
                     <div class="col-6 mb-5 mt-4">
-                        <a href="{{ route('download', $item->id)}}" download="{{ $item->original }}">
+                        <a href="{{ url('download', $item->iddropzone)}}" download="{{ $item->original }}">
                             {{ Str::limit( $item->thumbnail, 35 )}}
                         </a>
-                        <form action="/images/{{ $item->id }}" method="post" >
+                        <form action="/images/{{ $item->iddropzone }}" method="post" >
                             @method('DELETE')
 
                             @csrf
