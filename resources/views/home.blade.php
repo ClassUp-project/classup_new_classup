@@ -70,6 +70,32 @@
                 </div>
             </div>
 
+            <div class="card mt-4">
+                <div class="card-header text-center font-weight-bold text-primary">Vos documents</div>
+
+                     <ul class="list-group">
+
+                        @foreach($documents as $document)
+
+                           <li class="list-group-item">
+
+                           <a href="{{$document->path() }}">{{$document->original}}</a>
+
+
+                           </li>
+
+                        @endforeach
+
+                     </ul>
+
+
+                <div class="card-body">
+
+
+                </div>
+            </div>
+
+
             <div class="card-body  d-flex justify-content-around " >
 
 
