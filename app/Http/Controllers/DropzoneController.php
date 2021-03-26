@@ -14,10 +14,10 @@ class DropzoneController extends Controller
 {
     public function index(){
 
-        $images_id = Dropzone::latest()->get();
+        $idFile = Dropzone::latest()->get();
 
 
-        return view('drop.dropzone', compact('images_id'));
+        return view('drop.dropzone', compact('idFile'));
 
 
      }
@@ -68,6 +68,22 @@ class DropzoneController extends Controller
 
 
      }
+
+
+
+
+
+     public function download(Dropzone $idFile, $iddropzone){
+
+
+        $idFile = Dropzone::find($iddropzone);
+
+
+        return Storage::disk('files')->download($idFile->original);
+
+
+     }
+
 
 
 

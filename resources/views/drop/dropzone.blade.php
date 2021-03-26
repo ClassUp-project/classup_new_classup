@@ -34,11 +34,11 @@
             <div class="container">
                 <div class="row">
 
-                    @foreach ($images_id as $item)
+                    @foreach ($idFile as $item)
 
 
                     <div class="col-6 mb-5 mt-4">
-                        <a href="{{ url('download', $item->iddropzone)}}" download="{{ $item->original }}">
+                        <a href="{{ Route('download', $item->iddropzone)}}" download="{{ $item->original }}">
                             {{ Str::limit( $item->thumbnail, 35 )}}
                         </a>
                         <form action="/images/{{ $item->iddropzone }}" method="post" >
