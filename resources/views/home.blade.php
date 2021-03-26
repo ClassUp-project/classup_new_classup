@@ -75,13 +75,12 @@
 
                      <ul class="list-group">
 
-                        @foreach($documents as $document)
+                        @foreach($idFile as $document)
 
                            <li class="list-group-item">
-
-                           <a href="{{$document->path() }}">{{$document->original}}</a>
-
-
+                                <a href="{{ route('download', $document->iddropzone)}}" download="{{ $document->original }}">
+                                    {{ Str::limit( $document->thumbnail, 35 )}}
+                                </a>
                            </li>
 
                         @endforeach

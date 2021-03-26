@@ -63,6 +63,11 @@ Route::get('/images', 'App\Http\Controllers\DropzoneController@index');
 Route::get('/download/{iddropzone}','App\Http\Controllers\DropzoneController@store');
 Route::delete('/images/{imageUpload}', 'App\Http\Controllers\DropzoneController@destroy');
 
+//download des documents home.blade
+Route::get('/download/{iddropzone}/download','App\Http\Controllers\HomeController@download')->name('download');
+//download des documents dropzone.blade
+Route::get('/download/{iddropzone}/download','App\Http\Controllers\DropzoneController@download')->name('download');
+
 
 //Route dasboard eleve
 Route::get('/eleves/', 'App\Http\Controllers\EleveController@index')->name('dashboardEleve');

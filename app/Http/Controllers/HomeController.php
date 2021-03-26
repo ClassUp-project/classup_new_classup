@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Profile;
 use App\AccueilEleve;
 use App\Models\Dropzone;
 use App\Models\Utilisateur;
-use App\Profile;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 
 class HomeController extends Controller
@@ -33,14 +34,28 @@ class HomeController extends Controller
 
         $questionnaires = auth()->user()->questionnaires;
 
-        $documents = Dropzone::all();
+        $idFile = Dropzone::all();
 
-        $teacher = auth()->user()->adminProfesseur;
 
-        $student = auth()->user()->student;
-
-        return view('home', compact('questionnaires', 'student', 'teacher', 'documents'));
+        return view('home', compact('questionnaires', 'idFile'));
     }
+
+
+
+
+    public function download(Dropzone $idFile, $iddropzone){
+
+
+        $idFile = Dropzone::find($iddropzone);
+
+
+        return Storage::disk('files')->download($idFile->original);
+
+
+     }
+
+
+
 
 
     public function user(Utilisateur $user)
