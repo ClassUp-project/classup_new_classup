@@ -51,7 +51,7 @@
                         <img class="w-full" src="/img/questionnaire-en-ligne.jpg" alt="Sunset in the mountains">
                         <div class="px-6 py-4">
                           <div class="font-bold text-xl mb-2">La liste de vos questionnaires</div>
-                          <ul class="list-none pl-4">
+                          <ul class="list-none pl-4 ">
                             @foreach($questionnaires as $questionnaire)
                             <li class="list-group-item mt-10 ">
                                 <a class="text-blue-800 font-bold" href="{{$questionnaire->path() }}">{{$questionnaire->titre}}</a>
