@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use App\Profile;
 use App\AccueilEleve;
 use App\Models\Dropzone;
-use App\Models\Utilisateur;
+use App\Models\Question;
 
+use App\Models\Utilisateur;
 use Illuminate\Http\Request;
+use App\Models\Questionnaire;
 use Illuminate\Support\Facades\Storage;
 
 
@@ -65,4 +67,15 @@ class HomeController extends Controller
        return view('home', compact('user'));
 
     }
+
+
+    public function destroy(Questionnaire $questionnaire)
+      {
+             $questionnaire->questions()->delete();
+
+             $questionnaire->delete();
+
+             return redirect('/home');
+
+      }
 }

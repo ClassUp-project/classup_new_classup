@@ -15,7 +15,7 @@
 
                     <div class="card-body">
 
-                        <form action="/questionnaires" method="post">
+                        <form action="/questionnaires/create" method="post">
                             @csrf
                             <div class="flex flex-wrap -mx-3 mb-6">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for=titre">Titre</label>
