@@ -108,6 +108,11 @@ class Utilisateur extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(Dropzone::class);
     }
 
+    public function resultat(){
+
+        return $this->hasMany(Resultat::class);
+    }
+
 
 
 

@@ -39,7 +39,7 @@
 
                             <a href="/images" class="ml-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 pl-6 rounded-full">Ajouter des documents ou vidéo</a>
 
-                            <a href="/graphs/create" class="ml-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 pl-6 rounded-full">Entrer des résultats par élève</a>
+                            <a href="/resultat/create" class="ml-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 pl-6 rounded-full">Entrer des résultats par élève</a>
 
                         </div>
 
@@ -63,6 +63,11 @@
                                     </p>
 
                                 </div>
+                                <form action="/home/{{$questionnaire->idquestionnaire}}" method="post">
+                                    @method('DELETE')
+                                    @csrf
+                                    <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full w-30 h-6" style="font-size: 12px;">Supprimer</button>
+                                </form>
                             </li>
                             @endforeach
                           </ul>

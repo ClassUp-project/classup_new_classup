@@ -29,6 +29,7 @@ Route::get('/dashboard', function () {
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
+Route::delete('/home/{questionnaire}', 'App\Http\Controllers\HomeController@destroy');
 
 //Route vers le choix et vue de la classe côté professeur
 Route::get('/maclasses/create', 'App\Http\Controllers\GroupeController@create')->name('classeprof');
@@ -74,6 +75,11 @@ Route::get('/download/{iddropzone}/download','App\Http\Controllers\HomeControlle
 //download des documents dropzone.blade
 Route::get('/download/{iddropzone}/download','App\Http\Controllers\DropzoneController@download')->name('download');
 
+
+//Route vers entrées résultats par élève
+Route::get('/resultat/create', 'App\Http\Controllers\ResultatController@create');
+Route::post('/resultat', 'App\Http\controllers\ResultatController@store');
+Route::get('/resultat/{resultat}', 'App\Htpp\Controllers\ResultatController@show' );
 
 //Route dasboard eleve
 Route::get('/eleves/', 'App\Http\Controllers\EleveController@index')->name('dashboardEleve');
