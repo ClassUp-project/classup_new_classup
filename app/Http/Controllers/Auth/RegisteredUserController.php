@@ -37,6 +37,7 @@ class RegisteredUserController extends Controller
         $request->validate([
             'nom' => ['required', 'string', 'max:255'],
             'prenom' => ['required', 'string', 'max:255'],
+            'statut' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:utilisateur'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -44,21 +45,16 @@ class RegisteredUserController extends Controller
         Auth::login($user = Utilisateur::create([
             'nom' => $request->nom,
             'prenom' => $request->prenom,
+            'statut' => $request->statut,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]));
 
 
-
-        if(isset($data['professeur'])){
-            $roleProf = new Professeur($data);
-            $user->professeur()->save($roleProf);
-        }elseif(isset($data['eleve'])){
-            $roleEleve = new Eleve($data);
-            $user->eleve()->save($roleEleve);
-        }
-
         event(new Registered($user));
+
+
+
 
 
         return redirect(RouteServiceProvider::HOME);

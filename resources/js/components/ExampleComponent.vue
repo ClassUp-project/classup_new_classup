@@ -21,6 +21,7 @@
                     <div class='file-input'>
                         <label for="file">sélectionnez</label>
                         <input type="file" id="file">
+                        <input type="hidden" name="utilisateur_idutilisateur">
                     </div>
                     </div>
                 </div>
@@ -44,7 +45,9 @@
         mounted() {
             this.dropzone = new Dropzone(this.$refs.imageUpload, {
                 url: '/api/images',
+
             });
+           
         },
          methods: {
                     OnDragEnter(e)

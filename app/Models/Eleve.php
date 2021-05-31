@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Eleve extends Model
 {
     protected $fillable = [
-        'eleve',
+        'statut',
     ];
 
     protected $guarded = [];

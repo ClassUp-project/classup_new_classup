@@ -67,7 +67,8 @@ Route::get('/matières/{matiere}', 'App\Http\Controllers\MatiereController@show'
 
 //route Dropzone
 Route::get('/images', 'App\Http\Controllers\DropzoneController@index');
-Route::get('/download/{iddropzone}','App\Http\Controllers\DropzoneController@store');
+Route::post('/images','App\Http\Controllers\DropzoneController@store')->name('images');
+//Route::get('/download/{iddropzone}','App\Http\Controllers\DropzoneController@store');
 Route::delete('/images/{imageUpload}', 'App\Http\Controllers\DropzoneController@destroy');
 
 //download des documents home.blade

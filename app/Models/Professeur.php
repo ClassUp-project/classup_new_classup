@@ -12,7 +12,7 @@ class Professeur extends model
 
 
     protected $fillable = [
-        'professeur',
+        'statut',
     ];
 
     protected $guarded = [];
@@ -32,7 +32,7 @@ class Professeur extends model
         return $this->belongsToMany(App\models\Utilisateur::class, 'professeur_utilisateur' );
     }
 
-   
+
 
 
     public function groupe()
