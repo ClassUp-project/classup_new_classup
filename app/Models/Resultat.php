@@ -10,7 +10,7 @@ class Resultat extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nom', 'note', 'idprofesseur',
+        'nom', 'note',
     ];
 
     protected $table = 'resultat';

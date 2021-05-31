@@ -4,6 +4,21 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Accueil') }}
         </h2>
+        <div class="bg-indigo-100 border-t-4 border-indigo-200 rounded-b text-teal-900 px-4 py-3 shadow-md w-80 float-right" role="alert">
+            <div class="flex">
+                <div>
+                        @can('isAdmin')
+                            <p class="font-bold">
+                                Bonjour! Prêt à envoyer vos cours à vos élèves.
+                            </p>
+                        @else
+                            <p class="font-bold">
+                                Hello! prêt à checker tes cours.
+                            <p>
+                        @endcan
+                </div>
+            </div>
+        </div>
     </x-slot>
 
     @section('content')
@@ -66,7 +81,7 @@
                                 <form action="/home/{{$questionnaire->idquestionnaire}}" method="post">
                                     @method('DELETE')
                                     @csrf
-                                    <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full w-30 h-6" style="font-size: 12px;">Supprimer</button>
+                                    <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold px-4 mt-2 rounded-full w-30 h-6" style="font-size: 12px;">Supprimer</button>
                                 </form>
                             </li>
                             @endforeach
@@ -75,14 +90,14 @@
                     </div>
 
 
-                    <div class="max-w-sm rounded overflow-hidden shadow-lg mt-10 ml-10">
+                    <div class="max-w-sm rounded overflow-hidden shadow-lg mt-10 ml-10" id="app">
                         <img class="w-full" src="/img/paper.jpg" alt="Sunset in the mountains">
                         <div class="px-6 py-4">
                           <div class="font-bold text-xl mb-2">La liste de vos documents</div>
                           <ul class="list-none pl-4">
                             @foreach($idFile as $document)
                             <li class="list-group-item mt-8">
-                                <a class="text-blue-800 font-bold" href="{{ route('download', $document->iddropzone)}}" download="{{ $document->original }}">
+                                <a class="text-blue-800 font-bold" href="{{ route('download', Auth::user()->idutilisateur )}}" download="{{ $document->original }}">
                                     {{ Str::limit( $document->thumbnail, 35 )}}
                                 </a>
                             </li>

@@ -9,15 +9,20 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 
-
 class DropzoneController extends Controller
 {
+
+    public function __construct()
+      {
+         $this->middleware('auth');
+      }
+
     public function index(){
 
-        $idFile = Dropzone::latest()->get();
+        $idFile = auth()->user()->imageFileUpload;
 
 
-        return view('drop.dropzone', compact('idFile'));
+        return view('drop.uploadfile', compact('idFile'));
 
 
      }
@@ -28,43 +33,41 @@ class DropzoneController extends Controller
      public function store(Request $request){
 
 
+        if($request->hasFile('file')){
 
 
-          if($request->hasFile('file')){
+            $file = $request->file('file')->getClientOriginalName();
+
+            $filePath = pathInfo($file, PATHINFO_FILENAME);
+
+            $fileExt = $request->file('file')->getClientOriginalExtension();
+
+            $newFile = $filePath.'_'.time().'.'.$fileExt;
+
+            $path= $request->file('file')->storeAs('files', $newFile);
 
 
+            Storage::disk('files')
 
-          $file = $request->file('file')->getClientOriginalName();
+                    ->put($file, $path);
 
-          $filePath = pathInfo($file, PATHINFO_FILENAME);
+                    //$filePath->move(storage_path('/files'), $newFile);
 
-          $fileExt = $request->file('file')->getClientOriginalExtension();
-
-          $newFile = $filePath.'_'.time().'.'.$fileExt;
-
-         $path = $request->file('file')->storeAs('files', $newFile);
-
-
-
-         Storage::disk('files')
-
-                ->put($file, $path);
-
-                //$filePath->move(storage_path('/files'), $newFile);
-
-               Dropzone::create([
+            Dropzone::create([
                     'original'=>$path,
                     'thumbnail'=>$path,
+                    'utilisateur_idutilisateur' => auth()->user()->idutilisateur
 
-                ]);
+                    ]);
+
+                    //$dropzone->auth()->user()->imageFileUpload()->save();
+
+        }else{
+                $newFile = 'nofile.pdf';
+            }
 
 
-     }else{
-            $newFile = 'nofile.pdf';
-          }
-
-
-        return redirect('/images');
+        return redirect('/images')->with('success','Bien reçu!');
 
 
      }

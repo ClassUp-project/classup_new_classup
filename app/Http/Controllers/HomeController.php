@@ -36,7 +36,7 @@ class HomeController extends Controller
 
         $questionnaires = auth()->user()->questionnaires;
 
-        $idFile = Dropzone::all();
+        $idFile = auth()->user()->imageFileUpload;
 
 
         return view('home', compact('questionnaires', 'idFile'));

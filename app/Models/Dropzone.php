@@ -4,15 +4,20 @@ namespace App\Models;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 
 class Dropzone extends Model
 {
-    use HasFactory;
+
+    use HasFactory, Notifiable;
+
 
     protected $fillable = [
         'original',
-        'thumbnail'
+        'thumbnail',
+        'utilisateur_idutilisateur',
     ];
 
     protected $guarded=[];
@@ -34,7 +39,7 @@ class Dropzone extends Model
 
      public function uploadForFile(){
 
-        return $this->belongsToMany(\App\Models\Utilisateur::class,'dropzone_iddropzone');
+        return $this->belongsTo(Utilisateur::class);
     }
 
 

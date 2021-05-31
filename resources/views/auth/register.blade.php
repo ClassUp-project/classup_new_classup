@@ -25,6 +25,11 @@
                 <x-input id="prenom" class="block mt-1 w-full" type="text" name="prenom" :value="old('prenom')" required autofocus />
             </div>
 
+            <select name="statut" for="statut" class=" w-full border bg-white rounded mt-4 px-3 py-2 outline-none" :value="__('Stattut')">
+                <option for="professeur" name="professeur" :value="__('Professeur')" class="py-1">professeur</option>
+                <option for="eleve" name="eleve" :value="__('Eleve')" class="py-1">eleve</option>
+            </select>
+
             <!-- Email Address -->
             <div class="mt-4">
                 <x-label for="email" :value="__('Email')" />

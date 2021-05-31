@@ -6,10 +6,11 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Passport\HasApiTokens;
 
 class Utilisateur extends Authenticatable implements MustVerifyEmail
 {
-    use HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -17,7 +18,7 @@ class Utilisateur extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'nom', 'prenom', 'email', 'password',
+        'nom', 'prenom', 'statut', 'email', 'password',
     ];
 
     protected $table = 'utilisateur';
@@ -94,14 +95,8 @@ class Utilisateur extends Authenticatable implements MustVerifyEmail
         return $this->belongsToMany(Eleve::class, 'eleve_utilisateur');
     }
 
-    public function hasRole(){
-        if($this->professeur()->where('professeur', 'professeur')->first()){
-            return true;
-        }elseif($this->eleve()->where('eleve','eleve')->first()){
-            return true;
-        }
-        return false;
-    }
+
+
 
     public function imageFileUpload(){
 

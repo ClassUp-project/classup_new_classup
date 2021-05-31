@@ -21,9 +21,7 @@
     <body>
         <div class="flex-center position-ref full-height" id="app">
 
-
-            <example-component></example-component>
-
+                <example-component></example-component>
 
             @if(session()->has('message'))
             <div class="alert alert-success">
@@ -67,8 +65,7 @@
 
         </div>
 
-        <script src="{{mix('/js/app.js')}}">
-        </script>
+        <script src="{{mix('/js/app.js')}}"></script>
 
 
 
