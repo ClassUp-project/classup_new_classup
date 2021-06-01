@@ -2,7 +2,7 @@
 
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Chargez vos fichiers ici') }}
+            {{ __('Chargez vos fichiers ici') }} &#128071;
         </h2>
     </x-slot>
 
@@ -33,6 +33,12 @@
         </div>
 
     </form>
+
+    <div class="flex items-center justify-center mt-10">
+        <a href="/home" class='border border-indigo-500 text-indigo-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-indigo-600 focus:outline-none focus:shadow-outline'>
+            Retour à l'accueil
+        </a>
+    </div>
 
 
         <div class="h-48 flex flex-wrap content-start mt-20 ml-40 mr-40 ...">
