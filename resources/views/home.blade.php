@@ -100,6 +100,11 @@
                                 <a class="text-blue-800 font-bold" href="{{ route('download', Auth::user()->idutilisateur )}}" download="{{ $document->original }}">
                                     {{ Str::limit( $document->thumbnail, 35 )}}
                                 </a>
+                                <form action="/home/{{$document->iddropzone}}" method="post">
+                                    @method('DELETE')
+                                    @csrf
+                                    <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold px-2 mt-2 rounded-full w-20 h-5" style="font-size: 12px;">Supprimer</button>
+                                </form>
                             </li>
                             @endforeach
                           </ul>
@@ -112,7 +117,7 @@
                     <div class="flex justify-center mt-20 " >
 
 
-                        <a href="/accueil" class="ml-8 bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 pl-6 rounded-full">Vue d'ensemble et cours</a>
+                        <a href="/dashboard" class="ml-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 pl-6 mb-10 rounded-full">Vue d'ensemble et cours</a>
 
 
                     </div>

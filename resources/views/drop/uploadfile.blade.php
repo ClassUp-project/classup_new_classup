@@ -54,7 +54,7 @@
 
                         @csrf
 
-                        <button class="small btn btn-outline-danger mt-2">Delete</button>
+                        <button class="text-red-500 mt-2 font-bold">Supprimer</button>
                     </form>
                     </div>
                 </div>
