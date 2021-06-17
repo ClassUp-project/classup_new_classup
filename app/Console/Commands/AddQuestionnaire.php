@@ -13,7 +13,7 @@ class AddQuestionnaire extends Command
      *
      * @var string
      */
-    protected $signature = 'questionnaire:titre';
+    protected $signature = 'questionnaire:insert';
 
     /**
      * The console command description.

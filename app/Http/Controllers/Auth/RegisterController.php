@@ -77,25 +77,22 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
 
-        if(isset($data['professeur'])){
-            $roleProf = new Professeur($data);
-            $user->professeur()->save($roleProf);
-        }elseif(isset($data['eleve'])){
-            $roleEleve = new Eleve($data);
-            $user->eleve()->save($roleEleve);
-        }
 
-        $role = Professeur::create([
-            'statut'=>$data['statut']
+
+
+       $role =  Professeur::create([
+            'statut'=>$data['statut'],
         ]);
+
 
         $roleEleve = Eleve::create([
             'statut' =>$data['statut']
         ]);
 
+        $user->save();
         $user->professeur()->attach($role);
         $user->eleve()->attach($roleEleve);
-        $user->save();
+
 
 
         return $user;

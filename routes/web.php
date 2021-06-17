@@ -22,14 +22,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')
+        ->middleware(['auth'])
+        ->name('dashboard');
+Route::delete('/dashboard/{questionnaire}', 'App\Http\Controllers\DashboardController@destroy');
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
-Route::delete('/home/{questionnaire}', 'App\Http\Controllers\HomeController@destroy');
+//Route::delete('/home/{questionnaire}', 'App\Http\Controllers\HomeController@destroy');
+
 
 //Route vers le choix et vue de la classe côté professeur
 Route::get('/maclasses/create', 'App\Http\Controllers\GroupeController@create')->name('classeprof');

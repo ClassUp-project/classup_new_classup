@@ -34,9 +34,9 @@ class HomeController extends Controller
     public function index()
     {
 
-        $questionnaires = auth()->user()->questionnaires;
+        $questionnaires = Questionnaire::all();
 
-        $idFile = auth()->user()->imageFileUpload;
+        $idFile = Dropzone::all();
 
 
         return view('home', compact('questionnaires', 'idFile'));

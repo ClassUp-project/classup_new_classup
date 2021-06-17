@@ -32,7 +32,7 @@
 
 
                         <div class="flex justify-center">
-                            Que souhaitez vous faire
+                            Tous les cours - questionnaires - documents
                         </div>
 
 
@@ -45,7 +45,7 @@
                             @endif
                         </div>
 
-
+{{--
         <div class="flex justify-center ml-32">
 
                         <div class="grid grid-cols-3 divide-x divide-gray-400 mt-10 ml-48 p-8 ml-4 ">
@@ -59,7 +59,7 @@
                         </div>
 
         </div>
-
+--}}
         <div class="flex justify-center ml-40">
 
                     <div class="max-w-sm rounded overflow-hidden shadow-lg mt-10 ml-10">
@@ -78,11 +78,6 @@
                                     </p>
 
                                 </div>
-                                <form action="/home/{{$questionnaire->idquestionnaire}}" method="post">
-                                    @method('DELETE')
-                                    @csrf
-                                    <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold px-4 mt-2 rounded-full w-30 h-6" style="font-size: 12px;">Supprimer</button>
-                                </form>
                             </li>
                             @endforeach
                           </ul>
@@ -100,11 +95,6 @@
                                 <a class="text-blue-800 font-bold" href="{{ route('download', Auth::user()->idutilisateur )}}" download="{{ $document->original }}">
                                     {{ Str::limit( $document->thumbnail, 35 )}}
                                 </a>
-                                <form action="/home/{{$document->iddropzone}}" method="post">
-                                    @method('DELETE')
-                                    @csrf
-                                    <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold px-2 mt-2 rounded-full w-20 h-5" style="font-size: 12px;">Supprimer</button>
-                                </form>
                             </li>
                             @endforeach
                           </ul>
