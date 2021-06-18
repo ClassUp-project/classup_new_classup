@@ -11,6 +11,7 @@
         @csrf
 
         <div class="flex items-center justify-center mt-40">
+            
             <div class="flex content-center">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">File <span class="required">*</span></label>
                 <div class="col-md-6 col-sm-6 col-xs-12">

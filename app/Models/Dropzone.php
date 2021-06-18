@@ -43,6 +43,12 @@ class Dropzone extends Model
     }
 
 
+    public function dashboard()
+    {
+        return $this->belongsTo(Dashboard::class);
+    }
+
+
 
 
 
