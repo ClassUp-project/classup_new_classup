@@ -13,4 +13,11 @@ class Dashboard extends Model
     {
         return $this->belongsTo(Utilisateur::class);
     }
+
+    public function dropzone()
+    {
+        return $this->hasMany(Dropzone::class);
+    }
+
+    
 }

@@ -44,10 +44,10 @@ class ResultatController extends Controller
     public function show()
     {
 
-        $resultats = Resultat::all();
+        $resultats = auth()->user()->resultat;
 
 
-        return view('resultat.show', compact('resultat'));
+        return view('resultat.show', compact('resultats'));
     }
 
 

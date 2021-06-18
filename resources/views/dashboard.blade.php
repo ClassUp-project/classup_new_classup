@@ -61,7 +61,7 @@
 
     </div>
 
-    <div class="flex justify-center ml-40">
+    <div class="flex justify-center ml-40 pb-40">
 
                 <div class="max-w-sm rounded overflow-hidden shadow-lg mt-10 ml-10">
                     <img class="w-full" src="/img/questionnaire-en-ligne.jpg" alt="Sunset in the mountains">
@@ -101,7 +101,29 @@
                             <a class="text-blue-800 font-bold" href="{{ route('download', Auth::user()->idutilisateur )}}" download="{{ $document->original }}">
                                 {{ Str::limit( $document->thumbnail, 35 )}}
                             </a>
-                            <form action="/dashboard/{{$document->iddropzone}}" method="post">
+                            <form action="/filedelete/{{$document->iddropzone}}" method="post">
+                                @method('DELETE')
+                                @csrf
+                                <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold px-2 mt-2 rounded-full w-20 h-5" style="font-size: 12px;">Supprimer</button>
+                            </form>
+                        </li>
+                        @endforeach
+                      </ul>
+                    </div>
+                </div>
+
+
+                <div class="max-w-sm rounded overflow-hidden shadow-lg mt-10 ml-10" id="app">
+                    <img class="w-full" src="/img/board-note.jpg" alt="Sunset in the mountains">
+                    <div class="px-6 py-4">
+                      <div class="font-bold text-xl mb-2">La liste des résultats</div>
+                      <ul class="list-none pl-4">
+                        @foreach($resultat as $resultats)
+                        <li class="list-group-item mt-8">
+                            <p class="text-blue-800 font-bold">
+                                {{ $resultats->nom }} | {{ $resultats->note }}
+                            </p>
+                            <form action="/notedelete/{{$resultats->idresultat}}" method="post">
                                 @method('DELETE')
                                 @csrf
                                 <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold px-2 mt-2 rounded-full w-20 h-5" style="font-size: 12px;">Supprimer</button>
