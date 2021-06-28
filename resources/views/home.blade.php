@@ -69,7 +69,7 @@
                           <ul class="list-none pl-4 ">
                             @foreach($questionnaires as $questionnaire)
                             <li class="list-group-item mt-10 ">
-                                <a class="text-blue-800 font-bold" href="{{$questionnaire->path() }}">{{$questionnaire->titre}}</a>
+                                <a class="text-blue-800 font-bold" href="{{$questionnaire->path() }}">{{$questionnaire->titre}}</a><p class=text-black>posté par: {{ $questionnaire->user->prenom }} {{ $questionnaire->user->nom }}</p>
                                 <div class="mt-2">
 
                                     <small class="font-bold">Share url</small>
@@ -95,6 +95,7 @@
                                 <a class="text-blue-800 font-bold" href="{{ route('download', Auth::user()->idutilisateur )}}" download="{{ $document->original }}">
                                     {{ Str::limit( $document->thumbnail, 35 )}}
                                 </a>
+                                <p class=text-black>posté par: {{ $document->uploadForFile->prenom }} {{ $document->uploadForFile->nom }}</p>
                             </li>
                             @endforeach
                           </ul>

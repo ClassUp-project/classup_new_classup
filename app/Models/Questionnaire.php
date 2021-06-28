@@ -35,7 +35,7 @@ class Questionnaire extends Model
      public function user()
      {
 
-          return $this->belongsTo(Utilisateur::class);
+          return $this->belongsTo(Utilisateur::class,'utilisateur_idutilisateur');
 
 
      }

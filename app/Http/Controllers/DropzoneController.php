@@ -44,7 +44,7 @@ class DropzoneController extends Controller
 
             $newFile = $filePath.'_'.time().'.'.$fileExt;
 
-            $path= $request->file('file')->storeAs('files', $newFile);
+            $path= $request->file('file')->storeAs('public/files', $newFile);
 
 
             Storage::disk('files')

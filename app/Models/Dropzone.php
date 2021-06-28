@@ -39,7 +39,7 @@ class Dropzone extends Model
 
      public function uploadForFile(){
 
-        return $this->belongsTo(Utilisateur::class);
+        return $this->belongsTo(Utilisateur::class,'utilisateur_idutilisateur');
     }
 
 
