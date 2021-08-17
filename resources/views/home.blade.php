@@ -32,7 +32,9 @@
 
 
                         <div class="flex justify-center">
-                            Tous les cours - questionnaires - documents
+                            <p class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 mr-3 bg-blue-200 text-blue-700 rounded-full">Tous les cours</p>
+                            <p class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 mr-3 bg-green-200 text-green-700 rounded-full">questionnaires</p>
+                            <p class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-indigo-200 text-indigo-700 rounded-full">documents</p>
                         </div>
 
 
@@ -69,7 +71,7 @@
                           <ul class="list-none pl-4 ">
                             @foreach($questionnaires as $questionnaire)
                             <li class="list-group-item mt-10 ">
-                                <a class="text-blue-800 font-bold" href="{{$questionnaire->path() }}">{{$questionnaire->titre}}</a><p class=text-black>posté par: {{ $questionnaire->user->prenom }} {{ $questionnaire->user->nom }}</p>
+                                <a class=" text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full" href="{{$questionnaire->path() }}">{{$questionnaire->titre}}</a><p class="text-gray-500 hover:text-gray-800">posté par: {{ $questionnaire->user->prenom }} {{ $questionnaire->user->nom }}</p>
                                 <div class="mt-2">
 
                                     <small class="font-bold">Share url</small>
@@ -92,10 +94,10 @@
                           <ul class="list-none pl-4">
                             @foreach($idFile as $document)
                             <li class="list-group-item mt-8">
-                                <a class="text-blue-800 font-bold" href="{{ route('download', Auth::user()->idutilisateur )}}" download="{{ $document->original }}">
+                                <a class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-indigo-200 text-indigo-700 rounded-full" href="{{ route('download', Auth::user()->idutilisateur )}}" download="{{ $document->original }}">
                                     {{ Str::limit( $document->thumbnail, 35 )}}
                                 </a>
-                                <p class=text-black>posté par: {{ $document->uploadForFile->prenom }} {{ $document->uploadForFile->nom }}</p>
+                                <p class="text-gray-500 hover:text-gray-800">posté par: {{ $document->uploadForFile->prenom }} {{ $document->uploadForFile->nom }}</p>
                             </li>
                             @endforeach
                           </ul>
