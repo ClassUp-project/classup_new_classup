@@ -16,7 +16,8 @@
         "laravel/passport": "^10.1",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.2",
-        "spatie/laravel-medialibrary": "^9.6.1"
+        "spatie/laravel-medialibrary": "^9.6.1",
+        "symfony/apache-pack": "^1.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",
