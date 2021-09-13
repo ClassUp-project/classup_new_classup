@@ -85,7 +85,7 @@ Route::get('/download/{iddropzone}/download','App\Http\Controllers\DashboardCont
 
 //Route vers entrées résultats par élève
 Route::get('/resultat/create', 'App\Http\Controllers\ResultatController@create');
-Route::post('/resultat', 'App\Http\controllers\ResultatController@store');
+Route::post('/resultat', 'App\Http\Controllers\ResultatController@store');
 Route::get('/resultat/{resultat}', 'App\Http\Controllers\ResultatController@show' );
 
 //Route dasboard eleve
