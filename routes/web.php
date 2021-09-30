@@ -91,6 +91,10 @@ Route::get('/resultat/{resultat}', 'App\Http\Controllers\ResultatController@show
 //Route dasboard eleve
 Route::get('/eleves/', 'App\Http\Controllers\EleveController@index')->name('dashboardEleve');
 
+//Route des categories
+Route::get('/category', 'App\Http\Controllers\CategoryController@index');
+Route::post('/category', 'App\Http\Controllers\CategoryController@store')->name('category.store');
+
 
 
 
