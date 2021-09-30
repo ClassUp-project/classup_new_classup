@@ -26,11 +26,11 @@
 
                 @foreach($questionnaire->questions as $question)
 
-                <div class="flex flex-col bg-gray-300 p-4 mt-60">
+                <div class="flex flex-col bg-blue-200 p-4 mt-60">
                     <div class="px-6 py-4 font-bold text-xl mb-2">{{$question->question}}</div>
 
                     <div class="card-body">
-                        <ul class="flex flex-col bg-gray-300 p-4">
+                        <ul class="flex flex-col bg-blue-300 p-4">
                             @foreach($question->answers as $answer)
                             <li class="border-gray-400 flex flex-row mb-2">
                                 <div class="select-none cursor-pointer bg-gray-200 rounded-md flex flex-1 items-center p-4  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
@@ -42,15 +42,6 @@
                             </li>
                             @endforeach
                         </ul>
-                    </div>
-
-
-                    <div class="card-footer">
-                        <form action="/questionnaires/{{$questionnaire->idquestionnaire}}/questions/{{$question->idquestion}}" method="post">
-                            @method('DELETE')
-                            @csrf
-                            <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">Supprimer la question</button>
-                        </form>
                     </div>
                 </div>
                 @endforeach

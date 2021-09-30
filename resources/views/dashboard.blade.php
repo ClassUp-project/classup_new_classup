@@ -28,13 +28,10 @@
     <div class="container">
         <div class="row justify-content-center mt-5 d-flex">
             <div class="col-md-8">
+                <div class="display-flex justify-center text-left ml-80">
+                    <h1 class="text-xl font-bold ">Votre espace personnel de gestion de vos cours</h1>
+                </div>
                 <div class="card">
-
-
-
-                    <div class="flex justify-center">
-                        Que souhaitez vous faire
-                    </div>
 
 
 
