@@ -32,7 +32,7 @@
                     <div class="card-body">
                         <ul class="flex flex-col bg-blue-300 p-4">
                             @foreach($question->answers as $answer)
-                            <li class="border-gray-400 flex flex-row mb-2">
+                            <li class="border-gray-500 flex flex-row mb-2">
                                 <div class="select-none cursor-pointer bg-gray-200 rounded-md flex flex-1 items-center p-4  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
                                 <div>{{$answer->reponse}}</div>
                                 @if($question->responses->count())
