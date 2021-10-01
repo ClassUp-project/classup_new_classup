@@ -3,7 +3,7 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }} &#128187;
         </h2>
-    </x-slot>
+
 
     <div class="bg-indigo-100 border-t-4 border-indigo-200 rounded-b text-teal-900 px-4 py-3 shadow-md w-80 float-right" role="alert">
         <div class="flex">
@@ -20,7 +20,7 @@
             </div>
         </div>
     </div>
-</x-slot>
+    </x-slot>
 
 @section('content')
 
