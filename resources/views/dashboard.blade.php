@@ -28,8 +28,8 @@
     <div class="container">
         <div class="row justify-content-center mt-5 d-flex">
             <div class="col-md-8">
-                <div class="display-flex justify-center text-left ml-80">
-                    <h1 class="text-xl font-bold ">Votre espace personnel de gestion de vos cours</h1>
+                <div class="display-flex justify-center text-left ml-80 title-dashboard">
+                    <h1 class="text-xl font-bold ">Votre espace personnel de gestion<br> de vos cours</h1>
                 </div>
                 <div class="card">
 
@@ -44,21 +44,21 @@
                     </div>
 
 
-    <div class="flex justify-center ml-32">
+    <div class="flex justify-center ml-32 button-tag-dashboard-div">
 
-                    <div class="grid grid-cols-3 divide-x divide-gray-400 mt-10 ml-48 p-8 ml-4 ">
+                    <div class="grid grid-cols-3 divide-x divide-gray-400 mt-10 ml-48 p-8 ml-4 button-tag-dashboard-div-align">
 
-                        <a href="/questionnaires/create" class="ml-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 pl-6 rounded-full">Créez un nouveau questionnaire</a>
+                        <a href="/questionnaires/create" class="ml-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 pl-6 rounded-full button-tag-dashboard">Créez un nouveau questionnaire</a>
 
-                        <a href="/images" class="ml-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 pl-6 rounded-full">Ajouter des documents ou vidéo</a>
+                        <a href="/images" class="ml-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 pl-6 rounded-full button-tag-dashboard">Ajouter des documents ou vidéo</a>
 
-                        <a href="/resultat/create" class="ml-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 pl-6 rounded-full">Entrer des résultats par élève</a>
+                        <a href="/resultat/create" class="ml-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 pl-6 rounded-full button-tag-dashboard">Entrer des résultats par élève</a>
 
                     </div>
 
     </div>
 
-    <div class="flex justify-center ml-40 pb-40">
+    <div class="flex justify-center ml-40 pb-40 div-card-home">
 
                 <div class="max-w-sm rounded overflow-hidden shadow-lg mt-10 ml-10">
                     <img class="w-full" src="/img/questionnaire-en-ligne.jpg" alt="Sunset in the mountains">

@@ -184467,3 +184467,59 @@ select {
   }
 }
 
+
+@media screen and (max-width:750px){
+
+    .button-tag-home{
+        display:flex;
+        justify-content:center;
+        text-align:center;
+
+        }
+
+    .button-tag-home-div{
+        margin-top:50px;
+        }
+
+    .div-card-home{
+        margin-top:30px;
+        display:grid;
+        grid-template-columns:auto;
+        margin-left:-40px;
+    }
+
+    .button-return-home{
+        margin-left:-40px;
+        width:200px;
+    }
+
+    .button-tag-dashboard-div{
+        margin-left:-220px;
+
+    }
+
+    .button-return-dashboard{
+       margin-left:-40px;
+    }
+
+    .button-tag-dashboard-div-align{
+        margin-top:10px;
+        display:grid;
+        grid-template-columns:auto;
+    }
+
+    .button-tag-dashboard{
+        margin-top:30px;
+    }
+
+    .title-dashboard{
+        display:flex;
+        justify-content:center;
+        margin-top:70px;
+        margin-left:30px;
+        text-align:center;
+    }
+
+
+}
+

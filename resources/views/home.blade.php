@@ -4,11 +4,11 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Accueil') }} &#127774;
         </h2>
-        <div class="bg-indigo-100 border-t-4 border-indigo-200 rounded-b text-teal-900 px-4 py-3 shadow-md w-80 float-right" role="alert">
+        <div class="bg-indigo-100 border-t-4 border-indigo-200 rounded-b text-teal-900 px-4 py-3 shadow-md w-80 float-right alert-flash-home" role="alert">
             <div class="flex">
                 <div>
                         @can('isAdmin')
-                            <p class="font-bold">
+                            <p class="font-bold p-flash-home">
                                 Bonjour! Prêt à envoyer vos cours à vos élèves.
                             </p>
                         @else
@@ -31,10 +31,10 @@
 
 
 
-                        <div class="flex justify-center">
-                            <p class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 mr-3 bg-blue-200 text-blue-700 rounded-full">Tous les cours</p>
-                            <p class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 mr-3 bg-green-200 text-green-700 rounded-full">questionnaires</p>
-                            <p class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-indigo-200 text-indigo-700 rounded-full">documents</p>
+                        <div class="flex justify-center button-tag-home-div">
+                            <p class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 mr-3 bg-blue-200 text-blue-700 rounded-full button-tag-home">Tous les cours</p>
+                            <p class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 mr-3 bg-green-200 text-green-700 rounded-full button-tag-home">questionnaires</p>
+                            <p class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-indigo-200 text-indigo-700 rounded-full button-tag-home">documents</p>
                         </div>
 
 
@@ -62,7 +62,7 @@
 
         </div>
 --}}
-        <div class="flex justify-center ml-40">
+        <div class="flex justify-center ml-40 div-card-home">
 
                     <div class="max-w-sm rounded overflow-hidden shadow-lg mt-10 ml-10">
                         <img class="w-full" src="/img/questionnaire-en-ligne.jpg" alt="Sunset in the mountains">
@@ -107,7 +107,7 @@
         </div>
 
 
-                    <div class="flex justify-center mt-20 " >
+                    <div class="flex justify-center mt-20 button-return-home " >
 
 
                         <a href="/dashboard" class="ml-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 pl-6 mb-10 rounded-full">Vue d'ensemble et cours</a>
