@@ -8,7 +8,7 @@
 
     @section('content')
     <div class="container">
-        <div class="flex justify-center ml-40 mt-20">
+        <div class="flex justify-center ml-40 mt-20 questionniare-div">
             <div class="col-md-8">
                 <div class="card">
                     <div class="font-bold text-xl mb-2">Creation Nouveau questionnaire</div>

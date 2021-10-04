@@ -184520,6 +184520,43 @@ select {
         text-align:center;
     }
 
+    .questionniare-div{
+        margin-left:50px;
+        margin-right: 100px;
+    }
+
+    .button-questionnaire-show{
+        width:210px;
+        margin-top:30px;
+        margin-left:20px;
+        display:flex;
+        justify-content:center;
+        text-align:center;
+    }
+
+    .button-tag-show{
+        display:flex;
+        justify-content:center;
+        text-align:center;
+        width:200px;
+        margin-left:25px;
+    }
+
+    .div-button-show-question{
+        display:grid;
+        grid-template-columns:auto;
+        justify-content:center;
+        text-align:center;
+        margin-top:30px;
+
+    }
+
+    .div-question-tab{
+        display:flex;
+        justify-content:center;
+        margin-top:50px;
+    }
+
 
 }
 
