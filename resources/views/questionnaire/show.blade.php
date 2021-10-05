@@ -18,8 +18,7 @@
                             <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full button-questionnaire-show" href="/questionnaires/{{$questionnaire->idquestionnaire}}/questions/create"> Rajouter
                                 des Questions</a>
                             <a class="ml-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full button-questionnaire-show"
-                                href="/surveys/{{$questionnaire->idquestionnaire}}-{{Str::slug($questionnaire->titre)}}">répondre à
-                                l'enquête</a>
+                                href="/surveys/{{$questionnaire->idquestionnaire}}-{{Str::slug($questionnaire->titre)}}">répondre au questionnaire</a>
 
                         </div>
                     </div>
