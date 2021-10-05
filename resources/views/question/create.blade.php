@@ -11,7 +11,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="flex justify-center mt-20">
-                    <div class="font-bold text-xl mb-2">Ajoutez vos questions Question</div>
+                    <div class="font-bold text-xl mb-2">Ajoutez vos questions</div>
 
                     <div class="flex justify-center mt-20">
 
