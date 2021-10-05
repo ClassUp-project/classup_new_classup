@@ -11,7 +11,7 @@
         <div class="flex justify-center ml-40 mt-20 questionniare-div">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="font-bold text-xl mb-2">Creation Nouveau questionnaire</div>
+                    <div class="font-bold text-xl mb-2">Creation d'un nouveau questionnaire</div>
 
                     <div class="card-body">
 
