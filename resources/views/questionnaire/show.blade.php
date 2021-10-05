@@ -36,7 +36,7 @@
                                 <div class="select-none cursor-pointer bg-gray-200 rounded-md flex flex-1 items-center p-4  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
                                 <div>{{$answer->reponse}}</div>
                                 @if($question->responses->count())
-                                <div class="ml-10 text-green-500">{{intval(($answer->responses->count()* 100)/$question->responses->count())}}%</div>
+                                <div class="ml-10 text-green-400">{{intval(($answer->responses->count()* 100)/$question->responses->count())}}%</div>
                                 @endif
                                 </div>
                             </li>
