@@ -87,13 +87,10 @@
             class="text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
             href="#"
           >
-            <svg
-              class="h-6 w-6 inline-block fill-current text-yellow-700"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
+            <img
+              class="h-12 w-20 inline-block fill-current text-yellow-700"
+              src="img/classuplogo.PNG"
             >
-              <path d="M13 8V0L8.11 5.87 3 12h4v8L17 8h-4z" />
-            </svg>
             Class' Up
           </a>
         </div>
@@ -190,7 +187,9 @@
       <div class="flex items-center w-full mx-auto content-end">
         <div
           class="browser-mockup flex flex-1 m-6 md:px-0 md:m-12 bg-white w-1/2 rounded shadow-xl"
-        ></div>
+        >
+            <img class="mx-auto mt-2 mb-2 h-auto w-auto fill-current text-yellow-700 " src="img/Q-3.png">
+      </div>
       </div>
     </div>
 
@@ -882,13 +881,10 @@
               class="text-orange-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
               href="#"
             >
-              <svg
-                class="h-6 w-6 inline-block"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
+              <img
+                class="h-12 w-20 inline-block"
+                src="img/classuplogo.png"
               >
-                <path d="M13 8V0L8.11 5.87 3 12h4v8L17 8h-4z" />
-              </svg>
               Class'Up
             </a>
           </div>
