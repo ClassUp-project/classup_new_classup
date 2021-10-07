@@ -185,7 +185,7 @@
         <div
           class="browser-mockup flex flex-1 m-6 md:px-0 md:m-12 bg-white w-1/2 rounded shadow-xl"
         >
-            <img class="mx-auto mt-2 mb-2 h-auto w-auto fill-current text-yellow-700 " src="/img/Q-3.png">
+            <img class="mx-auto mt-2 mb-2 h-auto w-auto fill-current text-yellow-700 " src="{{asset('img/Q-3.png')}}">
       </div>
       </div>
     </div>
@@ -865,7 +865,7 @@
             >
               <img
                 class="h-12 w-20 inline-block"
-                src="/img/classuplogo.png"
+                src="{{asset('img/classuplogo.png')}}"
               >
               Class'Up
             </a>
