@@ -7,6 +7,7 @@ use App\Models\Professeur;
 use App\Models\Utilisateur;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Notifications\UserRegistreredNotification;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Events\Registered;
@@ -52,6 +53,10 @@ class RegisteredUserController extends Controller
 
 
         event(new Registered($user));
+
+        $post = ['title'=>'Bienvenue sur Class\'Up'];
+
+        $user->notify(new UserRegistreredNotification($user,$post));
 
 
 
