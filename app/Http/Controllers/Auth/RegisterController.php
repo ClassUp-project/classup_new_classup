@@ -8,9 +8,11 @@ use App\Models\Professeur;
 use App\Models\Utilisateur;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Auth\Events\Registered;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Notifications\UserRegistreredNotification;
 
 class RegisterController extends Controller
 {
@@ -77,22 +79,25 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
 
-
-
-
-       $role =  Professeur::create([
+        if($role =  Professeur::create([
             'statut'=>$data['statut'],
-        ]);
-
-
-        $roleEleve = Eleve::create([
+            ])
+            ){
+            $user->professeur()->attach($role);
+            }else{
+            $roleEleve = Eleve::create([
             'statut' =>$data['statut']
-        ]);
+            ]);
+            $user->eleve()->attach($roleEleve);
+            }
 
         $user->save();
-        $user->professeur()->attach($role);
-        $user->eleve()->attach($roleEleve);
 
+        event(new Registered($user));
+
+        $post = ['title'=>'Bienvenue sur Class\'Up'];
+
+        $user->notify(new UserRegistreredNotification($user,$post));
 
 
         return $user;

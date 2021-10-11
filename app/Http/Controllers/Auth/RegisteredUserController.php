@@ -52,14 +52,7 @@ class RegisteredUserController extends Controller
         ]));
 
 
-        event(new Registered($user));
-
-        $post = ['title'=>'Bienvenue sur Class\'Up'];
-
-        $user->notify(new UserRegistreredNotification($user,$post));
-
-
-
+        //event(new Registered($user));
 
 
         return redirect(RouteServiceProvider::HOME);

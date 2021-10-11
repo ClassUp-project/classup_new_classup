@@ -8,6 +8,11 @@
 </head>
 <body>
     <h1>Merci pour ton inscription {{ $user->prenom }}</h1>
-    <h3>Tu reçois ce mail pour l'action : {{ $post->post['title'] }}</h3>
+    <h2>{{ $post['title'] }}</h2>
+    <h3>Poste et réponds dès maintenant aux questionnaires dans la matière de ton choix</h3>
+
+    <button type="button" class="btn btn-dark" >
+        <a id="navigation-to-dashboard" href="https://classup.tech/login" class="ml-40 bg-blue-500 text-white font-bold py-2 px-4 pl-6 mb-10 rounded-full">Tous les cours</a>
+    </button>
 </body>
 </html>
