@@ -175,9 +175,11 @@
         </p>
 
         <button
-          class="mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48"
+          class="mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-50"
         >
-          Sign Up
+            <a href="{{ route('contact.store') }}">
+            Nous contacter !
+            </a>
         </button>
       </div>
 
@@ -185,7 +187,7 @@
         <div
           class="browser-mockup flex flex-1 m-6 md:px-0 md:m-12 bg-white w-1/2 rounded shadow-xl"
         >
-            <x-application-model-blanc class="mx-auto mt-2 mb-2 h-auto w-auto fill-current text-yellow-700" />
+            <x-application-model-blanc class="mx-auto mt-2 mb-2 h-auto w-auto" />
         </div>
       </div>
     </div>

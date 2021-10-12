@@ -95,5 +95,8 @@ Route::get('/eleves/', 'App\Http\Controllers\EleveController@index')->name('dash
 Route::get('/category', 'App\Http\Controllers\CategoryController@index');
 Route::post('/category', 'App\Http\Controllers\CategoryController@store')->name('category.store');
 
+//route contact form
+Route::get('/contact', 'App\Http\Controllers\ContactController@index');
+Route::post('/contact',  'App\Http\Controllers\ContactController@store')->name('contact.store');
 
 
