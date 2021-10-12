@@ -859,15 +859,8 @@
       <div class="container mx-auto mt-8 px-8">
         <div class="w-full flex flex-col md:flex-row py-6">
           <div class="flex-1 mb-6">
-            <a
-              class="text-orange-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
-              href="#"
-            >
-              <img
-                class="h-12 w-20 inline-block"
-                src="{{asset('img/classuplogo.png')}}"
-              >
-              Class'Up
+            <a href="/">
+                <x-application-logo class="w-24 h-14 fill-current text-gray-500" />
             </a>
           </div>
 
