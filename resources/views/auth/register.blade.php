@@ -46,7 +46,7 @@
                                 name="password"
                                 required autocomplete="new-password" />
                 <x-label for="password" class="italic text-blue-500" :value="__('La sécurité est importante ! Choisissez un mot de passe fort, de 8 chars min, majuscule.s et minuscule.s, 1 chiffre min et 1 symbole.')" />
-                <a href="https://www.cnil.fr/fr/les-conseils-de-la-cnil-pour-un-bon-mot-de-passe" class="italic font-bold text-sm underline text-blue-600">Qu'est ce qu'un bon mot de passe ?</a>
+                <a href="https://www.cnil.fr/fr/les-conseils-de-la-cnil-pour-un-bon-mot-de-passe" class="italic font-bold text-sm underline text-blue-600" target="_blank">Qu'est ce qu'un bon mot de passe ?</a>
             </div>
 
             <!-- Confirm Password -->
