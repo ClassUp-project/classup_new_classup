@@ -94,7 +94,7 @@ class RegisterController extends Controller
 
         $user->save();
 
-        event(new Registered($user));
+        //event(new Registered($user));
 
         $post = ['title'=>'Bienvenue sur Class\'Up'];
 

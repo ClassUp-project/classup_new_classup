@@ -23,11 +23,6 @@
 
                 <example-component></example-component>
 
-            @if(session()->has('message'))
-            <div class="alert alert-success">
-                {{ session()->get('message') }}
-            </div>
-            @endif
 
             <div class="container mt-20">
                 <div class="row">
