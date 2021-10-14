@@ -87,7 +87,7 @@ class Utilisateur extends Authenticatable implements MustVerifyEmail
 
     public function professeur(){
 
-        return $this->belongsToMany(Professeur::class, 'professeur_utilisateur','utilisateur_idutilisateur');
+        return $this->belongsToMany(Statut::class, 'statut_utilisateur','utilisateur_idutilisateur');
     }
 
     public function eleve(){

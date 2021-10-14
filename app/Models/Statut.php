@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 
-class Professeur extends model
+class Statut extends model
 {
 
 
@@ -17,11 +17,11 @@ class Professeur extends model
 
     protected $guarded = [];
 
-    protected $table = 'professeur';
+    protected $table = 'statut';
 
     public $timestamps = false;
 
-    protected $primaryKey = 'idprofesseur';
+    protected $primaryKey = 'idstatut';
 
 
 
@@ -29,7 +29,7 @@ class Professeur extends model
     public function utilisateur()
     {
 
-        return $this->belongsToMany(App\models\Utilisateur::class, 'professeur_utilisateur', 'professeur_idprofesseur' );
+        return $this->belongsToMany(App\models\Utilisateur::class, 'statut_utilisateur', 'statut_idstatut' );
     }
 
 

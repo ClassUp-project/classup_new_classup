@@ -4,20 +4,18 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Accueil') }} &#127774;
         </h2>
-        <div class="bg-indigo-100 border-t-4 border-indigo-200 rounded-b text-teal-900 px-4 py-3 shadow-md w-80 float-right alert-flash-home" role="alert">
-            <div class="flex">
-                <div>
-                    @if(Auth::user()->professeur)
-                    <p class="font-bold">
-                        Bonjour! Prêt à envoyer vos cours à vos élèves.
-                    </p>
+        <div class="alert-toast float-right" role="alert">
+            <input type="checkbox" class="hidden" id="footertoast">
+            <label class="close cursor-pointer flex items-start justify-between w-full bg-indigo-200 border-t-4 border-indigo-400 rounded-b text-teal-900 px-4 py-1 shadow-md w-80 h-10 rounded shadow-lg text-white" title="close" for="footertoast">
+                @if(Auth::user()->statut == 'professeur')
+                    Bonjour! Prêt à envoyer vos cours à vos élèves.
                 @else
-                    <p class="font-bold">
-                        Hello! prêt à checker tes cours.
-                    <p>
+                    Hello! prêt à checker tes cours.
                 @endif
-                </div>
-            </div>
+                    <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                        <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+                    </svg>
+            </label>
         </div>
     </x-slot>
 

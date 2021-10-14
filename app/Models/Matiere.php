@@ -25,7 +25,7 @@ class Matiere extends Model
 
     public function profMatiere()
     {
-        return $this->belongsTo(App\models\Professeur::class);
+        return $this->belongsTo(App\models\Statut::class);
     }
 
     public function utilisateur()

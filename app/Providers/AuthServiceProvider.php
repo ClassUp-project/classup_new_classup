@@ -32,11 +32,11 @@ class AuthServiceProvider extends ServiceProvider
         Passport::personalAccessTokensExpireIn(now()->addDays(1));
 
         Gate::define('isAdmin', function($user) {
-            return $user->role == 'professeur';
+            return $user->statut == 'professeur';
         });
 
         Gate::define('isUser', function($user) {
-            return $user->role == 'eleve';
+            return $user->status == 'eleve';
         });
     }
 }

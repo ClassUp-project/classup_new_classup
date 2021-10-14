@@ -62,7 +62,7 @@ class Questionnaire extends Model
 
    public function professeur()
     {
-        return $this->belongsTo(Professeur::class);
+        return $this->belongsTo(Statut::class);
     }
 
 

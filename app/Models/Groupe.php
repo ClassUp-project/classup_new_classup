@@ -21,7 +21,7 @@ class Groupe extends Model
     public function professeur()
     {
 
-        return $this->belongsToMany(App\models\Professeur::class);
+        return $this->belongsToMany(App\models\Statut::class);
     }
 
 

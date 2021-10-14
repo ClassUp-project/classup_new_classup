@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
 use App\Models\Eleve;
-use App\Models\Professeur;
+use App\Models\Statut;
 use App\Models\Utilisateur;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -80,7 +80,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
 
-        if($role =  Professeur::create([
+        if($role =  Statut::create([
             'statut'=>$data['statut'],
             ])
             ){
