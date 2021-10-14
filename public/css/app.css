@@ -184483,7 +184483,7 @@ select {
         }
 
     .button-tag-home-div{
-        margin-top:50px;
+        margin-top:70px;
         }
 
     .div-card-home{
@@ -184494,8 +184494,8 @@ select {
     }
 
     .button-return-home{
-        margin-left:-40px;
-        width:200px;
+        margin-left:-80px;
+        width:400px;
     }
 
     .button-tag-dashboard-div{
@@ -184561,6 +184561,91 @@ select {
         justify-content:center;
         margin-top:50px;
     }
+
+    .groupe-reponse{
+        display:grid;
+        grid-template-columns: auto;
+        justify-content:center;
+        text-align:center;
+    }
+
+    .envoyer-ma-reponse{
+        width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .email{
+        margin-left: -40px;
+        margin-top: 30px;
+    }
+    .nom{
+        margin-left: 10px;
+    }
+
+    .upload-file{
+        display:grid;
+        grid-template-columns: auto;
+        justify-content:center;
+        text-align:center;
+    }
+
+    .envoyer-fichier{
+        display:grid;
+        grid-template-columns: auto;
+        justify-content:center;
+        text-align:center;
+    }
+
+    .files-poster{
+        display:grid;
+        grid-template-columns: auto;
+        justify-content:center;
+        text-align:center;
+        margin-top: 10px;
+    }
+
+    .alert-upload-file{
+        display:grid;
+        grid-template-columns: auto;
+        justify-content:center;
+        text-align:center;
+        margin-top: -30px;
+
+    }
+
+    .alert-upload-file-div{
+        display:grid;
+        grid-template-columns: auto;
+        justify-content:center;
+        text-align:center;
+        margin-left: 70px;
+        margin-bottom: 50px;
+        width: 300px;
+    }
+
+    .resultat-eleve{
+        display:grid;
+        grid-template-columns: auto;
+        justify-content:center;
+        text-align:center;
+        margin-left: -120px;
+        margin-right: 40px;
+    }
+
+    .note-eleve{
+        display:grid;
+        grid-template-columns: auto;
+        justify-content:center;
+        text-align:center;
+        margin-left: 15px;
+    }
+
+    .table-resultat{
+        margin-bottom:30px;
+        width: 320px;
+    }
+
+
 
 
 

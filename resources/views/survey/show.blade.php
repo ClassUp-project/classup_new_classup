@@ -54,8 +54,8 @@
                     <div class="card mt-4">
                         <div class="card-header">Vos Informations</div>
 
-                        <div class="flex justify-center mt-20">
-                            <div class="form-group">
+                        <div class="flex justify-center mt-20 groupe-reponse">
+                            <div class="form-group nom">
                                 <label for="name">Votre Nom</label>
                                 <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="enquete[nom]" type="text" class="form-control" id="nom"
                                     aria-describedby="nomHelp" placeholder="Entrer votre Nom">
@@ -66,7 +66,7 @@
 
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group email">
                                 <label for="email">Votre Email</label>
                                 <input class="ml-6 appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="enquete[email]" type="email" class="form-control" id="email"
                                     aria-describedby="emailHelp" placeholder="Entrer un Email">
@@ -78,7 +78,7 @@
                             </div>
 
                             <div class="px-6 pt-4 pb-2 mt-4 ml-10">
-                                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" type="submit">Question complète</button>
+                                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full envoyer-ma-reponse" type="submit">Envoyer ma réponse</button>
                             </div>
                         </div>
                     </div>

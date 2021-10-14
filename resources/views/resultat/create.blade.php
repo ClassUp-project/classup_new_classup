@@ -10,7 +10,7 @@
     <div class="container">
         <div class="flex justify-center ml-40 mt-20">
             <div class="col-md-8">
-                <div class="card">
+                <div class="card resultat-eleve">
                     <div class="font-bold text-xl mb-2">Entrez des résultat pour un élève</div>
                     <div class="font-bold text-sm mb-2">Enregistrez la note obtenu par votre élève</div>
 

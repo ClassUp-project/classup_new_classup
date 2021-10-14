@@ -6,9 +6,9 @@
         </h2>
     </x-slot>
 
-    <div class="flex items-center justify-center mt-40">
+    <div class="fixed flex items-center justify-center mt-20 alert-upload-file">
         @if(Session::has('success'))
-                    <div class="fixed rounded-full bg-indigo-900 text-center py-4 lg:px-4 mt-4 mb-4">
+                    <div class="fixed rounded-full bg-indigo-900 text-center py-4 lg:px-4 mt-4 mb-4 alert-upload-file-div">
                         <div class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
                                 <span class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3"><a href="{{ route('home') }}">Accueil</a></span>
                                     <span class="font-semibold mr-2 text-left flex-auto"><a href="{{ route('home') }}"> {{Session::get('success')}} </a> </span>
@@ -22,7 +22,7 @@
     <form action="{{route('images')}}" enctype='multipart/form-data' method="post" >
         @csrf
 
-        <div class="flex items-center justify-center mt-40">
+        <div class="flex items-center justify-center mt-40 upload-file">
 
             <div class="flex content-center">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">File <span class="required">*</span></label>
@@ -36,7 +36,7 @@
                 </div>
             </div>
 
-            <div class="flex content-center">
+            <div class="flex content-center envoyer-fichier">
                 <div class="col-md-6">
                     <button type="submit" name="submit" value='Submit' class='border border-indigo-500 text-indigo-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-indigo-600 focus:outline-none focus:shadow-outline'>
                         envoyer
@@ -54,7 +54,7 @@
     </div>
 
 
-        <div class="h-48 flex flex-wrap content-start mt-20 ml-40 mr-40 ...">
+        <div class="h-48 flex flex-wrap content-start mt-20 ml-40 mr-40 files-poster ...">
 
             @foreach ($idFile as $item)
                 <div class="flex items-stretch bg-indigo-200 h-24 m-4">

@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dropzone;
+use App\Models\Resultat;
 use Illuminate\Http\Request;
 use App\Models\Questionnaire;
-use App\Models\Resultat;
-use Illuminate\Support\Facades\Storage;
+use App\Models\Utilisateur;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardController extends Controller
 {

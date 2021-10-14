@@ -7,15 +7,15 @@
         <div class="bg-indigo-100 border-t-4 border-indigo-200 rounded-b text-teal-900 px-4 py-3 shadow-md w-80 float-right alert-flash-home" role="alert">
             <div class="flex">
                 <div>
-                        @can('isAdmin')
-                            <p class="font-bold p-flash-home">
-                                Bonjour! Prêt à envoyer vos cours à vos élèves.
-                            </p>
-                        @else
-                            <p class="font-bold">
-                                Hello! prêt à checker tes cours.
-                            <p>
-                        @endcan
+                    @if(Auth::user()->professeur)
+                    <p class="font-bold">
+                        Bonjour! Prêt à envoyer vos cours à vos élèves.
+                    </p>
+                @else
+                    <p class="font-bold">
+                        Hello! prêt à checker tes cours.
+                    <p>
+                @endif
                 </div>
             </div>
         </div>

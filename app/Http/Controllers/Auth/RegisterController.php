@@ -85,12 +85,12 @@ class RegisterController extends Controller
             ])
             ){
             $user->professeur()->attach($role);
-            }else{
+        }else{
             $roleEleve = Eleve::create([
             'statut' =>$data['statut']
             ]);
             $user->eleve()->attach($roleEleve);
-            }
+        }
 
         $user->save();
 

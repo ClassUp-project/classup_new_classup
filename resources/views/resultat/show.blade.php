@@ -7,9 +7,9 @@
     </x-slot>
 
 
-<div class="max-w-sm rounded overflow-hidden shadow-lg mt-10 ml-10" id="app">
+<div class="max-w-sm rounded overflow-hidden shadow-lg mt-10 ml-10 note-eleve" id="app">
     @foreach ($resultats as $resultat )
-        <table class="table-fixed">
+        <table class="table-fixed table-resultat">
             <thead>
             <tr>
                 <th class="w-1/2 ...">nom</th>
