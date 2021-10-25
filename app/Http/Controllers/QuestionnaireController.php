@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categories;
 use App\Models\Questionnaire;
 use Illuminate\Http\Request;
 
@@ -15,18 +16,20 @@ class QuestionnaireController extends Controller
 
     public function create(){
 
-        return view('questionnaire.create');
+        $categories = Categories::all();
+
+        return view('questionnaire.create', compact('categories'));
 
     }
 
-    public function store(){
+    public function store(Request $request){
 
         $data = request()->validate([
 
                  'titre'=>'required',
                  'proposition'=>'required',
+                 'categorie_idcategorie'=>'required|integer',
         ]);
-
 
        $questionnaire =auth()->user()->questionnaires()->create($data);
 

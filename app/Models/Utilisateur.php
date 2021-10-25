@@ -115,6 +115,12 @@ class Utilisateur extends Authenticatable implements MustVerifyEmail
     }
 
 
+    public function categ()
+    {
+        return $this->hasMany(Categories::class);
+    }
+
+
 
 
 }

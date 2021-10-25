@@ -45,7 +45,7 @@
                 </button>
                 </div>
 
-                <form action="" method="POST">
+                <form action="{{ route("category.store") }}" method="POST">
                 @csrf
                 @method('PUT')
 
@@ -64,58 +64,44 @@
             </div>
         </div>
 
-        <div class="row">
-        <div class="w-full p-4 flex justify-center font-sans">
+        <div class="rounded overflow-hidden shadow-lg flex items-center justify-center h-screen w-96 ml-20 ">
 
-            <div class="card">
-            <div class="card-header">
-                <h3>Categories</h3>
-            </div>
-            <div class="card-body">
+
+
+            <div class="font-bold text-xl mb-2 h-screen ">Categories</div>
+
+            <div class="px-6 py-4">
                 <ul class="list-group">
                 @foreach ($categories as $category)
-                    <li class="list-group-item">
-                    <div class="d-flex justify-content-between">
-                        {{ $category->name }}
+                    <li class="list-group-item h-screen mt-20">
 
-                        <div class="button-group d-flex">
-                        <button type="button" class="btn btn-sm btn-primary mr-1 edit-category" data-toggle="modal" data-target="#editCategoryModal" data-id="{{ $category->id }}" data-name="{{ $category->name }}">Edit</button>
 
-                        <form action="{{ route('category.destroy', $category->idcategorie) }}" method="POST">
-                            @csrf
-                            @method('DELETE')
 
-                            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
-                        </form>
-                        </div>
-                    </div>
+                        @if ($category->children)
+                            <ul class="list-group mt-2">
+                            @foreach ($category->children as $child)
+                                <li class="list-group-item">
+                                <div class="px-6 py-4">
+                                    {{ $child->name }}
 
-                    @if ($category->children)
-                        <ul class="list-group mt-2">
-                        @foreach ($category->children as $child)
-                            <li class="list-group-item">
-                            <div class="d-flex justify-content-between">
-                                {{ $child->name }}
+                                    <div class="button-group d-flex">
+                                    <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2" data-toggle="modal" data-target="#editCategoryModal" data-id="{{ $child->id }}" data-name="{{ $child->name }}">Edit</button>
 
-                                <div class="button-group d-flex">
-                                <button type="button" class="btn btn-sm btn-primary mr-1 edit-category" data-toggle="modal" data-target="#editCategoryModal" data-id="{{ $child->id }}" data-name="{{ $child->name }}">Edit</button>
+                                    <form action="{{ route('category.destroy', $child->idcategorie) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
 
-                                <form action="{{ route('category.destroy', $child->idcategorie) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-
-                                    <button type="submit" class="btn btn-sm btn-danger">Delete</button>
-                                </form>
+                                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Delete</button>
+                                    </form>
+                                    </div>
                                 </div>
-                            </div>
-                            </li>
-                        @endforeach
-                        </ul>
-                    @endif
+                                </li>
+                            @endforeach
+                            </ul>
+                        @endif
                     </li>
                 @endforeach
                 </ul>
-            </div>
             </div>
         </div>
 
@@ -129,23 +115,26 @@
                     <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="{{ route('category.store') }}" method="POST">
                     @csrf
 
-                    <div class="mb-4">
-                        <select class="w-full border bg-white rounded px-3 py-2 outline-none text-gray-700" name="parent_id">
-                        <option value="">Select Parent Category</option>
 
-                        @foreach ($categories as $category)
-                            <option value="{{ $category->idcategorie }}">{{ $category->name }}</option>
-                        @endforeach
-                        </select>
-                    </div>
+                        <div class="inline-block relative w-64">
+                            <select name="parent_id" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                            <option value="">Selectionner la catégorie principale</option>
+                                @foreach ($categories as $category)
+                                    <option value="{{ $category->idcategorie }}">{{ $category->name }}</option>
+                                @endforeach
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                            </div>
+                        </div>
 
-                    <div class="form-group">
-                        <input type="text" name="name" class="bg-white shadow-md rounded px-8 pt-2 pb-4 mb-4" value="{{ old('name') }}" placeholder="Category Name" required>
-                    </div>
+                        <div class="form-group">
+                            <input type="text" name="name" class="bg-white shadow-md rounded px-8 pt-2 pb-4 mt-2 mb-4" value="{{ old('name') }}" placeholder="Category Name" required>
+                        </div>
 
-                    <div class="form-group">
-                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Create</button>
-                    </div>
+                        <div class="form-group">
+                            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Créer</button>
+                        </div>
                     </form>
                 </div>
             </div>

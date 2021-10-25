@@ -2,11 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Console\Commands\questionnaire as CommandsQuestionnaire;
 use Illuminate\Http\Request;
 use App\Models\Categories;
+use App\Models\Questionnaire;
+use Illuminate\Support\Facades\DB;
 
 class CategoryController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -44,7 +52,7 @@ class CategoryController extends Controller
 
         Categories::create($validatedData);
 
-        return redirect()->route('category.index')->withSuccess('You have successfully created a Category!');
+        return back()->withSuccess('You have successfully created a Category!');
     }
 
     /**
@@ -53,9 +61,17 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($idcategorie)
     {
-        //
+        $categ = Categories::find($idcategorie);
+
+        $questionnaires = Questionnaire::with('categ')->where('categorie_idcategorie',$idcategorie)->orderBy('idquestionnaire','desc')->get();
+        //dd($questionnaires);
+
+
+
+        return view('categorie.categ', compact('questionnaires', 'categ'));
+
     }
 
     /**

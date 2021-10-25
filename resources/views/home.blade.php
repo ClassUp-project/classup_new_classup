@@ -6,7 +6,7 @@
         </h2>
         <div class="alert-toast float-right" role="alert">
             <input type="checkbox" class="hidden" id="footertoast">
-            <label class="close cursor-pointer flex items-start justify-between w-full bg-indigo-200 border-t-4 border-indigo-400 rounded-b text-teal-900 px-4 py-1 shadow-md w-80 h-10 rounded shadow-lg text-white" title="close" for="footertoast">
+            <label class="close cursor-pointer flex items-start justify-between w-full bg-indigo-200 border-t-4 border-indigo-400 rounded-b text-teal-900 px-4 py-1 shadow-md w-80 h-10 rounded shadow-lg text-white label-alert" title="close" for="footertoast">
                 @if(Auth::user()->statut == 'professeur')
                     Bonjour! Prêt à envoyer vos cours à vos élèves.
                 @else
@@ -33,6 +33,17 @@
                             <p class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 mr-3 bg-blue-200 text-blue-700 rounded-full button-tag-home">Tous les cours</p>
                             <p class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 mr-3 bg-green-200 text-green-700 rounded-full button-tag-home">questionnaires</p>
                             <p class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-indigo-200 text-indigo-700 rounded-full button-tag-home">documents</p>
+                        </div>
+
+                        <div class="flex justify-center button-tag-home-categ mt-6 ml-24">
+                            <div class="bg-white rounded px-2 py-2 mr-2">
+                                <p class="text-blue-500 button-tag-categ mb-2 font-bold">Filtrez par catégorie </p>
+                                @foreach ( $categorie as $categories )
+                                <a href="/categ/{{ $categories->idcategorie}}">
+                                    <p class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 mr-3 bg-red-200 text-blue-700 rounded-full button-tag-categ-categ">{{ $categories->name }}</p>
+                                </a>
+                                @endforeach
+                            </div>
                         </div>
 
 

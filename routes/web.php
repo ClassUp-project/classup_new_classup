@@ -92,8 +92,11 @@ Route::get('/resultat/{resultat}', 'App\Http\Controllers\ResultatController@show
 Route::get('/eleves/', 'App\Http\Controllers\EleveController@index')->name('dashboardEleve');
 
 //Route des categories
-Route::get('/category', 'App\Http\Controllers\CategoryController@index');
+Route::get('/category', 'App\Http\Controllers\CategoryController@index')->name('category');
 Route::post('/category', 'App\Http\Controllers\CategoryController@store')->name('category.store');
+Route::delete('/category', 'App\Http\Controllers\CategoryController@store')->name('category.destroy');
+//vue pour une categorie filtrée depuis Home
+Route::get('/categ/{idcategorie}', 'App\Http\Controllers\CategoryController@show')->name('categ');
 
 //route contact form
 Route::get('/contact', 'App\Http\Controllers\ContactController@index');

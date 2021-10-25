@@ -72,6 +72,12 @@ class Questionnaire extends Model
     }
 
 
+    public function categ()
+    {
+        return $this->belongsTo(Categories::class, 'categorie_idcategorie');
+    }
+
+
 
 
 }

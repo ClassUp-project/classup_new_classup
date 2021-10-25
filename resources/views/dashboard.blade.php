@@ -7,7 +7,7 @@
 
         <div class="alert-toast float-right" role="alert">
             <input type="checkbox" class="hidden" id="footertoast">
-            <label class="close cursor-pointer flex items-start justify-between w-full bg-indigo-200 border-t-4 border-indigo-400 rounded-b text-teal-900 px-4 py-1 shadow-md w-80 h-10 rounded shadow-lg text-white" title="close" for="footertoast">
+            <label class="close cursor-pointer flex items-start justify-between w-full bg-indigo-200 border-t-4 border-indigo-400 rounded-b text-teal-900 px-4 py-1 shadow-md w-80 h-10 rounded shadow-lg text-white label-alert" title="close" for="footertoast">
                 @if(Auth::user()->statut == 'professeur')
                     Bonjour! Prêt à envoyer vos cours à vos élèves.
                 @else

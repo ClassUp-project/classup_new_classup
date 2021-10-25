@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Profile;
 use App\AccueilEleve;
+use App\Models\Categories;
 use App\Models\Dropzone;
 use App\Models\Question;
 
@@ -38,8 +39,10 @@ class HomeController extends Controller
 
         $idFile = Dropzone::with('uploadForFile')->get();
 
+        $categorie = Categories::with('questionnaire_categ')->get();
 
-        return view('home', compact('questionnaires', 'idFile'));
+
+        return view('home', compact('questionnaires', 'idFile', 'categorie'));
     }
 
 
@@ -78,4 +81,7 @@ class HomeController extends Controller
              return redirect('/home');
 
       }
+
+
 }
+

@@ -37,6 +37,22 @@
                                     @enderror
 
                             </div>
+
+                            <div class="flex flex-wrap -mx-3 mb-6">
+                                <label class="bblock uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="categorie_idcategorie">La catégorie</label>
+                                    <select name="categorie_idcategorie" class="form-select appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+                                        @foreach ( $categories as $categorie )
+                                        <option value="{{ $categorie->idcategorie }}">{{ $categorie->name }}</option>
+                                        @endforeach
+                                    </select>
+                                <small id="categorie_idcategorieHelp" class="form-text text-muted mt-2">Attribuez le à une catégorie</small>
+
+                                @error('categorie_idcategorie')
+                                <small class="text-danger">{{ $message}}</small>
+                                    @enderror
+
+                            </div>
+
                             <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Creation Question</button>
 
 
