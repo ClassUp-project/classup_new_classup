@@ -184676,11 +184676,13 @@ select {
     }
 
     .button-tag-categ-categ{
-        margin-top:10px;
+        margin-top:20px;
         display:grid;
         grid-template-columns: auto;
         justify-content:center;
         text-align:center;
+        width: 250px;
+        height:35px;
     }
 
     .titre-categ{
@@ -184688,6 +184690,8 @@ select {
         justify-content:center;
         text-align:center;
         margin-left: -10px;
+        margin-top: 60px;
+
     }
 
     .label-alert{
@@ -184695,6 +184699,22 @@ select {
         display:flex;
         justify-content:center;
 
+    }
+
+
+    .div-card-home-categ{
+        margin-top:30px;
+        display:grid;
+        grid-template-columns:auto;
+        margin-left:-40px;
+        margin-bottom: 50px;
+    }
+
+    .div-card-home-categ-categ{
+        margin-top:30px;
+        display:grid;
+        grid-template-columns:auto;
+        margin-bottom: 50px;
     }
 
 

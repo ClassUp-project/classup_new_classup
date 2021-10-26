@@ -36,12 +36,27 @@
                             @endif
                         </div>
 
+
                         <div class="flex justify-center ml-40 mt-10 titre-categ">
-                            <h1 class="text-xl font-bold">Tous les questionnaires dans la catégorie {{ $categ->name }}</h1>
+                            <h1 class="text-xl font-bold">
+                                @if ($categ->name == 'Mathématique')
+                                Prêt à choper la bosse des {{ $categ->name }} ?
+                                @elseif ($categ->name == 'Français')
+                                Prêt à devenir un boss en {{ $categ->name }} ?
+                                @elseif ($categ->name == 'Histoire')
+                                Rejoins les grand.e.s de l'{{ $categ->name }} !
+                                @elseif ($categ->name == 'Géographie')
+                                Prends un sac, on part à la découverte ! vive la {{ $categ->name }}
+                                @elseif ($categ->name == 'Science')
+                                Rivalises avec les scientifiques de l'histoire ! vive la {{ $categ->name }}
+                                @endif
+                            </h1>
                         </div>
-                            <div class="flex justify-center ml-40 div-card-home">
+
+                        @if (count($questionnaires) > 0)
+                            <div class="flex justify-center ml-40 div-card-home-categ">
                                 @foreach($questionnaires as $questionnaire)
-                                        <div class="max-w-sm rounded overflow-hidden shadow-lg mt-10 ml-10">
+                                        <div class="max-w-sm rounded overflow-hidden shadow-lg mt-10 ml-10 div-card-home-categ-categ">
                                             <img class="w-full" src="/img/questionnaire-en-ligne.jpg" alt="Sunset in the mountains">
                                             <div class="px-6 py-4">
                                                 <div class="font-bold text-xl mb-2">Questionnaire</div>
@@ -60,6 +75,9 @@
                                         </div>
                                 @endforeach
                             </div>
+                        @else
+                        <h1>il n'y a rien</h1>
+                        @endif
                     </div>
                 </div>
             </div>
