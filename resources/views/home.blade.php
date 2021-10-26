@@ -83,7 +83,7 @@
                                 <a class=" text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full" href="{{$questionnaire->path() }}">{{$questionnaire->titre}}</a><p class="text-gray-500 hover:text-gray-800">posté par: {{ $questionnaire->user->prenom }} {{ $questionnaire->user->nom }}</p>
                                 <div class="mt-2">
 
-                                    <small class="font-bold">Share url</small>
+                                    <small class="font-bold">Ouvrir le questionnaire | Partager l'url</small>
                                     <p>
                                         <a class="text-blue-500" href="{{$questionnaire->publicPath()}}">{{$questionnaire->publicPath()}}</a>
                                     </p>

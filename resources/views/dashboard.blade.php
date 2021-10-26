@@ -68,7 +68,7 @@
                             <a class="text-blue-800 font-bold" href="{{$questionnaire->path() }}">{{$questionnaire->titre}}</a>
                             <div class="mt-2">
 
-                                <small class="font-bold">Share url</small>
+                                <small class="font-bold">Ouvrir le questionnaire | Partager l'url</small>
                                 <p>
                                     <a class="text-blue-500" href="{{$questionnaire->publicPath()}}">{{$questionnaire->publicPath()}}</a>
                                 </p>
