@@ -60,15 +60,49 @@
                                             <img class="w-full" src="/img/questionnaire-en-ligne.jpg" alt="Sunset in the mountains">
                                             <div class="px-6 py-4">
                                                 <div class="font-bold text-xl mb-2">Questionnaire</div>
-                                                        <a class=" text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full" href="{{$questionnaire->path() }}">{{$questionnaire->titre}}</a>
-                                                                | <p class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-blue-200 text-green-700 rounded-full">objet: {{ $questionnaire->proposition }}</p>
-                                                                | <p class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 mt-1 bg-red-200 text-green-700 rounded-full">categ: {{ $questionnaire->categ->name }}</p>
-                                                                <p class="text-gray-500 hover:text-gray-800 mt-1">posté par: {{ $questionnaire->user->prenom }} {{ $questionnaire->user->nom }}</p>
+                                                                <p class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-blue-200 text-green-700 rounded-full">objet: {{ $questionnaire->proposition }}</p>
+                                                                | <p class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-red-200 text-green-700 rounded-full float-right">categ: {{ $questionnaire->categ->name }}</p>
+                                                                <p class="text-gray-500 hover:text-gray-800 mt-2">posté par: {{ $questionnaire->user->prenom }} {{ $questionnaire->user->nom }}</p>
+                                                                <small class="font-bold mt-2">voir les resultats du questionnaire : </small><a class=" text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full mr-40 " href="{{$questionnaire->path() }}">{{$questionnaire->titre}}</a>
+                                                                <small class="font-bold">Répondre au questionnaire :</small><a class=" text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-indigo-200 text-green-700 rounded-full mr-40" href="{{$questionnaire->publicPath()}}">{{$questionnaire->titre}}</a>
                                                             <div class="mt-2">
-                                                                <small class="font-bold">Ouvrir le questionnaire | Partager l'url</small>
-                                                                <p>
-                                                                    <a class="text-blue-500" href="{{$questionnaire->publicPath()}}">{{$questionnaire->publicPath()}}</a>
-                                                                </p>
+                                                                <small class="font-bold">Partager l'url</small>
+                                                                <p>{{$questionnaire->publicPath()}}</p>
+                                                                <hr>
+                                                                <div class="flex items-center justify-center">
+                                                                <a class="text-blue-500" href="{{$questionnaire->publicPath()}}">
+                                                                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                                                                        width="25px" height="25px" viewBox="0 0 1280.000000 1081.000000"
+                                                                        preserveAspectRatio="xMidYMid meet" style="margin-top: 10px">
+                                                                        <g transform="translate(0.000000,1081.000000) scale(0.100000,-0.100000)"
+                                                                        fill="grey" stroke="none" margin-top="20px">
+                                                                        <path d="M12675 10770 c-215 -75 -521 -182 -575 -200 -30 -10 -147 -51 -260
+                                                                        -90 -113 -39 -230 -80 -260 -90 -56 -19 -134 -46 -490 -170 -113 -39 -230 -80
+                                                                        -260 -90 -30 -10 -147 -51 -260 -90 -113 -39 -230 -80 -260 -90 -30 -10 -147
+                                                                        -51 -260 -90 -356 -124 -434 -151 -490 -170 -30 -10 -147 -51 -260 -90 -356
+                                                                        -124 -434 -151 -490 -170 -30 -10 -147 -51 -260 -90 -113 -39 -230 -80 -260
+                                                                        -90 -30 -10 -147 -51 -260 -90 -356 -124 -434 -151 -490 -170 -30 -10 -147
+                                                                        -51 -260 -90 -113 -39 -230 -80 -260 -90 -30 -10 -147 -51 -260 -90 -279 -97
+                                                                        -410 -143 -575 -200 -77 -26 -194 -67 -260 -90 -66 -23 -183 -63 -260 -90 -77
+                                                                        -26 -194 -67 -260 -90 -66 -23 -131 -45 -145 -50 -14 -4 -117 -40 -230 -80
+                                                                        -113 -39 -230 -80 -260 -90 -30 -10 -147 -51 -260 -90 -113 -39 -268 -93 -345
+                                                                        -120 -77 -26 -194 -67 -260 -90 -192 -66 -408 -141 -435 -150 -14 -4 -117 -40
+                                                                        -230 -80 -220 -77 -479 -167 -520 -180 -14 -4 -117 -40 -230 -80 -113 -39
+                                                                        -230 -80 -260 -90 -30 -10 -147 -51 -260 -90 -113 -39 -268 -93 -345 -120 -77
+                                                                        -26 -194 -67 -260 -90 -192 -66 -408 -141 -435 -150 -14 -4 -117 -40 -230 -80
+                                                                        -280 -98 -413 -144 -557 -193 -75 -25 -123 -47 -123 -55 0 -8 -5 -10 -12 -6
+                                                                        -21 11 592 -621 1502 -1552 l265 -271 112 -279 c62 -153 181 -450 266 -659 85
+                                                                        -209 236 -580 335 -825 99 -245 185 -457 192 -472 l13 -27 380 256 c209 141
+                                                                        385 256 391 257 12 1 181 -170 1086 -1099 310 -319 661 -679 780 -800 118
+                                                                        -121 363 -372 544 -558 181 -186 333 -334 337 -330 4 5 325 530 714 1168 777
+                                                                        1273 1015 1664 1263 2070 91 149 202 331 247 405 45 74 156 257 247 405 91
+                                                                        149 254 416 363 595 109 179 272 447 363 595 91 149 258 423 372 610 114 187
+                                                                        389 637 610 1000 222 363 496 813 610 1000 114 187 388 637 610 1000 436 714
+                                                                        1180 1935 1187 1948 7 11 -5 8 -122 -33z"/>
+                                                                        </g>
+                                                                    </svg>
+                                                                </a>
+                                                                </div>
                                                             </div>
                                                 </div>
 

@@ -65,10 +65,10 @@
                       <ul class="list-none pl-4 ">
                         @foreach($questionnaires as $questionnaire)
                         <li class="list-group-item mt-10 ">
-                            <a class="text-blue-800 font-bold" href="{{$questionnaire->path() }}">{{$questionnaire->titre}}</a>
+                            <small class="font-bold">Voir les résultats au questionnaire :</small><a class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full" href="{{$questionnaire->path() }}">{{$questionnaire->titre}}</a>
                             <div class="mt-2">
 
-                                <small class="font-bold">Ouvrir le questionnaire | Partager l'url</small>
+                                <small class="font-bold">Répondre au questionnaire | Partager l'url</small>
                                 <p>
                                     <a class="text-blue-500" href="{{$questionnaire->publicPath()}}">{{$questionnaire->publicPath()}}</a>
                                 </p>
@@ -80,6 +80,7 @@
                                 <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold px-4 mt-2 rounded-full w-30 h-6" style="font-size: 12px;">Supprimer</button>
                             </form>
                         </li>
+                        <hr class="mt-4">
                         @endforeach
                       </ul>
                     </div>
@@ -102,6 +103,7 @@
                                 <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold px-2 mt-2 rounded-full w-20 h-5" style="font-size: 12px;">Supprimer</button>
                             </form>
                         </li>
+                        <hr class="mt-4">
                         @endforeach
                       </ul>
                     </div>
@@ -124,6 +126,7 @@
                                 <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold px-2 mt-2 rounded-full w-20 h-5" style="font-size: 12px;">Supprimer</button>
                             </form>
                         </li>
+                        <hr class="mt-4">
                         @endforeach
                       </ul>
                     </div>

@@ -80,16 +80,17 @@
                           <ul class="list-none pl-4 ">
                             @foreach($questionnaires as $questionnaire)
                             <li class="list-group-item mt-10 ">
-                                <a class=" text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full" href="{{$questionnaire->path() }}">{{$questionnaire->titre}}</a><p class="text-gray-500 hover:text-gray-800">posté par: {{ $questionnaire->user->prenom }} {{ $questionnaire->user->nom }}</p>
+                                <small class="font-bold">Voir les résultats: </small><a class=" text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full" href="{{$questionnaire->path() }}">{{$questionnaire->titre}}</a><p class="text-gray-500 hover:text-gray-800">posté par: {{ $questionnaire->user->prenom }} {{ $questionnaire->user->nom }}</p>
                                 <div class="mt-2">
 
-                                    <small class="font-bold">Ouvrir le questionnaire | Partager l'url</small>
+                                    <small class="font-bold">Répondre au questionnaire | Partager l'url</small>
                                     <p>
                                         <a class="text-blue-500" href="{{$questionnaire->publicPath()}}">{{$questionnaire->publicPath()}}</a>
                                     </p>
 
                                 </div>
                             </li>
+                            <hr class="mt-2">
                             @endforeach
                           </ul>
                         </div>
@@ -108,6 +109,7 @@
                                 </a>
                                 <p class="text-gray-500 hover:text-gray-800">posté par: {{ $document->uploadForFile->prenom }} {{ $document->uploadForFile->nom }}</p>
                             </li>
+                            <hr class="mt-2">
                             @endforeach
                           </ul>
                         </div>
