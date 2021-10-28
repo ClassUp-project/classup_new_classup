@@ -9,15 +9,17 @@
     @section('content')
 
         <div class="flex justify-center items-center bg-gray-200 h-full all-acteg">
+            <div class="all-acteg-div">
             @foreach ( $allcateg as  $allcategs )
 
-                <a href="/categ/{{ $allcategs->idcategorie }}">
-                    <h1 class="font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full mr-20 mt-32 mb-32">
+                <a class="a-categ-all" href="/categ/{{ $allcategs->idcategorie }}">
+                    <h1 class="flex justify-center items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full mr-20 mt-32 mb-32 all-categ-all">
                         {{ $allcategs->name }}
                     </h1>
                 </a>
 
             @endforeach
+            </div>
         </div>
 
 

@@ -184721,6 +184721,28 @@ select {
         margin-top:10px;
     }
 
+    .all-acteg{
+        display:grid;
+        grid-template-columns:auto auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .all-acteg-div{
+        display:grid;
+        grid-template-columns:auto auto;
+        align-items: center;
+        justify-content: center;
+        margin-left: 125px;
+        margin-top:30px;
+    }
+
+    .a-categ-all{
+        margin-top:-110px;
+        margin-left: -50px;
+    }
+
+
 
 
 
