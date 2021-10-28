@@ -184689,8 +184689,8 @@ select {
         display:flex;
         justify-content:center;
         text-align:center;
-        margin-left: -10px;
-        margin-top: 60px;
+        margin-left: 10px;
+        margin-top: 70px;
 
     }
 
@@ -184715,6 +184715,10 @@ select {
         display:grid;
         grid-template-columns:auto;
         margin-bottom: 50px;
+    }
+
+    .alert-toast{
+        margin-top:10px;
     }
 
 
