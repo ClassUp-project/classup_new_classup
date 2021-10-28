@@ -28,6 +28,7 @@ class QuestionnaireController extends Controller
 
                  'titre'=>'required',
                  'proposition'=>'required',
+                 'description'=>'required',
                  'categorie_idcategorie'=>'required|integer',
         ]);
 

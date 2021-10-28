@@ -11,7 +11,9 @@
         <div class="flex justify-center mt-20">
             <div class="col-md-8">
 
-                <h1 class="px-6 py-4 font-bold text-xl mb-2">{{$questionnaire->titre}}</h1>
+                <h1 class="px-6 py-4 font-bold text-xl mb-2">Titre : {{$questionnaire->titre}}</h1>
+                <h3 class=" inline-flex items-center font-bold leading-sm uppercase px-6 py-2 bg-blue-200 text-green-700 rounded-full">Objet : {{$questionnaire->proposition}}</h3>
+                <p class="mt-6 mb-9 font-bold">{{ $questionnaire->description }}</p>
 
                 <form action="/surveys/{{$questionnaire->idquestionnaire}}-{{Str::slug($questionnaire->titre)}}" method="post">
                     @csrf
