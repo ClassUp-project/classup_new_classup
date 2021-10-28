@@ -74,6 +74,15 @@ class CategoryController extends Controller
 
     }
 
+
+    public function allCateg()
+    {
+
+        $allcateg = Categories::all();
+
+        return view('categorie.all-categ', compact('allcateg'));
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

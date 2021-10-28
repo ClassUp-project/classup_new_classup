@@ -76,7 +76,7 @@
                     <div class="max-w-sm rounded overflow-hidden shadow-lg mt-10 ml-10">
                         <img class="w-full" src="/img/questionnaire-en-ligne.jpg" alt="Sunset in the mountains">
                         <div class="px-6 py-4">
-                          <div class="font-bold text-xl mb-2">La liste de vos questionnaires</div>
+                          <div class="font-bold text-xl mb-2">La liste des derniers questionnaires</div>
                           <ul class="list-none pl-4 ">
                             @foreach($questionnaires as $questionnaire)
                             <li class="list-group-item mt-10 ">
@@ -93,6 +93,14 @@
                             <hr class="mt-2">
                             @endforeach
                           </ul>
+                            <div class="flex items-center justify-center mt-2">
+                                <a href="/toutescateg">
+                                <button class="inline-flex items-center justify-center w-10 h-10 mr-2 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                                </button>
+                                </a>
+                                <small class="font-bold object-bottom">plus de questionnaires</small>
+                            </div>
                         </div>
                     </div>
 
@@ -100,7 +108,7 @@
                     <div class="max-w-sm rounded overflow-hidden shadow-lg mt-10 ml-10" id="app">
                         <img class="w-full" src="/img/paper.jpg" alt="Sunset in the mountains">
                         <div class="px-6 py-4">
-                          <div class="font-bold text-xl mb-2">La liste de vos documents</div>
+                          <div class="font-bold text-xl mb-2">La liste des derniers documents</div>
                           <ul class="list-none pl-4">
                             @foreach($idFile as $document)
                             <li class="list-group-item mt-8">
@@ -112,6 +120,12 @@
                             <hr class="mt-2">
                             @endforeach
                           </ul>
+                            <div class="flex items-center justify-center mt-2">
+                                <button class="inline-flex items-center justify-center w-10 h-10 mr-2 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                                </button>
+                                <small class="font-bold object-bottom">plus de documents</small>
+                            </div>
                         </div>
                     </div>
 
