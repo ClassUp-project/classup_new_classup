@@ -8,6 +8,14 @@
 
     @section('content')
 
+    <div class="flex justify-left items-center bg-gray-100 h-full allcateg-return">
+        <a href="{{ route('home') }}">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: royalblue; margin-left: 50px;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        </a>
+    </div>
+
         <div class="flex justify-center items-center bg-gray-200 h-full all-acteg">
             <div class="all-acteg-div">
             @foreach ( $allcateg as  $allcategs )

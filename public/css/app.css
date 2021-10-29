@@ -184734,12 +184734,17 @@ select {
         align-items: center;
         justify-content: center;
         margin-left: 125px;
-        margin-top:30px;
+
     }
 
-    .a-categ-all{
-        margin-top:-110px;
+    .all-categ-all{
+        margin-top: 50px;
         margin-left: -50px;
+        margin-bottom: 50px;
+    }
+
+    allcateg-return-categ{
+        top: 50px;
     }
 
 
