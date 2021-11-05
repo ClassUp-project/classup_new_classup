@@ -35,17 +35,16 @@
                             <p class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-indigo-200 text-indigo-700 rounded-full button-tag-home">documents</p>
                         </div>
 
-                        <div class="flex justify-center button-tag-home-categ mt-6 ml-24">
-                            <div class="bg-white rounded px-2 py-2 mr-2">
-                                <p class="text-blue-500 button-tag-categ mb-2 font-bold">Filtrez par catégorie </p>
-                                @foreach ( $categorie as $categories )
-                                <a href="/categ/{{ $categories->idcategorie}}">
-                                    <p class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 mr-3 bg-red-200 text-blue-700 rounded-full button-tag-categ-categ">{{ $categories->name }}</p>
-                                </a>
-                                @endforeach
+                        <div class="flex align-items-center content-center justify-center mt-6">
+                            <div class="flex flex-wrap -mx-3 mb-6 w-56">
+                                <label class="bblock uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="categorie_idcategorie">Filtrez par catégorie</label>
+                                    <select onchange="window.location=this.options[this.selectedIndex].value;" name="categorie_idcategorie"  class="form-select appearance-none block w-full bg-gray-200 text-gray-700 border border-blue-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+                                        @foreach ( $categorie as $categories )
+                                        <option value="/categ/{{ $categories->idcategorie }}">{{ $categories->name }}</a></option>
+                                        @endforeach
+                                    </select>
                             </div>
                         </div>
-
 
 
                         <div class="card-body">
