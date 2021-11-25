@@ -928,21 +928,21 @@
             <ul class="list-reset mb-6">
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/ClassUpTheNewSchool"
                   class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500"
                   >Facebook</a
                 >
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/class-up-edtech"
                   class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500"
                   >Linkedin</a
                 >
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
                 <a
-                  href="#"
+                  href="https://twitter.com/GoodLifeIA"
                   class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500"
                   >Twitter</a
                 >
