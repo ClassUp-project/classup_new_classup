@@ -730,7 +730,7 @@
         <h2
           class="w-full my-2 text-5xl font-black leading-tight text-center text-gray-800"
         >
-          Class'Up en action
+          Class'Up action et developpement
         </h2>
         <div class="w-full mb-4">
           <div
@@ -806,14 +806,25 @@
           >
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
               <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-6">
-                VIDEO
+                Developpement
               </p>
               <div class="w-full font-bold text-xl text-gray-800 px-6">
-                Ta matière en vidéo.
+                Une app Européenne.
+                <img
+                src="https://flagcdn.com/40x30/eu.png"
+                srcset="https://flagcdn.com/80x60/eu.png 2x,
+                    https://flagcdn.com/120x90/eu.png 3x"
+                width="30"
+                height="20"
+                alt="Union européenne"
+                style="float: right; margin-right:150px">
               </div>
               <p class=" text-gray-600 text-base px-6 mb-5">
-                Les vidéo sont un bon moyen d'étudier.<br />
-                Retrouve toutes les meilleurs vidéo postés par tes professeurs sur ta matière.
+                Class'Up est développée à Bruxelles.<br />
+                Nous sommes attachés à la protection des données et nous sommes fier de développer
+                cette application au coeur de l'Europe.<br />
+                Nous construisons une application "maison", sans plugins importés, afin d'être sûr d'avoir toujours la main
+                sur le code et l'outil en général.<br />
               </p>
             </a>
           </div>
