@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
   -->
     <link
-      href="https://unpkg.com/tailwindcss/dist/tailwind.min.css"
+      href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
     <!--Replace with your tailwind.css once created-->
