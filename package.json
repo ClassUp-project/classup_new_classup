@@ -18,7 +18,7 @@
         "bootstrap": "^4.0.0",
         "dropzone": "^5.9.2",
         "jquery": "^3.2",
-        "laravel-mix": "^6.0.6",
+        "laravel-mix": "^6.0.39",
         "lodash": "^4.17.19",
         "popper.js": "^1.12",
         "postcss": "^8.2.9",
@@ -30,5 +30,8 @@
         "vue": "^2.6.12",
         "vue-loader": "^15.9.6",
         "vue-template-compiler": "^2.6.12"
+    },
+    "dependencies": {
+        "postcss-loader": "^6.2.1"
     }
 }

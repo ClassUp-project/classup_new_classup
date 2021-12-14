@@ -3838,6 +3838,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -50397,7 +50398,11 @@ var staticRenderFns = [
     return _c("div", { staticClass: "file-input" }, [
       _c("label", { attrs: { for: "file" } }, [_vm._v("sélectionnez")]),
       _vm._v(" "),
-      _c("input", { attrs: { type: "file", id: "file" } })
+      _c("input", { attrs: { type: "file", id: "file" } }),
+      _vm._v(" "),
+      _c("input", {
+        attrs: { type: "hidden", name: "utilisateur_idutilisateur" }
+      })
     ])
   }
 ]

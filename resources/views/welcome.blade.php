@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
   -->
     <link
-      href="https://unpkg.com/tailwindcss/dist/tailwind.min.css"
+      href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
     <!--Replace with your tailwind.css once created-->
@@ -22,7 +22,7 @@
       rel="stylesheet"
     />
 
-     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <!--Tailwind Custom Forms - use to standardise form fields - https://github.com/tailwindcss/custom-forms-->
 
 
@@ -34,28 +34,23 @@
           "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
           "Noto Color Emoji";
       }
-
       .gradient {
         background-image: linear-gradient(-225deg, #cbbacc 0%, #2580b3 100%);
       }
-
       button,
       .gradient2 {
         background-color: #f39f86;
         background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
       }
-
       /* Browser mockup code
  * Contribute: https://gist.github.com/jarthod/8719db9fef8deb937f4f
  * Live example: https://updown.io
  */
-
       .browser-mockup {
         border-top: 2em solid rgba(230, 230, 230, 0.7);
         position: relative;
         height: 60vh;
       }
-
       .browser-mockup:before {
         display: block;
         position: absolute;
@@ -68,11 +63,9 @@
         background-color: #f44;
         box-shadow: 0 0 0 2px #f44, 1.5em 0 0 2px #9b3, 3em 0 0 2px #fb5;
       }
-
       .browser-mockup > * {
         display: block;
       }
-
       /* Custom code for the demo */
     </style>
   </head>
@@ -112,7 +105,6 @@
             </svg>
           </button>
         </div>
-
         <div
           class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 text-black p-4 lg:p-0 z-20"
           id="nav-content"
@@ -984,14 +976,11 @@
     <script>
       /*Toggle dropdown list*/
       /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
-
       var navMenuDiv = document.getElementById("nav-content");
       var navMenu = document.getElementById("nav-toggle");
-
       document.onclick = check;
       function check(e) {
         var target = (e && e.target) || (event && event.srcElement);
-
         //Nav Menu
         if (!checkParent(target, navMenuDiv)) {
           // click NOT on the menu
