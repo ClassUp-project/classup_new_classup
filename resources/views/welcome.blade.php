@@ -140,7 +140,7 @@
     @if (Route::has('login'))
         <button
         id="navAction"
-        class="fixed top-16 right-4 px-6 py-4 sm:block mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 shadow opacity-75"
+        class="fixed top-32 right-4 px-6 py-4 sm:block mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 shadow opacity-75"
         >
             @auth
                     <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
