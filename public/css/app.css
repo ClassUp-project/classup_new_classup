@@ -184467,3 +184467,177 @@ select {
   }
 }
 
+@media screen and (max-width:800px){
+
+    /**
+     * DASHBORD
+     */
+    .count-cards-div{
+        display: grid;
+        grid-template-columns:auto;
+        margin-left: 0px;
+    }
+    .count-cards{
+        width: auto;
+    }
+
+    .close{
+        height:auto;
+        margin-top: 20px;
+    }
+
+    .title-dashboard{
+        margin-left:20px;
+        margin-top: 80px;
+        text-align: center;
+    }
+
+    .button-tag-dashboard-div-align{
+        margin-left:-150px;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns:auto;
+        justify-content: center;
+
+    }
+    .button-tag-dashboard{
+        width: 250px;
+        margin-top: 20px;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    .div-card-home{
+        display: grid;
+        grid-template-columns:auto;
+        justify-content: center;
+        margin-left: -40px;
+    }
+
+
+    /**
+     * ACCUEIL
+     */
+
+    .button-tag-home-div{
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns:auto auto auto;
+        width:auto ;
+
+    }
+
+    .button-return-home{
+        margin-left: -170px;
+    }
+
+    /**
+     * form questionnaire
+     */
+
+     .form-questionnaire{
+         margin-left:-150px;
+         margin-bottom: 50px;
+         width:250px;
+     }
+
+     /**
+      * UPLOAD FILES
+      */
+
+      .upload-file{
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns:auto;
+      }
+
+      .envoyer-fichier{
+          justify-content: center;
+      }
+
+      .files-poster{
+        justify-content: center;
+        height:auto;
+      }
+      .items-stretch{
+        justify-content: center;
+        height:auto;
+      }
+
+      /**
+       * RESULTATS ELEVES
+       */
+      .resultat-eleve{
+        margin-left:-150px;
+        margin-bottom: 50px;
+        width:250px;
+      }
+
+      /**
+       * CATEG
+       */
+
+       .titre-categ{
+        margin-left:20px;
+        margin-top: 40px;
+        text-align: center;
+       }
+
+       .div-card-home-categ{
+        display: grid;
+        grid-template-columns:auto;
+        margin-left: -40px;
+       }
+
+       /**
+        * SHOW QUESTIONNAIRE
+        */
+       .div-button-show-question{
+        display: grid;
+        grid-template-columns:auto;
+        margin-top: 20px;
+       }
+
+       .button-questionnaire-show{
+        text-align:center;
+        margin-top:20px;
+       }
+
+       .button-tag-show{
+           margin-left:50px;
+       }
+
+       .div-question-tab{
+           margin-top:40px;
+           margin-bottom:40px;
+       }
+
+       /**
+        * RESPONSE QUESTIONNAIRE
+        */
+       .title-show-quest{
+           margin-left:70px;
+       }
+
+       .tag-show-quest{
+            margin-left:70px;
+       }
+
+       .desc{
+        text-align:center;
+       }
+
+       .form-response{
+        margin-left:70px;
+        margin-top:40px;
+        margin-bottom:50px;
+       }
+
+       .groupe-reponse{
+        display: grid;
+        grid-template-columns:auto;
+        margin-left: -100px;
+        margin-top:20px;
+       }
+}

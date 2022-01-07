@@ -56,8 +56,8 @@
 
     </div>
 
-    <div class="flex ml-52 justify-center items-center">
-        <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+    <div class="flex ml-52 justify-center items-center count-cards-div">
+        <div class="w-full md:w-1/2 xl:w-1/3 p-6 count-cards">
             <!--Metric Card-->
             <div class="bg-gradient-to-b from-green-200 to-green-100 border-b-4 border-green-600 rounded-lg shadow-xl p-5">
                 <div class="flex flex-row items-center">
