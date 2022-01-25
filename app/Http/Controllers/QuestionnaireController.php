@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categories;
-use App\Models\Questionnaire;
 use Illuminate\Http\Request;
+use App\Models\Questionnaire;
+use App\Models\Utilisateur;
+use App\Notifications\NewQuestionnaire;
+use Illuminate\Support\Facades\Notification;
 
 class QuestionnaireController extends Controller
 {
@@ -42,6 +45,18 @@ class QuestionnaireController extends Controller
     public function show(Questionnaire $questionnaire)
  {
      $questionnaire->load('questions.answers.responses');
+
+     $questionnaireSend = Utilisateur::first();
+
+        $newQuestionnaire = [
+            'body' => 'Tu as un nouveau questionnaire à consulter',
+            'actionText' => 'Consulter le questionnaire',
+            'Url' => url('/home'),
+            'Consultez le questionnaire' => 'Consultez le questionnaire'
+        ];
+
+        //$questionnaire->notify(new NewQuestionnaire($newQuestionnaire));
+        Notification::send($questionnaireSend, new NewQuestionnaire($newQuestionnaire));
 
     //dd($questionnaire);
 
