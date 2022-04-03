@@ -115,7 +115,7 @@
                                 <a class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-indigo-200 text-indigo-700 rounded-full" href="{{ route('download', Auth::user()->idutilisateur )}}" download="{{ $document->original }}">
                                     {{ Str::limit( $document->thumbnail, 35 )}}
                                 </a>
-                                <p class="text-gray-500 hover:text-gray-800">posté par: {{ $document->uploadForFile->prenom }} {{ $document->uploadForFile->nom }}</p>
+                                <p class="text-gray-500 hover:text-gray-800">posté par : {{ $document->uploadForFile->prenom }} {{ $document->uploadForFile->nom }}</p>
                             </li>
                             <hr class="mt-2">
                             @endforeach
@@ -133,7 +133,7 @@
 
 
                     <div class="flex justify-center mt-20 button-return-home " >
-                        <a id="navigation-to-dashboard" href="/dashboard" class="ml-40 bg-blue-500 text-white font-bold py-2 px-4 pl-6 mb-10 rounded-full">Vue d'ensemble et cours</a>
+                        <a id="navigation-to-dashboard" href="/dashboard" class="ml-40 bg-blue-500 text-white font-bold py-2 px-4 pl-6 mb-10 rounded-full">Retour à votre tableau de bord</a>
                     </div>
 
 
