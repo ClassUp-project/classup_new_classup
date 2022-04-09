@@ -104,5 +104,9 @@ Route::get('/toutescateg', 'App\Http\Controllers\CategoryController@allCateg')->
 Route::get('/contact', 'App\Http\Controllers\ContactController@index');
 Route::post('/contact',  'App\Http\Controllers\ContactController@store')->name('contact.store');
 
+//route pour les cours
+Route::get('/cours', 'App\Http\Controllers\CoursController@index')->name('cours');
+Route::get('/cours_details/{idcours}', 'App\Http\Controllers\CoursController@show')->name('cours_details');
+
 
 

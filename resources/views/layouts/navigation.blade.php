@@ -19,7 +19,13 @@
                 <!--Home nav-->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
-                        {{ __('Accueil') }}
+                        {{ __('Questionnaires') }}
+                    </x-nav-link>
+                </div>
+                <!--Cours nav-->
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('cours')" :active="request()->routeIs('cours')">
+                        {{ __('Cours') }}
                     </x-nav-link>
                 </div>
             </div>
