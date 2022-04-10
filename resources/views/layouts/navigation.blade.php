@@ -82,12 +82,18 @@
         <!--Home nav-->
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
-                {{ __('Home') }}
+                {{ __('Questionnaires') }}
+            </x-responsive-nav-link>
+        </div>
+         <!--Cours nav-->
+         <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('cours')" :active="request()->routeIs('cours')">
+                {{ __('Cours') }}
             </x-responsive-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->
-        <div class="pt-4 pb-1 border-t border-gray-200">
+        <div class="pt-4 pb-1 border-t border-gray-200 bg-green-100">
             <div class="flex items-center px-4">
                 <div class="flex-shrink-0">
                     <svg class="h-10 w-10 fill-current text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
