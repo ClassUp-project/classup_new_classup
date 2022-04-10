@@ -15,6 +15,8 @@ class Dropzone extends Model
 
 
     protected $fillable = [
+        'titre',
+        'description',
         'original',
         'thumbnail',
         'utilisateur_idutilisateur',

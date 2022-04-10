@@ -24,23 +24,29 @@
 
         <div class="flex items-center justify-center mt-40 upload-file">
 
-            <div class="flex content-center">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">File <span class="required">*</span></label>
+            <div class="content-center">
+                <div class="mb-6">
+                    <label for="titre" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Titre</label>
+                    <input type="text" name="titre" id="titre" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                  </div>
+                  <div class="mb-6">
+                    <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Description</label>
+                    <textarea id="description" name="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Laissez une description..."></textarea>
+                  </div>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Fichier <span class="required">*</span></label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-
                     <input type='file' name='file' class="border border-indigo-500 text-indigo-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-indigo-600 focus:outline-none focus:shadow-outline">
 
                     @if ($errors->has('file'))
                     <span class="errormsg text-danger">{{ $errors->first('file') }}</span>
                     @endif
                 </div>
-            </div>
-
-            <div class="flex content-center envoyer-fichier">
-                <div class="col-md-6">
-                    <button type="submit" name="submit" value='Submit' class='border border-indigo-500 text-indigo-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-indigo-600 focus:outline-none focus:shadow-outline'>
-                        envoyer
-                    </button>
+                <div class="content-center envoyer-fichier">
+                    <div class="col-md-6">
+                        <button type="submit" name="submit" value='Submit' class='border border-indigo-500 text-indigo-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-indigo-600 focus:outline-none focus:shadow-outline'>
+                            envoyer
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

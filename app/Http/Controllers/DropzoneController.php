@@ -54,6 +54,8 @@ class DropzoneController extends Controller
                     //$filePath->move(storage_path('/files'), $newFile);
 
             Dropzone::create([
+                    'titre' => $request->titre,
+                    'description' => $request->description,
                     'original'=>$path,
                     'thumbnail'=>$path,
                     'utilisateur_idutilisateur' => auth()->user()->idutilisateur

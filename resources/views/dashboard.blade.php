@@ -142,7 +142,8 @@
                       <ul class="list-none pl-4">
                         @foreach($idFile as $document)
                         <li class="list-group-item mt-8">
-                            <a class="text-blue-800 font-bold" href="{{ route('download', Auth::user()->idutilisateur )}}" download="{{ $document->original }}">
+                            <p class="underline mb-4">{{ $document->titre }}</p>
+                            <a class="mt-5 text-blue-800 font-bold bg-purple-100 p-1 rounded-lg mt-2" href="{{ route('download', Auth::user()->idutilisateur )}}" download="{{ $document->original }}">
                                 {{ Str::limit( $document->thumbnail, 35 )}}
                             </a>
                             <form action="/filedelete/{{$document->iddropzone}}" method="post">
