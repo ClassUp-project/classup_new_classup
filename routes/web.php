@@ -106,7 +106,7 @@ Route::post('/contact',  'App\Http\Controllers\ContactController@store')->name('
 
 //route pour les cours
 Route::get('/cours', 'App\Http\Controllers\CoursController@index')->name('cours');
-Route::get('/cours_details', 'App\Http\Controllers\CoursController@show')->name('cours_details');
+Route::get('/cours_details/{iddropzone}', 'App\Http\Controllers\CoursController@show')->name('cours_details');
 
 
 

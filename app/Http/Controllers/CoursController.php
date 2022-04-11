@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Dropzone;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class CoursController extends Controller
 {
@@ -20,8 +21,16 @@ class CoursController extends Controller
         return view('cours.cours', compact('file'));
     }
 
-    public function show()
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Dropzone $drop, $iddropzone)
     {
-        return view('cours.cours_details');
+        $drop = Dropzone::find($iddropzone);
+
+        return view('cours.cours_details', compact('drop'));
     }
 }

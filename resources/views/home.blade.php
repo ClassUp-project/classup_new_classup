@@ -112,7 +112,7 @@
                           <ul class="list-none pl-4">
                             @foreach($idFile as $document)
                             <li class="list-group-item mt-8">
-                                <a class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-indigo-200 text-indigo-700 rounded-full" href="{{ route('download', Auth::user()->idutilisateur )}}" download="{{ $document->original }}">
+                                <a class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-indigo-200 text-indigo-700 rounded-full" href="{{ route('download', $document )}}" download="{{ $document->original }}">
                                     {{ Str::limit( $document->thumbnail, 35 )}}
                                 </a>
                                 <p class="text-gray-500 hover:text-gray-800">posté par : {{ $document->uploadForFile->prenom }} {{ $document->uploadForFile->nom }}</p>

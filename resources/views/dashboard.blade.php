@@ -80,7 +80,7 @@
                         <div class="rounded-full p-5 bg-indigo-600"><i class="fas fa-tasks fa-2x fa-inverse"></i></div>
                     </div>
                     <div class="flex-1 text-right md:text-center">
-                        <h2 class="font-bold uppercase text-gray-600">nbrs de documents partagés</h2>
+                        <h2 class="font-bold uppercase text-gray-600">nbrs de cours partagés</h2>
                         <p class="font-bold text-3xl">{{ $idFile->count() }}</p>
                     </div>
                 </div>
@@ -138,7 +138,7 @@
                 <div class="max-w-sm rounded overflow-hidden shadow-lg mt-10 ml-10" id="app">
                     <img class="w-full" src="/img/paper.jpg" alt="Sunset in the mountains">
                     <div class="px-6 py-4">
-                      <div class="font-bold text-xl mb-2">La liste de vos documents</div>
+                      <div class="font-bold text-xl mb-2">La liste de vos cours</div>
                       <ul class="list-none pl-4">
                         @foreach($idFile as $document)
                         <li class="list-group-item mt-8">
