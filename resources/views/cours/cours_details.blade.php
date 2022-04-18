@@ -51,12 +51,12 @@
 
 	<!--Title-->
 	<div class="text-center pt-16 md:pt-32">
-		<p class="text-sm md:text-base text-green-500 font-bold"> {{ now("Europe/Paris")->toDateString() }} <span class="text-gray-900">/</span> GETTING STARTED</p>
+		<p class="text-sm md:text-base text-green-500 font-bold"> {{ now("Europe/Paris")->toDateString() }} <span class="text-gray-900">/</span> C'EST PARTI !</p>
 		<h1 class="font-bold break-normal text-3xl md:text-5xl">{{ $drop->titre }}</h1>
 	</div>
 
 	<!--image-->
-	<div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded" style="background-image:url('https://source.unsplash.com/collection/1118905/'); height: 75vh;"></div>
+	<div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded" style="background-image:url('/img/mr-bean-triche.gif'); height: 75vh;"></div>
 
 	<!--Container-->
 	<div class="container max-w-5xl mx-auto -mt-32">
@@ -70,14 +70,17 @@
 
 				<!--Lead Para-->
 				<p class="text-2xl md:text-3xl mb-5">
-					👋 Welcome fellow <a class="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500" href="https://www.tailwindcss.com">Tailwind CSS</a> and <a class="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500" href="https://www.ghost.org">Ghost</a> fan.  This starter template is an attempt to replicate the default Ghost theme <a class="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500" href="https://demo.ghost.io/welcome">"Casper"</a> using Tailwind CSS and vanilla Javascript.
+					👋 Hello ! Suis le cours ci-dessous. Lis bien la description et jete un  oeil au document à télécharger si il y en a un.<br>
+                    Bon cours !
 				</p>
 
 				<p class="py-6">{{ $drop->description }}</p>
 
 				<blockquote class="border-l-4 border-green-500 italic my-8 pl-8 md:pl-12">
-                    Document joint au cours à consulter/télécharger<br><br>
-                    <a href="{{ route('download', $drop )}}" download="{{ $drop->original }}" {{ $drop->original }}">{{ $drop->original }}</a>
+                    Document joint au cours à consulter/télécharger :<br><br>
+                    <a href="{{ route('download', $drop )}}" download="{{ $drop->original }}" {{ $drop->original }}" class="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500">
+                        {{ $drop->original }}
+                    </a>
                 </blockquote>
 
                 <!--

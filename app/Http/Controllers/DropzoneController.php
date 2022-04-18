@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use App\Models\Dropzone;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Questionnaire;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 
@@ -32,6 +33,7 @@ class DropzoneController extends Controller
 
      public function store(Request $request){
 
+        $allowedfileExtension=['pdf','jpg','png','docx'];
 
         if($request->hasFile('file')){
 
@@ -44,11 +46,14 @@ class DropzoneController extends Controller
 
             $newFile = $filePath.'_'.time().'.'.$fileExt;
 
-            $path= $request->file('file')->storeAs('public/files', $newFile);
+            $check=in_array($fileExt, $allowedfileExtension);
+
+            if ($check) {
+                $path= $request->file('file')->storeAs('public/files', $newFile);
+            }
 
 
             Storage::disk('files')
-
                     ->put($file, $path);
 
                     //$filePath->move(storage_path('/files'), $newFile);
