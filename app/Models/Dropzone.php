@@ -34,7 +34,7 @@ class Dropzone extends Model
 
     public function path(){
 
-        return url('/cours' .$this->iddropzone. '-'. Str::slug($this->titre));
+        return url('/files' .$this->iddropzone. '-'. Str::slug($this->titre));
      }
 
 
