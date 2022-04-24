@@ -71,7 +71,7 @@
                                 <div class="font-bold text-xl mb-2">
                                     <a class="bg bg-green-200 p-1 rounded-lg" href="{{$questionnaire->publicPath()}}">{{$questionnaire->titre}}</a>
                                 </div>
-                                <p class="text-gray-500 hover:text-gray-800">posté par: {{ $questionnaire->user->prenom ?? none }} {{ $questionnaire->user->nom ?? none }}</p>
+                                <p class="text-gray-500 hover:text-gray-800">posté par: {{ $questionnaire->user->prenom }} {{ $questionnaire->user->nom }}</p>
                                 <small class="font-bold mt-4">Répondre au questionnaire | Partager l'url :</small>
                                 <p class="text-gray-700 text-base">
                                     <div class="bg-purple-100 p-1 rounded-lg mt-2">
@@ -103,7 +103,7 @@
                                 <div class="font-bold text-xl mb-2">
                                     <a class="bg bg-green-200 p-1 rounded-lg" href="{{$document->publicPath()}}">{{ $document->titre }}</a>
                                 </div>
-                                <p class="text-gray-500 hover:text-gray-800">posté par: {{ $document->uploadForFile->prenom ?? none }} {{ $document->uploadForFile->nom ?? none }}</p>
+                                <p class="text-gray-500 hover:text-gray-800">posté par: {{ $document->uploadForFile->prenom }} {{ $document->uploadForFile->nom }}</p>
                                 <small class="font-bold mt-4">Voir le cours | Partager l'url :</small>
                                 <p class="text-gray-700 text-base">
                                     <div class="bg-purple-100 p-1 rounded-lg mt-2">
