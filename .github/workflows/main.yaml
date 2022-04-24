@@ -23,4 +23,5 @@ jobs:
           "cd public_html/ &&
           git pull &&
           composer install &&
-          APP_DEBUG=false"
+          APP_DEBUG=false &&
+          APP_ENV=prod"
