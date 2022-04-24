@@ -18,6 +18,11 @@
         @endif
     </div>
 
+    <!--Title-->
+	<div class="text-center pt-16">
+		<h1 class="text-gray-600 md:text-5xl">Enregistrez votre cours</h1>
+	</div>
+
 
     <form action="{{route('images')}}" enctype='multipart/form-data' method="post" >
         @csrf
@@ -28,12 +33,13 @@
                 <div class="mb-6">
                     <label for="titre" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Titre</label>
                     <input type="text" name="titre" id="titre" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
-                  </div>
-                  <div class="mb-6">
+                </div>
+                <div class="mb-6">
                     <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Description</label>
-                    <textarea id="description" name="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Laissez une description..."></textarea>
-                  </div>
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Fichier <span class="required">*</span></label>
+                    <textarea id="description" name="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Donnez toutes les explications necessaires"></textarea>
+                </div>
+
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Fichier <span class="italic text-sm">optionnel</span></label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <input type='file' name='file' class="border border-indigo-500 text-indigo-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-indigo-600 focus:outline-none focus:shadow-outline">
 
@@ -41,6 +47,12 @@
                     <span class="errormsg text-danger">{{ $errors->first('file') }}</span>
                     @endif
                 </div>
+                <label class="bblock uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="questionnaire_idquestionnaire">Questionnaire à joindre</label>
+                                    <select name="questionnaire_idquestionnaire" id="questionnaire_idquestionnaire" class="form-select appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+                                        @foreach ( $questionnaire as $questionnaires )
+                                        <option value="{{ $questionnaires->idquestionnaire }}">{{ $questionnaires->titre }}</option>
+                                        @endforeach
+                                    </select>
                 <div class="content-center envoyer-fichier">
                     <div class="col-md-6">
                         <button type="submit" name="submit" value='Submit' class='border border-indigo-500 text-indigo-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-indigo-600 focus:outline-none focus:shadow-outline'>
@@ -65,9 +77,16 @@
             @foreach ($idFile as $item)
                 <div class="flex items-stretch bg-indigo-200 h-24 m-4">
                     <div class="flex-1 text-white text-center bg-indigo-400 px-4 py-2 m-2 ">
-                    <a href="{{ Route('download', $item->iddropzone)}}" download="{{ $item->original }}">
-                        {{ Str::limit( $item->thumbnail, 35 )}}
-                    </a>
+                    @if ($item->original)
+                        <a href="{{ Route('download', $item->iddropzone)}}" download="{{ $item->original }}">
+                            {{ Str::limit( $item->thumbnail, 35 )}}
+                        </a>
+                    @elseif (! $item->original)
+                        <a href="{{ Route('cours_details', $item->iddropzone)}}">
+                            {{ $item->titre }}
+                        </a>
+                    @endif
+
                     <form action="/images/{{ $item->iddropzone }}" method="post" >
                         @method('DELETE')
 

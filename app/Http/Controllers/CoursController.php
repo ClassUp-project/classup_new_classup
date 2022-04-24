@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Dropzone;
 use Illuminate\Http\Request;
-use Carbon\Carbon;
+use App\Models\Questionnaire;
 
 class CoursController extends Controller
 {
@@ -27,10 +28,15 @@ class CoursController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Dropzone $drop, $iddropzone)
+    public function show(Dropzone $drop, Questionnaire $questionnaire, $id)
     {
-        $drop = Dropzone::find($iddropzone);
+        $drop = Dropzone::find($id);
 
-        return view('cours.cours_details', compact('drop'));
+        $questionnaire = Dropzone::with('questionnaireid')->where('questionnaire_idquestionnaire')->get();
+        //dd($questionnaire);
+
+        return view('cours.cours_details', compact('drop', 'questionnaire'));
     }
+
+
 }

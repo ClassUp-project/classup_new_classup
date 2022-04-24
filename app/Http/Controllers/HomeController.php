@@ -35,7 +35,7 @@ class HomeController extends Controller
     public function index()
     {
 
-        $questionnaires = Questionnaire::with('user')->limit(4)->orderBy('idquestionnaire', 'desc')->get();
+        $questionnaires = Questionnaire::with('user')->orderBy('idquestionnaire', 'desc')->get();
 
         $idFile = Dropzone::with('uploadForFile')->limit(4)->orderBy('iddropzone', 'desc')->get();
 

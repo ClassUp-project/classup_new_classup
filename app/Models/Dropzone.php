@@ -19,6 +19,7 @@ class Dropzone extends Model
         'description',
         'original',
         'thumbnail',
+        'questionnaire_idquestionnaire',
         'utilisateur_idutilisateur',
     ];
 
@@ -55,6 +56,10 @@ class Dropzone extends Model
         return $this->belongsTo(Dashboard::class);
     }
 
+    public function questionnaireid()
+    {
+        return $this->belongsTo(Questionnaire::class, 'questionnaire_idquestionnaire');
+    }
 
 
 

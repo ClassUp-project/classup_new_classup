@@ -80,6 +80,11 @@ class Questionnaire extends Model
         return $this->belongsTo(Categories::class, 'categorie_idcategorie');
     }
 
+    public function drop()
+    {
+        return $this->belongsTo(Dropzone::class, 'questionnaire_idquestionnaire');
+    }
+
 
 
 

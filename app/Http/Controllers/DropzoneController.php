@@ -18,12 +18,13 @@ class DropzoneController extends Controller
          $this->middleware('auth');
       }
 
-    public function index(){
+    public function index(Questionnaire $questionnaire){
 
         $idFile = auth()->user()->imageFileUpload;
+        $questionnaire = auth()->user()->questionnaires;
 
 
-        return view('drop.uploadfile', compact('idFile'));
+        return view('drop.uploadfile', compact('idFile', 'questionnaire'));
 
 
      }
@@ -32,8 +33,6 @@ class DropzoneController extends Controller
 
 
      public function store(Request $request){
-
-        $allowedfileExtension=['pdf','jpg','png','docx'];
 
         if($request->hasFile('file')){
 
@@ -46,12 +45,7 @@ class DropzoneController extends Controller
 
             $newFile = $filePath.'_'.time().'.'.$fileExt;
 
-            $check=in_array($fileExt, $allowedfileExtension);
-
-            if ($check) {
-                $path= $request->file('file')->storeAs('public/files', $newFile);
-            }
-
+            $path = $request->file('file')->storeAs('public/files', $newFile);
 
             Storage::disk('files')
                     ->put($file, $path);
@@ -63,6 +57,7 @@ class DropzoneController extends Controller
                     'description' => $request->description,
                     'original'=>$path,
                     'thumbnail'=>$path,
+                    'questionnaire_idquestionnaire' => $request->questionnaire_idquestionnaire,
                     'utilisateur_idutilisateur' => auth()->user()->idutilisateur
 
                     ]);
@@ -70,7 +65,15 @@ class DropzoneController extends Controller
                     //$dropzone->auth()->user()->imageFileUpload()->save();
 
         }else{
-                $newFile = 'nofile.pdf';
+            Dropzone::create([
+                'titre' => $request->titre,
+                'description' => $request->description,
+                'original'=>$request->original,
+                'thumbnail'=>$request->thumbnail,
+                'questionnaire_idquestionnaire' => $request->questionnaire_idquestionnaire,
+                'utilisateur_idutilisateur' => auth()->user()->idutilisateur
+
+                ]);
             }
 
 

@@ -48,7 +48,7 @@
 
                         <a id="navigation-to-dashboard" href="/questionnaires/create" class="ml-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 pl-6 rounded-full button-tag-dashboard">Créez un nouveau questionnaire</a>
 
-                        <a id="navigation-to-dashboard" href="/images" class="ml-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 pl-6 rounded-full button-tag-dashboard">Ajouter des documents ou vidéo</a>
+                        <a id="navigation-to-dashboard" href="/images" class="ml-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 pl-6 rounded-full text-center button-tag-dashboard">Créer un cours</a>
 
                         <a id="navigation-to-dashboard" href="/resultat/create" class="ml-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 pl-6 rounded-full button-tag-dashboard">Entrer des résultats par élève</a>
 

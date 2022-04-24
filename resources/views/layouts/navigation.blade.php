@@ -19,7 +19,7 @@
                 <!--Home nav-->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
-                        {{ __('Questionnaires') }}
+                        {{ __('Les derniers posts') }}
                     </x-nav-link>
                 </div>
                 <!--Cours nav-->
@@ -82,7 +82,7 @@
         <!--Home nav-->
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
-                {{ __('Questionnaires') }}
+                {{ __('Les derniers posts') }}
             </x-responsive-nav-link>
         </div>
          <!--Cours nav-->
