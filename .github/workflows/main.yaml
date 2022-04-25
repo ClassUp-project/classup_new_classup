@@ -23,7 +23,5 @@ jobs:
           "cd public_html/ &&
           git pull &&
           composer install &&
-          npm install &&
-          npm update vue-loader
           APP_DEBUG=false &&
           APP_ENV=prod"
