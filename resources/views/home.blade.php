@@ -101,7 +101,7 @@
                             <img class="w-full" src="/img/questionnaire-en-ligne.jpg" alt="Mountain">
                             <div class="px-6 py-4">
                                 <div class="font-bold text-xl mb-2">
-                                    <a class="bg bg-green-200 p-1 rounded-lg" href="{{$document->publicPath()}}">{{ $document->titre }}</a>
+                                    <a class="bg bg-blue-200 p-1 rounded-lg" href="{{$document->publicPath()}}">{{ $document->titre }}</a>
                                 </div>
                                 <p class="text-gray-500 hover:text-gray-800">posté par: </p>
                                 <small class="font-bold mt-4">Voir le cours | Partager l'url :</small>
@@ -120,10 +120,15 @@
 
         </div>
 
-
-        <div class="flex justify-center mt-20 pb-20 button-return-home " >
-            <a id="navigation-to-dashboard" href="/dashboard" class="ml-40 bg-blue-500 text-white font-bold py-2 px-4 pl-6 mb-10 rounded-full">Retour à votre tableau de bord</a>
-        </div>
+        @if (Auth::user()->statut == 'professeur')
+            <div class="flex justify-center mt-20 pb-20 button-return-home " >
+                <a id="navigation-to-dashboard" href="/dashboard" class="ml-40" ><x-button>Retour à votre tableau de bord</x-button></a>
+            </div>
+        @else
+            <div class="flex justify-center mt-20 pb-20 button-return-home " >
+                <a id="navigation-to-dashboard" href="/cours" class="ml-40"><x-button>Voir tous les cours</x-button></a>
+            </div>
+        @endif
 
     </div>
 

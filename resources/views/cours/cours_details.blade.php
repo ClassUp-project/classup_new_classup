@@ -56,7 +56,14 @@
 	</div>
 
 	<!--image-->
-	<div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded" style="background-image:url('/img/mr-bean-triche.gif'); height: 75vh;"></div>
+	<div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 flex justify-center items-top rounded" style="background-image:url('/img/pexels-rodnae.jpg'); height: 75vh;">
+        <div class="absolute mt-10 text-center backdrop-filter backdrop-blur-xl rounded-lg">
+            <div class="px-6 py-4 text-4xl text-indigo-600 font-semibold">
+                La classe<br> de la semaine ! &#128512;
+            </div>
+            <span class="small">Mr Didier</span>
+        </div>
+    </div>
 
 	<!--Container-->
 	<div class="container max-w-5xl mx-auto -mt-32">
@@ -70,7 +77,7 @@
 
 				<!--Lead Para-->
 				<p class="text-2xl md:text-3xl mb-5">
-					👋 Hello ! Suis le cours ci-dessous. Lis bien la description et jete un  oeil au document à télécharger si il y en a un.<br>
+					👋 Suis le cours ci-dessous. Lis bien la description et jete un  oeil au document à télécharger si il y en a un.<br>
                     Bon cours !
 				</p>
 
@@ -90,7 +97,7 @@
                 <blockquote class="border-l-4 border-green-500 italic my-8 pl-8 md:pl-12">
                     Répondez à ce questionnaire :<br><br>
 					@if ($drop->questionnaire_idquestionnaire)
-                            <a class="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500" href="{{ $questionnaire->questionnaireid->publicPath() }}">{{ $questionnaire->questionnaireid->publicPath() }}</a>
+                            <a class="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500" href="{{ $drop->questionnaireid->publicPath() }}">{{ $drop->questionnaireid->proposition }}</a>
 					@else
 					  	Pas de questionnaire joint
 					@endif
