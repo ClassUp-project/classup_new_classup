@@ -28,14 +28,11 @@ class CoursController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Dropzone $drop, Questionnaire $questionnaire, $id)
+    public function show($id)
     {
-        $drop = Dropzone::find($id);
+        $drop = Dropzone::with('questionnaireid')->find($id);
 
-        $questionnaire = Dropzone::with('questionnaireid')->where('questionnaire_idquestionnaire')->get();
-        //dd($questionnaire);
-
-        return view('cours.cours_details', compact('drop', 'questionnaire'));
+        return view('cours.cours_details', compact('drop'));
     }
 
 

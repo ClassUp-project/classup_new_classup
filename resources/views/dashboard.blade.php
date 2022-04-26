@@ -109,24 +109,36 @@
                 <div class="max-w-sm rounded overflow-hidden shadow-lg mt-10 ml-10">
                     <img class="w-full" src="/img/questionnaire-en-ligne.jpg" alt="Sunset in the mountains">
                     <div class="px-6 py-4">
-                      <div class="font-bold text-xl mb-2">La liste de vos questionnaires</div>
+                      <div class="font-bold text-xl mb-2 text-center"><p>La liste de vos questionnaires</p></div>
                       <ul class="list-none pl-4 ">
                         @foreach($questionnaires as $questionnaire)
                         <li class="list-group-item mt-10 ">
                             <small class="font-bold">Voir les résultats au questionnaire :</small><a class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full" href="{{$questionnaire->path() }}">{{$questionnaire->titre}}</a>
                             <div class="mt-2">
+                                <div class="text-center">
+                                <small class="font-bold">Partager l'URL | Répondre </small>
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <button class="text-blue-500" onclick="copyToClipboard()" value="{{$questionnaire->publicPath()}}">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="margin-top: 10px; color:gray">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                                        </svg>
+                                    </button>
 
-                                <small class="font-bold">Répondre au questionnaire | Partager l'url</small>
-                                <p>
-                                    <a class="text-blue-500" href="{{$questionnaire->publicPath()}}">{{$questionnaire->publicPath()}}</a>
-                                </p>
-
+                                    <a class="text-blue-500" href="{{$questionnaire->publicPath()}}">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="margin-top: 10px; margin-left: 50px; color:gray">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
+                            <div class="flex justify-center align-content-center mt-6">
                             <form action="/dashboard/{{$questionnaire->idquestionnaire}}" method="post">
                                 @method('DELETE')
                                 @csrf
                                 <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold px-4 mt-2 rounded-full w-30 h-6" style="font-size: 12px;">Supprimer</button>
                             </form>
+                            </div>
                         </li>
                         <hr class="mt-4">
                         @endforeach
@@ -138,18 +150,19 @@
                 <div class="max-w-sm rounded overflow-hidden shadow-lg mt-10 ml-10" id="app">
                     <img class="w-full" src="/img/paper.jpg" alt="Sunset in the mountains">
                     <div class="px-6 py-4">
-                      <div class="font-bold text-xl mb-2">La liste de vos cours</div>
+                      <div class="font-bold text-xl mb-2">La liste de vos cours et documents</div>
                       <ul class="list-none pl-4">
                         @foreach($idFile as $document)
                         <li class="list-group-item mt-8">
-                            <p class="underline mb-4">{{ $document->titre }}</p>
+                            <a href="{{route('cours_details', $document->iddropzone)}}" class="underline mb-4 font-bold">{{ $document->titre }}</a>
+                            <p class="mt-4 italic">document attaché au cours :</p>
                             <a class="mt-5 text-blue-800 font-bold bg-purple-100 p-1 rounded-lg mt-2" href="{{ route('download', Auth::user()->idutilisateur )}}" download="{{ $document->original }}">
                                 {{ Str::limit( $document->thumbnail, 35 )}}
                             </a>
                             <form action="/filedelete/{{$document->iddropzone}}" method="post">
                                 @method('DELETE')
                                 @csrf
-                                <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold px-2 mt-2 rounded-full w-20 h-5" style="font-size: 12px;">Supprimer</button>
+                                <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold px-2 mt-4 rounded-full w-20 h-5" style="font-size: 12px;">Supprimer</button>
                             </form>
                         </li>
                         <hr class="mt-4">
@@ -162,7 +175,7 @@
                 <div class="max-w-sm rounded overflow-hidden shadow-lg mt-10 ml-10" id="app">
                     <img class="w-full" src="/img/board-note.jpg" alt="Sunset in the mountains">
                     <div class="px-6 py-4">
-                      <div class="font-bold text-xl mb-2">La liste des résultats</div>
+                      <div class="font-bold text-xl mb-2 text-center"><p>La liste des résultats</p></div>
                       <ul class="list-none pl-4">
                         @foreach($resultat as $resultats)
                         <li class="list-group-item mt-8">
@@ -189,4 +202,18 @@
         </div>
     </div>
 @endsection
+
+<script>
+    function copyToClipboard(text) {
+        var inputc = document.body.appendChild(document.createElement("input"));
+        inputc.value = "{{$questionnaire->publicPath()}}";
+        inputc.focus();
+        inputc.select();
+        inputc.setSelectionRange(0, 99999);
+        document.execCommand('copy');
+        inputc.parentNode.removeChild(inputc);
+        alert("le lien à été copié : " + inputc.value);
+    }
+</script>
+
 </x-app-layout>
