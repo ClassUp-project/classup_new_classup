@@ -32,9 +32,6 @@ class CoursController extends Controller
     {
         $drop = Dropzone::with('questionnaireid')->find($id);
 
-
-        //dd($questionnaire);
-
         return view('cours.cours_details', compact('drop'));
     }
 
