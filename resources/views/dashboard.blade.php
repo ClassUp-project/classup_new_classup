@@ -112,8 +112,10 @@
                       <div class="font-bold text-xl mb-2 text-center">La liste de vos questionnaires</div>
                       <ul class="list-none pl-4 ">
                         @foreach($questionnaires as $questionnaire)
-                        <li class="list-group-item mt-10 ">
+                        <li class="list-group-item mt-6 ">
+                            <div class="text-center">
                             <small class="font-bold">Voir les résultats au questionnaire :</small><a class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full" href="{{$questionnaire->path() }}">{{$questionnaire->titre}}</a>
+                            </div>
                             <div class="mt-2">
                                 <small class="font-bold">Partager l'URL | Répondre </small>
                                 <div class="flex items-center justify-center">
