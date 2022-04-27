@@ -46,11 +46,26 @@
 
                     <div class="grid grid-cols-3 divide-x divide-gray-400 mt-10 ml-48 p-8 ml-4 button-tag-dashboard-div-align">
 
-                        <a id="navigation-to-dashboard" href="/questionnaires/create" class="ml-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 pl-6 rounded-full button-tag-dashboard">Créez un nouveau questionnaire</a>
+                        <a id="navigation-to-dashboard" href="/questionnaire/create" class="bg-green-500 hover:bg-green-700 text-white ml-8 py-2 px-4 rounded inline-flex items-center button-tag-dashboard">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                            Créer un nouveau quiz
+                        </a>
 
-                        <a id="navigation-to-dashboard" href="/images" class="ml-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 pl-6 rounded-full text-center button-tag-dashboard">Créer un cours</a>
+                        <a id="navigation-to-dashboard" href="/images" class="bg-indigo-500 hover:bg-indigo-700 text-white py-2 px-4 rounded inline-flex ml-8 pl-6 items-center button-tag-dashboard">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                            Créer un cours
+                        </a>
 
-                        <a id="navigation-to-dashboard" href="/resultat/create" class="ml-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 pl-6 rounded-full button-tag-dashboard">Entrer des résultats par élève</a>
+                        <a id="navigation-to-dashboard" href="/resultat/create" class="bg-pink-500 hover:bg-pink-700 text-white py-2 px-4 rounded inline-flex ml-8 pl-6 items-center button-tag-dashboard">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                            Entre un résultat élève
+                        </a>
 
                     </div>
 
@@ -116,10 +131,10 @@
                             <div class="text-center">
                             <small class="font-bold">Voir les résultats au questionnaire :</small><a class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full" href="{{$questionnaire->path() }}">{{$questionnaire->titre}}</a>
                             </div>
-                            <div class="mt-2">
+                            <div class="mt-2 text-center">
                                 <small class="font-bold">Partager l'URL | Répondre </small>
                                 <div class="flex items-center justify-center">
-                                    <button class="text-blue-500" onclick="copyToClipboard()" value="{{$questionnaire->publicPath()}}">
+                                    <button url-site="{{$questionnaire->publicPath()}}" data-bs-original-title="Copy Url" class="btn text-blue-500 link-copy">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="margin-top: 10px; color:gray">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                                         </svg>
@@ -133,11 +148,13 @@
                                 </div>
                             </div>
 
+                            <div class="flex items-center justify-center mt-6">
                             <form action="/dashboard/{{$questionnaire->idquestionnaire}}" method="post">
                                 @method('DELETE')
                                 @csrf
                                 <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold px-4 mt-2 rounded-full w-30 h-6" style="font-size: 12px;">Supprimer</button>
                             </form>
+                            </div>
                         </li>
                         <hr class="mt-4">
                         @endforeach
@@ -202,17 +219,6 @@
     </div>
 @endsection
 
-<script>
-    function copyToClipboard(text) {
-        var inputc = document.body.appendChild(document.createElement("input"));
-        inputc.value = "{{$questionnaire->publicPath()}}";
-        inputc.focus();
-        inputc.select();
-        inputc.setSelectionRange(0, 99999);
-        document.execCommand('copy');
-        inputc.parentNode.removeChild(inputc);
-        alert("le lien à été copié : " + inputc.value);
-    }
-</script>
+<script src="{{asset('js/share_link.js')}}"></script>
 
 </x-app-layout>
