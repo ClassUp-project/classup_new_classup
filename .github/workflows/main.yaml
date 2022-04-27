@@ -23,6 +23,5 @@ jobs:
           "cd public_html/ &&
           git pull &&
           composer install &&
-          npm install clipboard --save &&
           APP_DEBUG=false &&
           APP_ENV=prod"
