@@ -48,7 +48,7 @@
                     @endif
                 </div>
                 <label class="bblock uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="questionnaire_idquestionnaire">Questionnaire à joindre</label>
-                                    <select name="questionnaire_idquestionnaire" id="questionnaire_idquestionnaire" class="form-select appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+                                    <select name="questionnaire_idquestionnaire" id="questionnaire_idquestionnaire" class="form-select appearance-none block w-full bg-gray-200 text-gray-700 border border-blue-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
                                         @foreach ( $questionnaire as $questionnaires )
                                         <option value="{{ $questionnaires->idquestionnaire }}">{{ $questionnaires->titre }}</option>
                                         @endforeach

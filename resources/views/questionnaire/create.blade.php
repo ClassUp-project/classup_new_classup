@@ -18,8 +18,8 @@
                         <form action="/questionnaires" method="post">
                             @csrf
                             <div class="flex flex-wrap -mx-3 mb-6">
-                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for=titre">Titre</label>
-                                <input name="titre" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="titre" aria-describedby="titreHelp" placeholder="Entrer un Titre">
+                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="titre">Titre</label>
+                                <input name="titre" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-green-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="titre" aria-describedby="titreHelp" placeholder="Entrer un Titre">
                                 <small id="titleHelp" class="form-text text-muted">Donnez à votre questionnaire un titre qui attire l'attention.</small>
                                 @error('titre')
                             <small class="text-danger">{{ $message}}</small>
@@ -29,7 +29,7 @@
 
                             <div class="flex flex-wrap -mx-3 mb-6">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="proposition">L'objet</label>
-                                <input name="proposition" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="proposition" aria-describedby="propositionHelp" placeholder="Entrer un objet">
+                                <input name="proposition" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-green-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="proposition" aria-describedby="propositionHelp" placeholder="Entrer un objet">
                                 <small id="propositionHelp" class="form-text text-muted">donner un objet a la question.</small>
 
                                 @error('proposition')
@@ -40,7 +40,7 @@
 
                             <div class="flex flex-wrap -mx-3 mb-6">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="description">La description</label>
-                                <textarea name="description" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="description" aria-describedby="descriptionHelp" placeholder="Entrer une description"></textarea>
+                                <textarea name="description" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-green-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="description" aria-describedby="descriptionHelp" placeholder="Entrer une description"></textarea>
                                 <small id="descriptionHelp" class="form-text text-muted">de quel sujet traite le questionnaire.</small>
 
                                 @error('description')
@@ -51,7 +51,7 @@
 
                             <div class="flex flex-wrap -mx-3 mb-6">
                                 <label class="bblock uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="categorie_idcategorie">La catégorie</label>
-                                    <select name="categorie_idcategorie" class="form-select appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+                                    <select name="categorie_idcategorie" class="form-select appearance-none block w-full bg-gray-200 text-gray-700 border border-green-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
                                         @foreach ( $categories as $categorie )
                                         <option value="{{ $categorie->idcategorie }}">{{ $categorie->name }}</option>
                                         @endforeach

@@ -73,19 +73,24 @@
                                                             <div class="mt-2">
                                                                 <hr>
 
-                                                                    <div class="flex items-center justify-center">
-                                                                    <button class="text-blue-500" onclick="copyToClipboard()" value="{{$questionnaire->publicPath()}}">
-                                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="margin-top: 10px; color:gray">
-                                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                                                                        </svg>
-                                                                    </button>
-
-                                                                    <a class="text-blue-500" href="{{$questionnaire->publicPath()}}">
-                                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="margin-top: 10px; margin-left: 50px; color:gray">
-                                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                                                                        </svg>
-                                                                    </a>
+                                                                <div class="mt-2">
+                                                                    <div class="text-center">
+                                                                    <small class="font-bold">Partager l'URL | Répondre </small>
                                                                     </div>
+                                                                    <div class="flex items-center justify-center" role="success">
+                                                                        <button url-site="{{$questionnaire->publicPath()}}" data-bs-original-title="Copy Url" class="btn text-blue-500 link-copy">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="margin-top: 10px; color:gray">
+                                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                                                                            </svg>
+                                                                        </button>
+                                    
+                                                                        <a class="text-blue-500" href="{{$questionnaire->publicPath()}}">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="margin-top: 10px; margin-left: 50px; color:gray">
+                                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                                                            </svg>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                 </div>
 
@@ -110,15 +115,6 @@
         </div>
     @endsection
 
-    <script>
-        function copyToClipboard(text) {
-            var inputc = document.body.appendChild(document.createElement("input"));
-            inputc.value = "{{$questionnaire->publicPath()}}" ;
-            inputc.focus();
-            inputc.select();
-            document.execCommand('copy');
-            alert("le lien à été copié : " + inputc.value);
-        }
-    </script>
+    <script src="{{asset('js/share_link.js')}}"></script>
 
 </x-app-layout>

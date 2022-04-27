@@ -20,7 +20,7 @@
                             @csrf
                             <div class="flex flex-wrap -mx-3 mb-6">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for=nom">nom- prenom</label>
-                                <input name="nom" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="nom" aria-describedby="nomHelp" placeholder="Entrez un nom">
+                                <input name="nom" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-blue-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="nom" aria-describedby="nomHelp" placeholder="Entrez un nom">
                                 <small id="titleHelp" class="form-text text-muted">Quel est le nom de votre élève</small>
                                 @error('nom')
                             <small class="text-danger">{{ $message}}</small>
@@ -30,7 +30,7 @@
 
                             <div class="flex flex-wrap -mx-3 mb-6">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="note">note</label>
-                                <input name="note" type="note" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="note" aria-describedby="noteHelp" placeholder="donnez une note ou une apreciation">
+                                <input name="note" type="note" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-blue-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="note" aria-describedby="noteHelp" placeholder="donnez une note ou une apreciation">
                                 <small id="noteHelp" class="form-text text-muted">Vous pouvez entrer une note ou simplement une appreciation</small>
 
                                 @error('note')
