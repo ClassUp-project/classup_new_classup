@@ -9,6 +9,13 @@ module.exports = {
         './resources/views/**/*.blade.php',
     ],
 
+    content: [
+        "./resources/**/*.blade.php",
+        "./resources/**/*.js",
+        "./resources/**/*.vue",
+        "./node_modules/flowbite/**/*.js"
+    ],
+
     theme: {
         extend: {
             fontFamily: {
@@ -23,5 +30,5 @@ module.exports = {
         },
     },
 
-    plugins: [require('@tailwindcss/forms')],
+    plugins: [require('@tailwindcss/forms'), ('flowbite/plugin')],
 };

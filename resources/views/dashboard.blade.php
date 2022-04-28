@@ -134,7 +134,7 @@
                             <div class="mt-2 text-center">
                                 <small class="font-bold">Partager l'URL | Répondre </small>
                                 <div class="flex items-center justify-center">
-                                    <button url-site="{{$questionnaire->publicPath()}}" data-bs-original-title="Copy Url" class="btn text-blue-500 link-copy">
+                                    <button url-site="{{$questionnaire->publicPath()}}" onclick="share()" data-bs-original-title="Copy Url" data-clipboard-text="c'est copié !" class="text-blue-500 link-copy" >
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="margin-top: 10px; color:gray">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                                         </svg>
@@ -220,5 +220,14 @@
 @endsection
 
 <script src="{{asset('js/share_link.js')}}"></script>
+
+<script>
+    function share(){
+        swal({
+            title: "Copié !",
+            icon: "success",
+        });
+    }
+</script>
 
 </x-app-layout>
