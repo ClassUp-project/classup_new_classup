@@ -58,7 +58,7 @@ class Dropzone extends Model
 
     public function questionnaireid()
     {
-        return $this->hasMany(Questionnaire::class, 'idquestionnaire');
+        return $this->belongsTo(Questionnaire::class, 'questionnaire_idquestionnaire');
     }
 
 

@@ -82,7 +82,7 @@ class Questionnaire extends Model
 
     public function drop()
     {
-        return $this->belongsTo(Dropzone::class);
+        return $this->hasMany(Dropzone::class);
     }
 
 
