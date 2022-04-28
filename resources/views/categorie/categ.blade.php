@@ -78,7 +78,7 @@
                                                                     <small class="font-bold">Partager l'URL | Répondre </small>
                                                                     </div>
                                                                     <div class="flex items-center justify-center" role="success">
-                                                                        <button url-site="{{$questionnaire->publicPath()}}" data-bs-original-title="Copy Url" class="btn text-blue-500 link-copy">
+                                                                        <button onclick="share()" url-site="{{$questionnaire->publicPath()}}" data-bs-original-title="Copy Url" class="btn text-blue-500 link-copy">
                                                                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="margin-top: 10px; color:gray">
                                                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                                                                             </svg>
@@ -116,5 +116,7 @@
     @endsection
 
     <script src="{{asset('js/share_link.js')}}"></script>
+
+    <script src="{{asset('js/alert.js')}}"></script>
 
 </x-app-layout>

@@ -221,13 +221,6 @@
 
 <script src="{{asset('js/share_link.js')}}"></script>
 
-<script>
-    function share(){
-        swal({
-            title: "Copié !",
-            icon: "success",
-        });
-    }
-</script>
+<script src="{{asset('js/alert.js')}}"></script>
 
 </x-app-layout>
