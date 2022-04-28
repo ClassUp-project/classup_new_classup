@@ -42,9 +42,11 @@ class NewQuestionnaire extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
+                    ->subject('Nouveau questionnaire disponible !')
+                    ->greeting('Salut' , $this->newQuestionnaire['prenom'])
+                    ->line('Un nouveau quiz vient d\'être publié. Consulte le !')
                     ->line($this->newQuestionnaire['body'])
-                    ->action($this->newQuestionnaire['actionText'], $this->newQuestionnaire['Url'])
-                    ->line($this->newQuestionnaire['Consultez le questionnaire']);
+                    ->action($this->newQuestionnaire['actionText'], $this->newQuestionnaire['Url']);
     }
 
     /**
