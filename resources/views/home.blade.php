@@ -98,7 +98,7 @@
                             <!--Card 1-->
 
                             <div class="max-w-sm w-max rounded shadow-lg">
-                            <img class="w-full" src="/img/questionnaire-en-ligne.jpg" alt="Mountain">
+                            <img class="w-full" src="/img/header.png" alt="Mountain">
                             <div class="px-6 py-4">
                                 <div class="font-bold text-xl mb-2">
                                     <a class="bg bg-blue-200 p-1 rounded-lg" href="{{$document->publicPath()}}">{{ $document->titre }}</a>
