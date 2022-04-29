@@ -109,4 +109,9 @@ Route::get('/cours', 'App\Http\Controllers\CoursController@index')->name('cours'
 Route::get('/cours_details/{iddropzone}', 'App\Http\Controllers\CoursController@show')->name('cours_details');
 
 
-
+/**
+* Verification Routes
+*/
+Route::get('/email/verify', 'App\Http\Controllers\Auth\VerificationController@show')->name('verification.notice');
+Route::get('/email/verify/{id}/{hash}', 'App\Http\Controllers\Auth\VerificationController@verify')->name('verification.verify')->middleware(['signed']);
+Route::post('/email/resend', 'App\Http\Controllers\Auth\VerificationController@resend')->name('verification.resend');

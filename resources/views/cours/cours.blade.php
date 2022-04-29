@@ -36,7 +36,7 @@
                 <p class="text-gray-700 text-base">
                     <p>{{ Str::limit( $cours->description, 150 ) }}</p>
                     <div class="bg-purple-100 p-1 rounded-lg mt-2">
-                    <a href="" class="text-blue-500 hover:text-blue-700">{{ Str::limit( $cours->thumbnail, 35 ) }}</a>
+                    <a href="{{ route('download', $cours )}}" download="{{ $cours->original }}" class="text-blue-500 hover:text-blue-700">{{ Str::limit( $cours->thumbnail, 35 ) }}</a>
                     </div>
                 </p>
             </div>
