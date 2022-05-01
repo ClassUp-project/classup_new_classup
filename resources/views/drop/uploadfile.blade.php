@@ -5,6 +5,7 @@
             {{ __('Chargez vos fichiers ici') }} &#128071;
         </h2>
     </x-slot>
+@section('content')
 
     <div class="fixed flex items-center justify-center mt-20 alert-upload-file">
         @if(Session::has('success'))
@@ -98,6 +99,7 @@
                 </div>
             @endforeach
         </div>
+@endsection
 
 
 </x-app-layout>
