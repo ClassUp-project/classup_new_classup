@@ -76,6 +76,18 @@
                         @endif
                     </div>
 
+                    <div class="w-full px-3{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Captcha</label>
+                        <div class="col-md-6 pull-center">
+                        {!! app('captcha')->display() !!}
+                        @if ($errors->has('g-recaptcha-response'))
+                        <span class="help-block">
+                        <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                        </span>
+                        @endif
+                        </div>
+                    </div>
+
                     </div>
 
                     <div class="md:flex md:items-center">
