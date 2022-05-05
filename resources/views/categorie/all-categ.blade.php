@@ -31,12 +31,7 @@
                     <div class="bg-pink-400 w-3/4 h-full rounded-lg shadow-md"></div>
                 </div>
                 </div>
-            <h3 class="text-xs uppercase">Current lesson:</h3>
-                <h2 class="tracking-wide">
-                Object in JavaScript
-                <br />
-                (Challenge)
-                </h2>
+            <h3 class="text-xs uppercase">Toutes les leçons</h3>
             <a class="a-categ-all" href="/categ/{{ $allcategs->idcategorie }}">
             <button class="bg-green-400 py-3 px-8 mt-4 mb-4 rounded text-sm font-semibold hover:bg-opacity-75">Go to lesson</button>
             </a>
