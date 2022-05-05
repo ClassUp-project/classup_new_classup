@@ -188701,6 +188701,14 @@ select {
         margin-left: -40px;
        }
 
+       .div-card-categ{
+        display: grid;
+        grid-template-columns:auto;
+        justify-content: center;
+        margin-left: 0px;
+        margin-right:0px;
+        }
+
        /**
         * SHOW QUESTIONNAIRE
         */

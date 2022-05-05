@@ -8,7 +8,7 @@
 
     @section('content')
 
-    <div class="justify-left items-center bg-gray-100 h-0 allcateg-return">
+    <div class="flex justify-left items-center bg-gray-200 h-full allcateg-return-categ">
         <a href="{{ route('home') }}">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: royalblue; margin-left: 50px;">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -16,7 +16,7 @@
         </a>
     </div>
 
-        <div class="bg-yellow-50 grid grid-cols-3 gap-4 content-start justify-center items-center mt-20 div-card-home">
+        <div class="bg-yellow-50 grid grid-cols-3 gap-4 content-start justify-center items-center div-card-categ">
          @foreach ( $allcateg as  $allcategs )
         <div class="bg-white p-10 rounded-lg shadow-md px-3 py-1 m-6">
             <h1 class="text-xl font-bold">Jump back in!</h1>
@@ -38,7 +38,7 @@
                 (Challenge)
                 </h2>
             <a class="a-categ-all" href="/categ/{{ $allcategs->idcategorie }}">
-            <button class="bg-green-400 py-3 px-8 mt-4 rounded text-sm font-semibold hover:bg-opacity-75">Go to lesson</button>
+            <button class="bg-green-400 py-3 px-8 mt-4 mb-4 rounded text-sm font-semibold hover:bg-opacity-75">Go to lesson</button>
             </a>
         </div>
         @endforeach
