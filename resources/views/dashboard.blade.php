@@ -3,8 +3,6 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }} &#128187;
         </h2>
-
-
         <div class="alert-toast float-right" role="alert">
             <input type="checkbox" class="hidden" id="footertoast">
             <label class="close cursor-pointer flex items-start justify-between w-full bg-indigo-200 border-t-4 border-indigo-400 rounded-b text-teal-900 px-4 py-1 shadow-md w-80 h-10 rounded shadow-lg text-white label-alert" title="close" for="footertoast">
@@ -29,7 +27,7 @@
             <div class="display-flex justify-center text-left ml-80 title-dashboard">
                 <h1 class="text-xl font-bold ">Votre espace personnel de gestion<br> de vos cours</h1>
             </div>
-        
+
 
 
 
@@ -140,7 +138,7 @@
                                             <div class="mt-2 text-center">
                                                 <small class="font-bold">Partager l'URL | Répondre </small>
                                                 <div class="flex items-center justify-center">
-                                                    <button url-site="{{$questionnaire->publicPath()}}" onclick="share()" data-bs-original-title="Copy Url" data-clipboard-text="c'est copié !" class="text-blue-500 link-copy" >
+                                                    <button onclick="share()" role="tooltip" id="tooltipButton" type="button" url-site="{{$questionnaire->publicPath()}}" data-bs-original-title="Copy Url" data-clipboard-text="c'est copié !" class="btn text-blue-500 link-copy" >
                                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="margin-top: 10px; color:gray">
                                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                                                         </svg>
@@ -234,8 +232,8 @@
 </div>
 @endsection
 
-<script src="{{asset('js/share_link.js')}}"></script>
-
-<script src="{{asset('js/alert.js')}}"></script>
-
 </x-app-layout>
+
+<script src="{{asset('js/share_link.js')}}" type="text/javascript"></script>
+
+<script src="{{asset('js/alert.js')}}" type="text/javascript"></script>

@@ -83,7 +83,7 @@
                                                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                                                                             </svg>
                                                                         </button>
-                                    
+
                                                                         <a class="text-blue-500" href="{{$questionnaire->publicPath()}}">
                                                                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="margin-top: 10px; margin-left: 50px; color:gray">
                                                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
@@ -115,8 +115,8 @@
         </div>
     @endsection
 
-    <script src="{{asset('js/share_link.js')}}"></script>
-
-    <script src="{{asset('js/alert.js')}}"></script>
-
 </x-app-layout>
+
+<script src="{{asset('js/share_link.js')}}"></script>
+
+<script src="{{asset('js/alert.js')}}"></script>
