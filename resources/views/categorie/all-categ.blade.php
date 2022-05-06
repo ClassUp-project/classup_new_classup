@@ -8,7 +8,7 @@
 
     @section('content')
 
-    <div class="flex justify-left items-center bg-gray-200 h-full allcateg-return-categ">
+    <div class="flex justify-left items-center bg-gray-200 h-full allcateg-return-categ relative shadow-lg">
         <a href="{{ route('home') }}">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: royalblue; margin-left: 50px;">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -26,14 +26,14 @@
                 </h3>
             </a>
                 <div class="mt-4 mb-10">
-                <p class="text-gray-600">Course 75% completed</p>
+                <p class="text-gray-600">Nombre de cours :</p>
                 <div class="bg-gray-400 w-64 h-3 rounded-lg mt-2 overflow-hidden">
                     <div class="bg-pink-400 w-3/4 h-full rounded-lg shadow-md"></div>
                 </div>
                 </div>
             <h3 class="text-xs uppercase">Toutes les leçons</h3>
             <a class="a-categ-all" href="/categ/{{ $allcategs->idcategorie }}">
-            <button class="bg-green-400 py-3 px-8 mt-4 mb-4 rounded text-sm font-semibold hover:bg-opacity-75">Go to lesson</button>
+            <button class="bg-purple-400 py-3 px-8 mt-4 mb-4 rounded text-sm text-white font-semibold hover:bg-opacity-75">Go to lesson</button>
             </a>
         </div>
         @endforeach
