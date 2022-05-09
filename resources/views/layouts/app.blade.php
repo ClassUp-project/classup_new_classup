@@ -6,6 +6,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
+        @laravelPWA
 
         <!--font awsome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/fontawesome.min.css" />
@@ -15,7 +16,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <link rel="manifest" href="./manifest.json">
+        <link rel="manifest" href="{{asset('manifest.json')}}">
         <!-- favicon -->
         <link rel="shortcut icon" href="{{ asset('img/classuplogo.png') }}">
         <style>
@@ -27,13 +28,29 @@
         <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-        @laravelPWA
+        <!-- Add to homescreen for Chrome on Android -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="PWA">
+        <link rel="icon" sizes="512x512" href="/images/icons/icon-512x512.png">
 
-        <script src="{{ asset('/serviceworker.js') }}"></script>
-        <script>
-            if (!navigator.serviceWorker.controller) {
-                navigator.serviceWorker.register("/serviceworker.js").then(function (reg) {
-                    console.log("Service worker has been registered for scope: " + reg.scope);
+        <!-- Add to homescreen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="PWA">
+        <link rel="apple-touch-icon" href="/images/icons/icon-512x512.png">
+
+        <script src="{{ asset('serviceworker.js') }}"></script>
+        <script type="text/javascript">
+            // Initialize the service worker
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/serviceworker.js', {
+                    scope: '.'
+                }).then(function (registration) {
+                    // Registration was successful
+                    console.log('Laravel PWA: ServiceWorker registration successful with scope: ', registration.scope);
+                }, function (err) {
+                    // registration failed :(
+                    console.log('Laravel PWA: ServiceWorker registration failed: ', err);
                 });
             }
         </script>
