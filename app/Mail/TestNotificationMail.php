@@ -33,6 +33,6 @@ class TestNotificationMail extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.notification-mail');
+        return $this->markdown('emails.notification-mail');
     }
 }

@@ -96,7 +96,9 @@ class RegisterController extends Controller
 
         //event(new Registered($user));
 
-        $post = ['title'=>'Bienvenue sur Class\'Up'];
+        $post = ['title'=>'Bienvenue sur Class\'Up',
+                 'url'=>'https://classup.tech',
+                ];
 
         $user->notify(new UserRegistreredNotification($user,$post));
 
