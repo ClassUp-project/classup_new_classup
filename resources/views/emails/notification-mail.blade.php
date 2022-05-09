@@ -43,7 +43,7 @@
         Merci pour ton inscription {{$user->prenom}}!
     </h1>
     <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">
-        Class'Up t'aide à réviser facilement tes cours et tes matières en te permattant de répondre à de cours questionniares, regarder des vidéos sur le sujet et lire des documents.
+        Class'Up t'aide à réviser facilement tes cours et tes matières en te permattant de répondre à des questionnaires, regarder des vidéos sur le sujet et lire des documents.
     </p>
     <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">
         Tu peux aussi tester tes ami.e.s en postant tes propres quiz!
