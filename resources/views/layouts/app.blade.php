@@ -28,17 +28,6 @@
         <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-        <!-- Add to homescreen for Chrome on Android -->
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="application-name" content="PWA">
-        <link rel="icon" sizes="512x512" href="/images/icons/icon-512x512.png">
-
-        <!-- Add to homescreen for Safari on iOS -->
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="PWA">
-        <link rel="apple-touch-icon" href="/images/icons/icon-512x512.png">
-
         <script src="{{ asset('serviceworker.js') }}"></script>
         <script type="text/javascript">
             // Initialize the service worker
