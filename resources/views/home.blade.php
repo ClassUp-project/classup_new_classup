@@ -56,13 +56,13 @@
             </div>
 
 
-            <div class="flex flex-col bg-white m-auto p-auto mt-10">
+            <div class="flex flex-col bg-yellow-50 m-auto p-auto mt-10">
                 <h1 class="flex py-5 lg:px-20 md:px-10 px-5 lg:mx-40 md:mx-20 mx-5 font-bold text-4xl text-gray-800">
                     Les derniers questionnaires
                 </h1>
                 <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
                     @foreach($questionnaires as $questionnaire)
-                    <div class="flex flex-nowrap lg:ml-20 md:ml-20 ml-10 ">
+                    <div class="flex flex-nowrap lg:ml-20 md:ml-20 ml-10 bg-white">
                             <!--Card 1-->
 
                             <div class="max-w-sm w-max rounded shadow-lg">
@@ -88,13 +88,13 @@
 
             <hr class="mt-20 mb-20">
 
-            <div class="flex flex-col bg-white m-auto p-auto mt-10">
+            <div class="flex flex-col bg-yellow-50 m-auto p-auto mt-10">
                 <h1 class="flex py-5 lg:px-20 md:px-10 px-5 lg:mx-40 md:mx-20 mx-5 font-bold text-4xl text-gray-800">
                     La liste des derniers cours
                 </h1>
                 <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
                     @foreach($idFile as $document)
-                    <div class="flex flex-nowrap lg:ml-20 md:ml-20 ml-10 ">
+                    <div class="flex flex-nowrap lg:ml-20 md:ml-20 ml-10 bg-white">
                             <!--Card 1-->
 
                             <div class="max-w-sm w-max rounded shadow-lg">

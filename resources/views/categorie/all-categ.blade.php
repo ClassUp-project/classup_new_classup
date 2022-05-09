@@ -26,14 +26,14 @@
                 </h3>
             </a>
                 <div class="mt-4 mb-10">
-                <p class="text-gray-600">Nombre de cours :</p>
+                <p class="text-gray-600">Nombre de quiz :</p>
                 <div class="bg-gray-400 w-64 h-3 rounded-lg mt-2 overflow-hidden">
                     <div class="bg-pink-400 w-3/4 h-full rounded-lg shadow-md"></div>
                 </div>
                 </div>
             <h3 class="text-xs uppercase">Toutes les leçons</h3>
             <a class="a-categ-all" href="/categ/{{ $allcategs->idcategorie }}">
-            <button class="bg-purple-400 py-3 px-8 mt-4 mb-4 rounded text-sm text-white font-semibold hover:bg-opacity-75">Go to lesson</button>
+            <button class="bg-purple-400 py-3 px-8 mt-4 mb-4 rounded text-sm text-white font-semibold hover:bg-opacity-75">Aller aux quiz</button>
             </a>
         </div>
         @endforeach
