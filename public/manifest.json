@@ -1,0 +1,37 @@
+{
+    "short_name": "ClassUp",
+    "name": "ClassUp",
+    "description": "New school",
+    "icons": [
+        {
+            "src": "images/icons/classuplogo.PNG",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "images/icons/classuplogo.PNG",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "images/icons/classuplogo.PNG",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "images/icons/classuplogo.PNG",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "images/icons/classuplogo.PNG",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "./?utm_source=web_app_manifest",
+    "display": "standalone",
+    "orientation": "portrait",
+    "theme_color": "#29BDBB",
+    "background_color": "#29BDBB"
+}
