@@ -26,7 +26,7 @@
         <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-
+        @laravelPWA
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
