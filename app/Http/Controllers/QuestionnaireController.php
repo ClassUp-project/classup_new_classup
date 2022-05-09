@@ -58,7 +58,7 @@ class QuestionnaireController extends Controller
             'Consultez le questionnaire' => 'Consultez le questionnaire'
         ];
      }
-        
+
         Notification::send($questionnaireSend, new NewQuestionnaire($newQuestionnaire));
 
     return view('questionnaire.show', compact('questionnaire'));
