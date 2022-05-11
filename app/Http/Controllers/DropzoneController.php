@@ -77,7 +77,7 @@ class DropzoneController extends Controller
             }
 
 
-        return redirect('/images')->with('success','Bien reçu!');
+        return redirect('/telechargement')->with('success','Bien reçu!');
 
 
      }

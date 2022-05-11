@@ -25,7 +25,7 @@
 	</div>
 
 
-    <form action="{{route('images')}}" enctype='multipart/form-data' method="post" >
+    <form action="{{route('telechargement')}}" enctype='multipart/form-data' method="post" >
         @csrf
 
         <div class="flex items-center justify-center mt-40 upload-file">

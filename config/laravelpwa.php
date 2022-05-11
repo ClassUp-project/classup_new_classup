@@ -5,7 +5,7 @@ return [
     'manifest' => [
         'name' => env('APP_NAME', 'ClassUp'),
         'short_name' => 'PWA',
-        'start_url' => '/',
+        'start_url' => '/home',
         'background_color' => '#ffffff',
         'theme_color' => '#000000',
         'display' => 'standalone',
@@ -70,7 +70,7 @@ return [
             [
                 'name' => 'Shortcut Link 2',
                 'description' => 'Shortcut Link 2 Description',
-                'url' => '/'
+                'url' => '/home'
             ]
         ],
         'custom' => []
