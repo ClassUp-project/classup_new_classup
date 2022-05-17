@@ -752,7 +752,7 @@
               <p class="text-gray-600 text-base px-6 mb-5">
                 Choisis ta matière.<br />
                 Choisie ton niveau. <br />
-                Tu peux aussi répondre aux derniers quiz qui postés.<br />
+                Tu peux aussi répondre aux derniers quiz qui sont postés.<br />
 
               </p>
             </a>
