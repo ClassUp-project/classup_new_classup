@@ -73,7 +73,7 @@ Route::get('/matières/{matiere}', 'App\Http\Controllers\MatiereController@show'
 Route::get('/telechargement', 'App\Http\Controllers\DropzoneController@index')->middleware(['auth'])->name('telechargement');
 Route::post('/telechargement','App\Http\Controllers\DropzoneController@store')->name('telechargement');
 //Route::get('/download/{iddropzone}','App\Http\Controllers\DropzoneController@store');
-Route::delete('/images/{imageUpload}', 'App\Http\Controllers\DropzoneController@destroy');
+Route::delete('/telechargement/{imageUpload}', 'App\Http\Controllers\DropzoneController@destroy');
 
 //download des documents home.blade
 Route::get('/download/{iddropzone}/download','App\Http\Controllers\HomeController@download')->name('download');

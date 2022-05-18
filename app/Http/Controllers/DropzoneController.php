@@ -114,7 +114,7 @@ class DropzoneController extends Controller
             $imageUpload->delete();
 
             //redirect
-            return redirect('/images');
+            return redirect('/telechargement');
 
 
         }
