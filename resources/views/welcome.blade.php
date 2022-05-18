@@ -178,7 +178,7 @@
         <!--buy me a coffe-->
         <div class="flex justify-center mt-3">
             <a href="https://www.buymeacoffee.com/classup" target="_blank">
-                <img  src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=classup&button_colour=5F7FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" />
+                <img style="width: 200px" src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=classup&button_colour=5F7FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" />
             </a>
         </div>
 
