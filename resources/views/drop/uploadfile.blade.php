@@ -30,7 +30,7 @@
 
         <div class="flex items-center justify-center mt-40 upload-file">
 
-            <div class="content-center">
+            <div class="content-center form-telechargement">
                 <div class="mb-6">
                     <label for="titre" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Titre</label>
                     <input type="text" name="titre" id="titre" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
@@ -41,8 +41,8 @@
                 </div>
 
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Fichier <span class="italic text-sm">optionnel</span></label>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <input type='file' name='file' class="border border-indigo-500 text-indigo-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-indigo-600 focus:outline-none focus:shadow-outline">
+                <div class="col-md-6 col-sm-6 col-xs-12 form-telechargement-file">
+                    <input type='file' name='file' class="form-telechargement-file border border-indigo-500 text-indigo-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-indigo-600 focus:outline-none focus:shadow-outline">
 
                     @if ($errors->has('file'))
                     <span class="errormsg text-danger">{{ $errors->first('file') }}</span>
@@ -73,7 +73,7 @@
         </a>
     </div>
 
-    <div class="pb-10 justify-center items-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+    <div class="pb-10 justify-center items-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 cards-own-cours">
     @foreach ($idFile as $item)
     <div class="w-80 flex mt-10 ml-20 flex-col bg-white shadow-lg rounded-lg overflow-hidden">
         <div class="bg-indigo-200 text-gray-700 text-lg px-6 py-4"><a href="{{$item->publicPath()}}">{{ $item->titre }}</a></div>

@@ -188663,6 +188663,26 @@ select {
         grid-template-columns:auto;
       }
 
+      .form-telechargement{
+
+          justify-content: center;
+          align-items: center;
+          width:350px;
+      }
+
+      .form-telechargement-file{
+        justify-content: center;
+        align-items: center;
+        width:250px;
+        margin-bottom:20px;
+    }
+
+      .cards-own-cours{
+        justify-content: center;
+        align-items: center;
+        margin-left:-60px;
+    }
+
       .envoyer-fichier{
           justify-content: center;
       }
