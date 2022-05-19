@@ -73,19 +73,19 @@
         </a>
     </div>
 
-    <div class="p-10 justify-center items-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+    <div class="pb-10 justify-center items-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
     @foreach ($idFile as $item)
     <div class="w-80 flex mt-10 ml-20 flex-col bg-white shadow-lg rounded-lg overflow-hidden">
-        <div class="bg-indigo-200 text-gray-700 text-lg px-6 py-4"><a href="{{ route('cours') }}">{{ $item->titre }}</a></div>
+        <div class="bg-indigo-200 text-gray-700 text-lg px-6 py-4"><a href="{{$item->publicPath()}}">{{ $item->titre }}</a></div>
 
             <div class="flex justify-between items-center px-6 py-4">
-            <div class="bg-orange-600 text-xs uppercase px-2 py-1 rounded-full border border-gray-200 text-gray-200 font-bold">Prêt à consulter</div>
+            <div class="bg-green-400 text-xs uppercase px-2 py-1 rounded-full border border-gray-200 text-gray-200 font-bold"><a href="{{$item->publicPath()}}">Prêt à consulter</a></div>
             <div class="text-sm">{{ date('d-m-y', strtotime($item->created_at)) }}</div>
             </div>
 
             <div class="px-6 py-4 border-t border-gray-200">
             <div class="border rounded-lg p-4 bg-gray-200">
-                <a href="{{ route('cours') }}">{{ Str::limit($item->description,30) }}</a>
+                <a href="{{$item->publicPath()}}">{{ Str::limit($item->description,30) }}</a>
             </div>
             </div>
 
@@ -95,7 +95,7 @@
                 <div class="bg-blue-700 w-12 h-12 flex justify-center items-center rounded-full uppercase font-bold text-white">DOC</div>
                 <div class="ml-4">
                 <p class="font-bold">Piéce jointe</p>
-                <p class="text-sm text-gray-700 mt-1"><a href="{{ route('cours') }}">{{ Str::limit($item->original, 30) }}</a></p>
+                <p class="text-sm text-gray-700 mt-1"><a href="{{$item->publicPath()}}">{{ Str::limit($item->original, 30) }}</a></p>
                 </div>
             </div>
         </div>

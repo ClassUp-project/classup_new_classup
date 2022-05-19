@@ -18,13 +18,14 @@ class DropzoneController extends Controller
          $this->middleware('auth');
       }
 
-    public function index(Questionnaire $questionnaire){
+    public function index(Questionnaire $questionnaire, Dropzone $iddropzone){
 
         $idFile = auth()->user()->imageFileUpload;
         $questionnaire = auth()->user()->questionnaires;
+        $iddropzone = Dropzone::find($iddropzone);
 
 
-        return view('drop.uploadfile', compact('idFile', 'questionnaire'));
+        return view('drop.uploadfile', compact('idFile', 'questionnaire', 'iddropzone'));
 
 
      }
