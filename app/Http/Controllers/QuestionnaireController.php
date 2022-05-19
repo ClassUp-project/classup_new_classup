@@ -48,18 +48,20 @@ class QuestionnaireController extends Controller
 
      $questionnaireSend = Utilisateur::all();
 
-     foreach($questionnaireSend as $send)
-     {
-        $newQuestionnaire = [
-            'prenom' => 'Salut' ,$send->prenom,
-            'body' => 'Tu as un nouveau quiz à consulter',
-            'actionText' => 'Bonne chance !',
-            'Url' => url('/home'),
-            'Consultez le questionnaire' => 'Consultez le questionnaire'
-        ];
-     }
+     /**
+      * foreach($questionnaireSend as $send)
+        * {
+         *   $newQuestionnaire = [
+          *      'prenom' => 'Salut' ,$send->prenom,
+           *     'body' => 'Tu as un nouveau quiz à consulter',
+           *     'actionText' => 'Bonne chance !',
+            *    'Url' => url('/home'),
+             *   'Consultez le questionnaire' => 'Consultez le questionnaire'
+            *];
+        *}
 
-        Notification::send($questionnaireSend, new NewQuestionnaire($newQuestionnaire));
+           * Notification::send($questionnaireSend, new NewQuestionnaire($newQuestionnaire));
+      */
 
     return view('questionnaire.show', compact('questionnaire'));
  }
