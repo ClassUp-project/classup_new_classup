@@ -59,7 +59,7 @@
 	<div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 flex justify-center items-top rounded" style="background-image:url('/img/learn.jpg'); height: 75vh;">
         <div class="absolute mt-10 text-center backdrop-filter backdrop-blur-xl rounded-lg">
             <div class="px-6 py-4 text-4xl text-indigo-600 font-semibold">
-                Voir plein<br> d'autres cours ? &#128512;
+                Revenir à<br> Tous les cours &#128512;
             </div>
             <span class="small bg-indigo-200 p-1 pl-3 pr-3 mt-n2 rounded-lg text-white"><a href="{{route('cours')}}">par ici</a></span>
         </div>

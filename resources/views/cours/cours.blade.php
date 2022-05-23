@@ -3,31 +3,24 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Cours') }} &#128187;
         </h2>
-
-
-        <div class="alert-toast float-right" role="alert">
-            <input type="checkbox" class="hidden" id="footertoast">
-            <label class="close cursor-pointer flex items-start justify-between w-full bg-indigo-200 border-t-4 border-indigo-400 rounded-b text-teal-900 px-4 py-1 shadow-md w-80 h-10 rounded shadow-lg text-white label-alert" title="close" for="footertoast">
-                @if(Auth::user()->statut == 'professeur')
-                    Bonjour! Prêt à envoyer vos cours à vos élèves.
-                @else
-                    Hello! prêt à checker tes cours.
-                @endif
-                    <svg class="fill-current text-white " xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-                        <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
-                    </svg>
-            </label>
-        </div>
     </x-slot>
 
     @section('content')
+
+    <div class="flex justify-left items-center bg-yellow-50 h-full allcateg-return-categ relative shadow-lg">
+        <a href="{{ route('home') }}">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: royalblue; margin-left: 50px;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        </a>
+    </div>
 
 
         <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5 mt-10">
             <!--Card 1-->
             @foreach($file as $cours)
             <div class="max-w-sm rounded shadow-lg">
-            <img class="w-full" src="img/header.png" alt="Mountain">
+            <img class="w-full" src="/img/header.png" alt="Mountain">
             <div class="px-6 py-4">
                 <div class="font-bold text-xl mb-2">
 

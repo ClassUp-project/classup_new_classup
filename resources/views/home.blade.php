@@ -28,15 +28,19 @@
 
 
 
-            <div class="flex justify-center button-tag-home-div">
-                <p class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 mr-3 bg-blue-200 text-blue-700 rounded-full button-tag-home">Tous les cours</p>
-                <p class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 mr-3 bg-green-200 text-green-700 rounded-full button-tag-home">questionnaires</p>
-                <p class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-indigo-200 text-indigo-700 rounded-full button-tag-home">documents</p>
+            @if (Auth::user()->statut == 'professeur')
+            <div class="flex justify-center mt-20 pb-20 button-return-home " >
+                <a id="navigation-to-dashboard" href="/dashboard" class="ml-40" ><x-button>Retour à votre tableau de bord</x-button></a>
             </div>
+            @else
+                <div class="flex justify-center mt-20 pb-20 button-return-home " >
+                    <a id="navigation-to-dashboard" href="/cours" class="ml-40"><x-button>Voir tous les cours</x-button></a>
+                </div>
+            @endif
 
-            <div class="flex align-items-center content-center justify-center mt-6">
+            <div class="flex align-items-center content-center justify-center">
                 <div class="flex flex-wrap -mx-3 mb-6 w-56">
-                    <label class="bblock uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="categorie_idcategorie">Filtrez par catégorie</label>
+                    <label class="bblock uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="categorie_idcategorie">Filtrez les quiz par catégorie</label>
                         <select onchange="window.location=this.options[this.selectedIndex].value;" name="categorie_idcategorie"  class="form-select appearance-none block w-full bg-gray-200 text-gray-700 border border-blue-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
                             <option>Toutes les categories</option>
                             @foreach ( $categorie as $categories )

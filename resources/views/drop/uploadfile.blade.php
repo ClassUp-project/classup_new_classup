@@ -7,6 +7,14 @@
     </x-slot>
 @section('content')
 
+<div class="flex justify-left items-center bg-yellow-50 h-full allcateg-return-categ relative shadow-lg">
+    <a href="{{ route('dashboard') }}">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: royalblue; margin-left: 50px;">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+    </svg>
+    </a>
+</div>
+
     <div class="fixed flex items-center justify-center mt-20 alert-upload-file">
         @if(Session::has('success'))
                     <div class="fixed rounded-full bg-indigo-900 text-center py-4 lg:px-4 mt-4 mb-4 alert-upload-file-div">

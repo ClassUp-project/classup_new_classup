@@ -7,6 +7,14 @@
     </x-slot>
 
     @section('content')
+    <div class="flex justify-left items-center bg-yellow-50 h-full allcateg-return-categ relative shadow-lg">
+        <a href="{{ route('dashboard') }}">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: royalblue; margin-left: 50px;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        </a>
+    </div>
+
     <div class="container">
 
             <div class="flex justify-center mt-20">
@@ -14,12 +22,9 @@
                     <div class="inline-block bg-blue-200 rounded-full px-3 py-1 text-lg font-semibold text-gray-700 ml-20 mb-2 button-tag-show">{{$questionnaire->titre}}</div>
 
                         <div class="flex justify-center mt-20 div-button-show-question">
-
-                            <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full button-questionnaire-show" href="/questionnaires/{{$questionnaire->idquestionnaire}}/questions/create"> Rajouter
-                                des Questions</a>
-                            <a class="ml-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full button-questionnaire-show"
-                                href="/surveys/{{$questionnaire->idquestionnaire}}-{{Str::slug($questionnaire->titre)}}">répondre au questionnaire</a>
-
+                            <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full button-questionnaire-show" href="/questionnaires/{{$questionnaire->idquestionnaire}}/questions/create">
+                                Ajoutez vos questions
+                            </a>
                         </div>
                     </div>
                 </div>

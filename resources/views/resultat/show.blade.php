@@ -6,6 +6,14 @@
         </h2>
     </x-slot>
 
+@section('content')
+<div class="flex justify-left items-center bg-yellow-50 h-full allcateg-return-categ relative shadow-lg">
+    <a href="{{ route('dashboard') }}">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: royalblue; margin-left: 50px;">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+    </svg>
+    </a>
+</div>
 
 <div class="max-w-sm rounded overflow-hidden shadow-lg mt-10 ml-10 note-eleve" id="app">
     @foreach ($resultats as $resultat )
@@ -33,5 +41,7 @@
 
 
 </div>
+
+@endsection
 
 </x-app-layout>
