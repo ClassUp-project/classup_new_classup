@@ -225,30 +225,6 @@
             <path d="M122.98275,60.50089H98.96945a3.49911,3.49911,0,1,0,0,6.99822h24.0133a3.49911,3.49911,0,0,0,0-6.99822Z"/><path class="cls-2" d="M81.988,60.50089H56.515a3.49911,3.49911,0,0,0,0,6.99822H81.98846a3.49911,3.49911,0,0,0-.00051-6.99822Z"/>
             <path d="M34.05256,52.68395a3.56522,3.56522,0,0,0-5.03631.00051L13.94108,67.75912,7.596,61.41424a3.56157,3.56157,0,1,0-5.03665,5.037l8.86328,8.86294a3.5611,3.5611,0,0,0,5.0358.00051L34.05273,57.72043a3.56419,3.56419,0,0,0,0-5.03648Z"/>
             </svg>
-            >Questionnaire</span
-          >
-
-          <span class="w-1/2 p-4 md:w-auto flex items-center"
-            ><svg
-              class="h-10 w-10 mr-4 fill-current text-gray-500 opacity-75"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 90 90"
-            >
-            <path d="M62.978,68.072c-0.828,0-1.5,0.672-1.5,1.5v13.711H12.515V18.684h48.962v11.4c0,0.829,0.672,1.5,1.5,1.5s1.5-0.671,1.5-1.5
-            v-12.9c0-0.829-0.672-1.5-1.5-1.5H11.015c-0.829,0-1.5,0.671-1.5,1.5v67.598c0,0.828,0.671,1.5,1.5,1.5h51.962
-            c0.828,0,1.5-0.672,1.5-1.5V69.572C64.478,68.743,63.806,68.072,62.978,68.072z"/>
-            <path d="M90.329,19.681c-0.08-0.39-0.312-0.732-0.644-0.951l-7.531-4.966c-0.332-0.218-0.735-0.295-1.129-0.217
-            c-0.39,0.08-0.731,0.312-0.95,0.645l-5.513,8.377c-0.057,0.087-0.104,0.178-0.141,0.271L45.257,67.093
-            c-0.061,0.093-0.109,0.193-0.148,0.296c-0.169,0.199-0.293,0.441-0.339,0.717l-1.893,11.313c-0.1,0.596,0.168,1.192,0.678,1.516
-            c0.245,0.154,0.523,0.231,0.801,0.231c0.301,0,0.602-0.091,0.859-0.271l9.393-6.563c0.09-0.063,0.17-0.135,0.242-0.213
-            c0.166-0.109,0.318-0.243,0.434-0.419l29.18-44.275c0.058-0.089,0.105-0.183,0.143-0.28l5.503-8.335
-            C90.33,20.477,90.409,20.072,90.329,19.681z M47.44,70.328l3.943,2.598l-4.958,3.464L47.44,70.328z M53.605,70.797l-5.018-3.306
-            L76.116,25.72l5.018,3.307L53.605,70.797z M82.756,26.503l-5.016-3.306l4.016-6.102l5.024,3.313L82.756,26.503z"/>
-            <path d="M46.741,34.636c0.829,0,1.5-0.671,1.5-1.5s-0.671-1.5-1.5-1.5H18.835c-0.829,0-1.5,0.671-1.5,1.5s0.671,1.5,1.5,1.5H46.741
-            z"/>
-            <path d="M19.184,46.992h27.899c0.829,0,1.5-0.671,1.5-1.5s-0.671-1.5-1.5-1.5H19.184c-0.829,0-1.5,0.671-1.5,1.5
-            S18.355,46.992,19.184,46.992z"/>
-            </svg>
             >Quiz</span
           >
 
@@ -295,7 +271,7 @@
         <h2
           class="w-full my-2 text-5xl font-black leading-tight text-center text-gray-800"
         >
-          Class'Up pour tes cours
+          Class'Up pour les cours
         </h2>
         <div class="w-full mb-4">
           <div
@@ -309,8 +285,8 @@
               La boite à outils
             </h3>
             <p class="text-gray-600 mb-8">
-              qui t'aide à réviser et te tester dans les matières<br />
-              <strong>> directement sur ton smartphone... ou ton pc.</strong><br />
+              qui aide à réviser et se tester dans les matières<br />
+              <strong>> directement sur smartphone... ou pc.</strong><br />
               Retrouve tous les quiz et cours que tu as besoin<br />
               pour garder le cap à l'école.
 
@@ -715,8 +691,8 @@
                 Connecté avec le monde
               </h3>
               <p class="text-gray-600 mb-8">
-                Tests toi avec les niveaux similaires à travers le monde.<br />
-                Découvre ce que font les autres étudiants du monde dans ta matière.<br />
+                Class'Up permet de se tester avec les niveaux similaires à travers le monde.
+                Et découvrir ce que font les autres étudiants dans la matière.<br />
                 Réponds aux tests acqiuerts de nouveaux savoir !
               </p>
             </div>
@@ -730,7 +706,7 @@
         <h2
           class="w-full my-2 text-5xl font-black leading-tight text-center text-gray-800"
         >
-          Class'Up action et developpement
+          Class'Up, action et developpement
         </h2>
         <div class="w-full mb-4">
           <div
@@ -744,7 +720,7 @@
           >
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
               <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-6">
-                QUESTIONNAIRE
+                QUIZ
               </p>
               <div class="w-full font-bold text-xl text-gray-800 px-6">
                 Réponds aux questionnaires
@@ -764,7 +740,7 @@
               <button
                 class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-extrabold rounded my-6 py-4 px-8 shadow-lg"
               >
-              <a href="{{ route('register') }}">Action</a>
+              <a href="{{ route('register') }}">Quiz</a>
               </button>
             </div>
           </div>
@@ -779,11 +755,11 @@
                 LES COURS
               </p>
               <div class="w-full font-bold text-xl text-gray-800 px-6">
-                Révise à partir de documents.
+                Révise à partir petits cours.
               </div>
               <p class="text-gray-600 text-base px-6 mb-5">
-               Selectionne les documents postés et révise tes matières.
-               Tu peux ensuite retourner vers les quiz pour tester tes connaissances
+               Selectionne les cours postés et révise tes matières.
+               Télécharge le document joint et répond au quiz lié au cours pour tester tes connaissances.
               </p>
             </a>
           </div>
@@ -794,7 +770,7 @@
               <button
                 class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-extrabold rounded my-6 py-4 px-8 shadow-lg"
               >
-              <a href="{{ route('register') }}">Action</a>
+              <a href="{{ route('register') }}">Cours</a>
               </button>
             </div>
           </div>
@@ -823,7 +799,7 @@
                 Class'Up est développée à Bruxelles.<br />
                 Nous sommes attachés à la protection des données et nous sommes fier de développer
                 cette application au coeur de l'Europe.<br />
-                Nous construisons une application "maison", sans plugins importés, afin d'être sûr d'avoir toujours la main
+                Nous construisons cette application comme des artisans, sans plugins importés, afin d'être sûr d'avoir toujours la main
                 sur le code et l'outil en général.<br />
               </p>
             </a>
@@ -835,7 +811,7 @@
               <button
                 class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-extrabold rounded my-6 py-4 px-8 shadow-lg"
               >
-              <a href="{{ route('register') }}">Action</a>
+              <a href="{{ route('register') }}">RGPD</a>
               </button>
             </div>
           </div>
