@@ -180,9 +180,23 @@
                                 <li class="list-group-item mt-8">
                                     <a href="{{route('cours_details', $document->iddropzone)}}" class="underline mb-4 font-bold">{{ $document->titre }}</a>
                                     <p class="mt-4 italic">document attaché au cours :</p>
+                                    @if($document->original)
                                     <a class="mt-5 text-blue-800 font-bold bg-purple-100 p-1 rounded-lg mt-2" href="{{ route('download', Auth::user()->idutilisateur )}}" download="{{ $document->original }}">
                                         {{ Str::limit( $document->thumbnail, 35 )}}
                                     </a>
+                                    @else
+                                    <p class="bg-yellow-200 w-26 p-1 rounded-lg">pas de doc</p>
+                                    @endif
+                                    <div class="mt-2 text-center">
+                                        <small class="font-bold">Partager l'URL </small>
+                                        <div class="flex items-center justify-center">
+                                            <button onclick="share()" role="tooltip" id="tooltipButton" type="button" url-site="{{$document->publicPath()}}" data-bs-original-title="Copy Url" data-clipboard-text="c'est copié !" class="btn text-blue-500 link-copy" >
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="margin-top: 10px; color:gray">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
                                     <form action="/filedelete/{{$document->iddropzone}}" method="post">
                                         @method('DELETE')
                                         @csrf
