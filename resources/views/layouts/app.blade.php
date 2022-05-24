@@ -28,7 +28,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
         <!--Flowbite-->
-        <link rel="stylesheet" href="https://unpkg.com/flowbite@latest/dist/flowbite.min.css" />
+        <!--<link rel="stylesheet" href="https://unpkg.com/flowbite@latest/dist/flowbite.min.css" />-->
 
         <script src="{{ asset('serviceworker.js') }}"></script>
         <script type="text/javascript">

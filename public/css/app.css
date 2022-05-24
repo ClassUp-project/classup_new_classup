@@ -188577,7 +188577,6 @@ select {
   }
 }
 
-
 @media screen and (max-width:800px){
 
     /**
@@ -188588,6 +188587,7 @@ select {
         grid-template-columns:auto;
         margin-left: 0px;
     }
+
     .count-cards{
         width: auto;
     }
