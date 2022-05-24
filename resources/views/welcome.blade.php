@@ -72,6 +72,8 @@
 
   <body class="gradient leading-relaxed tracking-wide flex flex-col">
 
+    <x-popup-astuce></x-components-popup-astuce>
+
     <!--Nav-->
     <nav id="header" class="w-full z-30 top-0 text-white py-1 lg:py-6">
       <div
