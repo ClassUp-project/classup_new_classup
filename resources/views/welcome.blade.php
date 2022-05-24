@@ -693,7 +693,7 @@
               <p class="text-gray-600 mb-8">
                 Class'Up permet de se tester avec les niveaux similaires à travers le monde.
                 Et découvrir ce que font les autres étudiants dans la matière.<br />
-                Réponds aux tests acqiuerts de nouveaux savoir !
+                Réponds aux tests et acqiuerts de nouveaux savoir !
               </p>
             </div>
           </div>
@@ -811,7 +811,7 @@
               <button
                 class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-extrabold rounded my-6 py-4 px-8 shadow-lg"
               >
-              <a href="{{ route('register') }}">RGPD</a>
+              <a href="{{ asset('/img/CGU.pdf') }}">RGPD/CGU</a>
               </button>
             </div>
           </div>
