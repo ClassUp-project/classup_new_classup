@@ -27,8 +27,6 @@
         <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-        <!--Flowbite-->
-        <!--<link rel="stylesheet" href="https://unpkg.com/flowbite@latest/dist/flowbite.min.css" />-->
 
         <script src="{{ asset('serviceworker.js') }}"></script>
         <script type="text/javascript">
