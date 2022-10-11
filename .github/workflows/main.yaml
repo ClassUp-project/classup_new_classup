@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      SSHPASS: ${{ secrets.APP_PASS }}
+      SSHPASS: ${{ secrets.CLEVERCLOUD }}
 
     steps:
       - uses: actions/checkout@v2
