@@ -22,7 +22,7 @@ class ContactController extends Controller
             'prenom' => 'required',
             'email' => 'required|email',
             'message' => 'required',
-            'g-recaptcha-response' => 'required|captcha',
+            'g-recaptcha-response' => 'required|recaptchav3:register,0.5'
          ]);
 
         //  Store data in database
