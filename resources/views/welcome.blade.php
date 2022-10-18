@@ -273,7 +273,7 @@
         <h2
           class="w-full my-2 text-5xl font-black leading-tight text-center text-gray-800"
         >
-          Class'Up pour les cours
+          Partager vos connaissances !
         </h2>
         <div class="w-full mb-4">
           <div
