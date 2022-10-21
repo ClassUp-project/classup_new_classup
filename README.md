@@ -10,7 +10,13 @@ Class'Up is a tool for school
 Class'Up is a toolbox that allows you to confirm an acquired knowledge in a subject through small tests and sharing of lessons and docs. And make them public (... without the answers for the tets;)) to share knowledge!
 
 ## Laravel
+Laravel 8
 ## Docker
+in progress
+
 ## Git
+
 ## GitHub Actions
-## Cloudways
+CI - CD in progress
+## Deploy
+Deploy on Cloudways.com
