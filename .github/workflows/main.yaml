@@ -21,5 +21,5 @@ jobs:
             cd applications/fpfhmpexxg/public_html
             git pull
             composer install
-            php artisan cache:clear
+            APP_ENV=production APP_DEBUG=false php artisan cache:clear
 
