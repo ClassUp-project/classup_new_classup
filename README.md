@@ -1,4 +1,4 @@
-<p align="center"><a href="https://classup.tecg" target="_blank"><img src="images/classuplogo.PNG" width="400"></a></p>
+<p align="center"><a href="https://classup.tech" target="_blank"><img src="images/classuplogo.PNG" width="400"></a></p>
 
 ## State Pipeline CI
 [![CD](https://github.com/ClassUp-project/classup_new_classup/actions/workflows/main.yaml/badge.svg?branch=main)](https://github.com/ClassUp-project/classup_new_classup/actions/workflows/main.yaml)
