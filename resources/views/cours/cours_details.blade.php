@@ -74,7 +74,7 @@
 				<blockquote class="border-l-4 border-green-500 italic my-8 pl-8 md:pl-12">
                     Document joint au cours à consulter/télécharger :<br><br>
 					@if ($drop->original)
-						<a href="{{ route('download', $drop )}}" download="{{ $drop->original }}" {{ $drop->original }}" class="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500" target="_blank">
+						<a href="{{ route('download', $drop)}}" download="{{ $drop->original }}" class="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500" target="_blank">
 							{{ $drop->thumbnail }}
 						</a>
 					@else
