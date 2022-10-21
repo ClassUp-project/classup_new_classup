@@ -11,3 +11,5 @@ Class'Up is a toolbox that allows you to confirm an acquired knowledge in a subj
 ## Git
 ## GitHub Actions
 ## Cloudways
+
+[![CD](https://github.com/ClassUp-project/classup_new_classup/actions/workflows/main.yaml/badge.svg?branch=main)](https://github.com/ClassUp-project/classup_new_classup/actions/workflows/main.yaml)
