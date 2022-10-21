@@ -17,6 +17,6 @@ in progress
 ## Git
 
 ## GitHub Actions
-CI - CD in progress
+CI ok - CD in progress
 ## Deploy
 Deploy on Cloudways.com
