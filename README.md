@@ -1,5 +1,8 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="/img/classuplogo.PNG" width="400"></a></p>
 
+## State Pipeline CI
+[![CD](https://github.com/ClassUp-project/classup_new_classup/actions/workflows/main.yaml/badge.svg?branch=main)](https://github.com/ClassUp-project/classup_new_classup/actions/workflows/main.yaml)
+
 ## About Class'Up
 
 Class'Up is a tool for school 
@@ -11,5 +14,3 @@ Class'Up is a toolbox that allows you to confirm an acquired knowledge in a subj
 ## Git
 ## GitHub Actions
 ## Cloudways
-
-[![CD](https://github.com/ClassUp-project/classup_new_classup/actions/workflows/main.yaml/badge.svg?branch=main)](https://github.com/ClassUp-project/classup_new_classup/actions/workflows/main.yaml)
