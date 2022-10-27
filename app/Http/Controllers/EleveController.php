@@ -28,37 +28,22 @@ class EleveController extends Controller
 
 
 
-    public function store(){
-
-
-        $professeur = Eleve::where('eleve','ideleve')->get();
-
+    public function storeEleve(){
 
         $data = request()->validate([
 
             'nom'=>'required',
-            'acronyme'=>'required',
+            'prenom'=>'required',
         ]);
-        $groupeClasse = Auth::user()->groupe()->create($data);
+        $eleveSubscribeByProf = Auth::user()->utilisateur()->create($data);
 
-        $data = request()->validate([
-
-            'lintitule'=>'required',
-        ]);
-        $matiere = Auth::user()->matiere()->create($data);
-
-
-
-        return redirect('/eleves/'.$groupeClasse->idgroupe)->with(compact('matiere'));
-
+        return redirect('/dashboard/', compact('eleveSubscribeByProf'));
 
     }
 
 
 
     public function show($idutilisateur){
-
-
 
         $groupe = auth()->user()->groupe;
 
