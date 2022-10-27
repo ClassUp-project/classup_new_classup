@@ -6,6 +6,7 @@ use App\Models\Dropzone;
 use App\Models\Resultat;
 use Illuminate\Http\Request;
 use App\Models\Questionnaire;
+use App\Models\Statut;
 use App\Models\Utilisateur;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
@@ -24,13 +25,11 @@ class DashboardController extends Controller
     {
 
         $questionnaires = auth()->user()->questionnaires;
-
         $idFile = auth()->user()->imageFileUpload;
-
         $resultat = auth()->user()->resultat;
+        $user = Statut::with('utilisateur')->where('statut','=','eleve')->get();
 
-
-        return view('dashboard', compact('questionnaires', 'idFile', 'resultat'));
+        return view('dashboard', compact('questionnaires', 'idFile', 'resultat', 'user'));
     }
 
 

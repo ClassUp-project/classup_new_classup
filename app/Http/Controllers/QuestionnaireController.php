@@ -25,7 +25,7 @@ class QuestionnaireController extends Controller
 
     }
 
-    public function store(Request $request){
+    public function store(){
 
         $data = request()->validate([
 

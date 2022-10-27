@@ -16,7 +16,7 @@
 </div>
 
 <div class="max-w-sm rounded overflow-hidden shadow-lg mt-10 ml-10 note-eleve" id="app">
-    @foreach ($resultats as $resultat )
+    
         <table class="table-fixed table-resultat">
             <thead>
             <tr>
@@ -26,11 +26,15 @@
             </thead>
             <tbody>
             <tr class="bg-blue-200 align-items-center">
-                <td>{{ $resultat->note }}</td>
+                <td></td>
+                @foreach ($resultats as $resultat)
+                <td>{{$resultat->note}}</td>
+                @endforeach
+                
             </tr>
             </tbody>
         </table>
-    @endforeach
+   
 </div>
 
 <div class="flex justify-center mt-20 " >
