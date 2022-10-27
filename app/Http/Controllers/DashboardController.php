@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Eleve;
+use App\Models\Statut;
 use App\Models\Dropzone;
 use App\Models\Resultat;
+use App\Models\Utilisateur;
 use Illuminate\Http\Request;
 use App\Models\Questionnaire;
-use App\Models\Statut;
-use App\Models\Utilisateur;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
@@ -27,7 +28,7 @@ class DashboardController extends Controller
         $questionnaires = auth()->user()->questionnaires;
         $idFile = auth()->user()->imageFileUpload;
         $resultat = auth()->user()->resultat;
-        $user = Statut::with('utilisateur')->where('statut','=','eleve')->get();
+        $user = auth()->user()->eleve;
 
         return view('dashboard', compact('questionnaires', 'idFile', 'resultat', 'user'));
     }
@@ -45,6 +46,21 @@ class DashboardController extends Controller
 
 
      }
+
+
+    
+    public function storeEleve(){
+
+        $data = request()->validate([
+
+            'nom'=>'required',
+            'prenom'=>'required',
+        ]);
+        $eleveSubscribeByProf = Auth::user()->eleve()->create($data);
+
+        return back()->with('eleveSubscribeByProf');
+
+    }
 
 
 

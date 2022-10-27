@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Eleve extends Model
 {
     protected $fillable = [
-        'statut',
+        'nom', 'prenom'
     ];
 
     protected $guarded = [];
@@ -23,9 +23,7 @@ class Eleve extends Model
 
      public function utilisateur()
      {
-
-         return $this->belongsToMany(App\models\Utilisateur::class,'eleve_utilisateur');
-
+         return $this->belongsTo(Utilisateur::class);
      }
 
 
@@ -39,6 +37,11 @@ class Eleve extends Model
      {
          return $this->hasMany(Matiere::class);
      }
+
+     public function ResultatEleve()
+    {
+        return $this->hasMany(Resultat::class, 'eleve_ideleve' );
+    }
 
 
 }

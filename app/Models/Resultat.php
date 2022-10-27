@@ -10,7 +10,7 @@ class Resultat extends Model
     use HasFactory;
 
     protected $fillable = [
-        'note', 'statut_idstatut', 'nom'
+        'note', 'eleve_ideleve', 'nom'
     ];
 
     protected $table = 'resultat';
@@ -28,7 +28,7 @@ class Resultat extends Model
 
     public function statut()
     {
-        return $this->belongsTo(Statut::class, 'statut_idstatut');
+        return $this->belongsTo(Eleve::class, 'eleve_ideleve');
     }
 
 

@@ -24,7 +24,7 @@ class ResultatController extends Controller
 
     public function create()
     {
-        $utilisateur = Statut::with('utilisateur')->where('statut','=','eleve')->get();
+        $utilisateur = auth()->user()->eleve;
 
         return view('resultat.create', compact('utilisateur'));
 
@@ -35,7 +35,7 @@ class ResultatController extends Controller
     {
         $data = request()->validate([
             'note'=>'required',
-            'statut_idstatut'=>'required|integer'
+            'eleve_ideleve'=>'required|integer'
         ]);
 
         $resultat = auth()->user()->resultat()->create($data);
@@ -55,7 +55,7 @@ class ResultatController extends Controller
 
     public function show_detail($idresultat)
     {
-        $resultats = Resultat::where('statut_idstatut',$idresultat)->get();
+        $resultats = Resultat::where('eleve_ideleve',$idresultat)->get();
 
        return view('resultat.detail_resultat', compact('idresultat','resultats'));
     }
