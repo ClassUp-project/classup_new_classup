@@ -10,7 +10,7 @@ class Resultat extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nom', 'note',
+        'note', 'statut_idstatut', 'nom'
     ];
 
     protected $table = 'resultat';
@@ -21,9 +21,14 @@ class Resultat extends Model
 
 
 
-    public function resultatUtilisateur(){
-
+    public function resultatUtilisateur()
+    {
         return $this->belongsTo(Utilisateur::class);
+    }
+
+    public function statut()
+    {
+        return $this->belongsTo(Statut::class, 'statut_idstatut');
     }
 
 

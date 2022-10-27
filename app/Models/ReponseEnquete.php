@@ -20,7 +20,4 @@ class ReponseEnquete extends Model
 
    }
 
-
-
-
 }

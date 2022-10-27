@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Resultat;
+use App\Models\Statut;
+use App\Models\Utilisateur;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -22,7 +24,9 @@ class ResultatController extends Controller
 
     public function create()
     {
-        return view('resultat.create');
+        $utilisateur = Statut::with('utilisateur')->where('statut','=','eleve')->get();
+
+        return view('resultat.create', compact('utilisateur'));
 
     }
 
@@ -30,9 +34,8 @@ class ResultatController extends Controller
     public function store()
     {
         $data = request()->validate([
-            'nom'=>'required',
-            'note'=>'required'
-
+            'note'=>'required',
+            'statut_idstatut'=>'required|integer'
         ]);
 
         $resultat = auth()->user()->resultat()->create($data);
@@ -46,8 +49,15 @@ class ResultatController extends Controller
 
         $resultats = auth()->user()->resultat;
 
-
         return view('resultat.show', compact('resultats'));
+    }
+    
+
+    public function show_detail($idresultat)
+    {
+        $resultats = Resultat::where('statut_idstatut',$idresultat)->get();
+
+       return view('resultat.detail_resultat', compact('idresultat','resultats'));
     }
 
 

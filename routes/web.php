@@ -87,6 +87,7 @@ Route::get('/download/{iddropzone}/download','App\Http\Controllers\DashboardCont
 Route::get('/resultat/create', 'App\Http\Controllers\ResultatController@create');
 Route::post('/resultat', 'App\Http\Controllers\ResultatController@store');
 Route::get('/resultat/{resultat}', 'App\Http\Controllers\ResultatController@show' );
+Route::get('/resultat_detail/{idresultat}', 'App\Http\Controllers\ResultatController@show_detail')->name('resultat_detail');
 
 //Route dasboard eleve
 Route::get('/eleves/', 'App\Http\Controllers\EleveController@index')->name('dashboardEleve');

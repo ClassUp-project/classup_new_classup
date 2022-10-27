@@ -215,22 +215,15 @@
                             La liste des résultats
                         </h2>
                         <img class="w-full" src="/img/board-note.jpg" alt="Sunset in the mountains">
-                        <div class="overflow-y-scroll h-80 justify-center items-center">
-                            <ul class="list-none pl-4">
-                                @foreach($resultat as $resultats)
-                                <li class="list-group-item mt-8">
-                                    <p class="text-blue-800 font-bold">
-                                        {{ $resultats->nom }} | {{ $resultats->note }}
-                                    </p>
-                                    <form action="/notedelete/{{$resultats->idresultat}}" method="post">
-                                        @method('DELETE')
-                                        @csrf
-                                        <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold px-2 mt-2 rounded-full w-20 h-5" style="font-size: 12px;">Supprimer</button>
-                                    </form>
-                                </li>
-                                <hr class="mt-4">
+                        <div class="overflow-y-scroll h-80 justify-center items-center mt-10">
+                            <select onchange="window.location.href=this.value" class="form-select appearance-none block w-full bg-gray-200 text-gray-700 border border-green-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+                                <option>liste des élèves</option>
+                                @foreach($user as $resultats)
+                                    <option value="{{ route('resultat_detail', $resultats->idstatut ) }}">
+                                        {{ $resultats->utilisateur->first()->nom }} {{$resultats->utilisateur->first()->prenom}}
+                                    </option>
                                 @endforeach
-                            </ul>
+                            </select>
                         </div>
                     </div>
 
