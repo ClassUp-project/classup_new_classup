@@ -16,7 +16,7 @@ class ReponseEnquete extends Model
 
    public function survey()
    {
-      return $this->belongsTo(App\models\Enquete::class);
+      return $this->belongsTo(Enquete::class);
 
    }
 

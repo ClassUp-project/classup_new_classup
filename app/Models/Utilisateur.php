@@ -120,6 +120,9 @@ class Utilisateur extends Authenticatable implements MustVerifyEmail
     }
 
 
-
+    public function question()
+    {
+        return $this->hasMany(Enquete::class);
+    }
 
 }

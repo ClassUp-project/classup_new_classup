@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Enquete;
 use App\Models\Categories;
+use App\Models\Utilisateur;
 use Illuminate\Http\Request;
 use App\Models\Questionnaire;
-use App\Models\Utilisateur;
+use App\Models\ReponseEnquete;
 use App\Notifications\NewQuestionnaire;
 use Illuminate\Support\Facades\Notification;
 
@@ -45,8 +47,9 @@ class QuestionnaireController extends Controller
     public function show(Questionnaire $questionnaire)
  {
      $questionnaire->load('questions.answers.responses');
+     $show = Questionnaire::with('surveys')->get();
+     $reponseUser = Enquete::with('responses')->get();
 
-     $questionnaireSend = Utilisateur::all();
 
      /**
       * foreach($questionnaireSend as $send)
@@ -63,7 +66,7 @@ class QuestionnaireController extends Controller
            * Notification::send($questionnaireSend, new NewQuestionnaire($newQuestionnaire));
       */
 
-    return view('questionnaire.show', compact('questionnaire'));
+    return view('questionnaire.show', compact('questionnaire','show','reponseUser'));
  }
 
 }
