@@ -2,7 +2,7 @@
 
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Questionnaire') }}
+            {{ __('Les réponses du questionnaire') }}
         </h2>
     </x-slot>
 
@@ -29,43 +29,43 @@
                 </div>
             </div>
 
-            <div class="h-56 grid grid-cols-3 gap-4 content-start ...">
-            @foreach($questionnaire->questions as $question)
-            <div class="flex flex-col w-80 ml-10 bg-blue-200 p-4 mt-20 div-question-tab">
-                <div class="px-6 py-4 font-bold text-xl mb-2">{{$question->question}}</div>
+            <div class="h-56 grid grid-cols-3 gap-4 content-start">
+                @foreach($questionnaire->questions as $question)
+                <div class="flex flex-col w-80 ml-10 bg-blue-200 p-4 mt-20 div-question-tab z-0">
+                    <div class="px-6 py-4 font-bold text-xl mb-2">{{$question->question}}</div>
 
-                <div class="card-body">
-                    <ul class="flex flex-col bg-blue-300 p-4">
-                        @foreach($question->answers as $answer)
-                        <li class="border-gray-500 flex flex-row mb-2">
-                            <div class="select-none cursor-pointer bg-gray-200 rounded-md flex flex-1 items-center p-4  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
-                            <div>{{$answer->reponse}}</div>
-                            @if($question->responses->count())
-                            <div class="ml-10 text-green-400">{{intval(($answer->responses->count()* 100)/$question->responses->count())}}%</div>
-                            @endif
-                            </div>
-                        </li>
-                        @endforeach
-                    </ul>
+                    <div class="card-body">
+                        <ul class="flex flex-col bg-blue-300 p-4">
+                            @foreach($question->answers as $answer)
+                            <li class="border-gray-500 flex flex-row mb-2">
+                                <div class="select-none cursor-pointer bg-gray-200 rounded-md flex flex-1 items-center p-4  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
+                                <div>{{$answer->reponse}}</div>
+                                @if($question->responses->count())
+                                <div class="ml-10 text-green-400">{{intval(($answer->responses->count()* 100)/$question->responses->count())}}%</div>
+                                @endif
+                                </div>
+                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            @endforeach
+                @endforeach
 
-            <div class="flex flex-col w-80 ml-10 bg-blue-200 p-4 mt-20 div-question-tab">
-                <div class="px-6 py-4 font-bold text-xl mb-2">Les personnes qui ont répondu au quiz</div>
+                <div class="flex flex-col w-80 ml-10 bg-blue-200 p-4 mt-20 div-question-tab-user-reponse">
+                    <div class="px-6 py-4 font-bold text-xl mb-2">Les personnes qui ont répondu au quiz</div>
 
-                <div class="card-body">
-                    <ul class="flex flex-col bg-blue-300 p-4">
-                        @foreach ( $questionnaire->surveys as $shows )
-                        <li class="border-gray-500 flex flex-row mb-2">
-                            <div class="select-none cursor-pointer bg-gray-200 rounded-md flex flex-1 items-center p-4  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
-                                    {{$shows->nom}}
-                            </div>
-                        </li>
-                        @endforeach
-                    </ul>
+                    <div class="card-body">
+                        <ul class="flex flex-col bg-blue-300 p-4">
+                            @foreach ( $questionnaire->surveys as $shows )
+                            <li class="border-gray-500 flex flex-row mb-2">
+                                <div class="select-none cursor-pointer bg-gray-200 rounded-md flex flex-1 items-center p-4  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
+                                        {{$shows->nom}}
+                                </div>
+                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
                 </div>
-            </div>
             </div>
 
         </div>
