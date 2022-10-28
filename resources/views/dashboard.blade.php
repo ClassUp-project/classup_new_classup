@@ -234,7 +234,7 @@
                                         @error('nom')
                                         <small class="text-danger">{{ $message}}</small>
                                         @enderror
-                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="prenom">Preom de l'éléve</label>
+                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="prenom">Prenom de l'éléve</label>
                                     <input name="prenom" type="nom" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-blue-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="prenom" aria-describedby="prenomHelp" placeholder="le prenom">
                                         @error('prenom')
                                         <small class="text-danger">{{ $message}}</small>
