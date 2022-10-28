@@ -20,18 +20,15 @@
         <table class="table-fixed table-resultat">
             <thead>
             <tr>
-                <th class="w-1/2 ...">nom</th>
                 <th class="w-1/4 ...">note</th>
             </tr>
             </thead>
             <tbody>
+            @foreach ($resultats as $resultat)
             <tr class="bg-blue-200 align-items-center">
-                <td></td>
-                @foreach ($resultats as $resultat)
-                <td>{{$resultat->note}}</td>
-                @endforeach
-                
+                <td>{{$resultat->note}}<hr></td>
             </tr>
+            @endforeach
             </tbody>
         </table>
    
