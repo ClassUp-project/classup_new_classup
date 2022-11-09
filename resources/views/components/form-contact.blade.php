@@ -76,14 +76,9 @@
                         @endif
                     </div>
 
-                    <div class="w-full px-3{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
+                    <div class="w-full px-3">
                         <div class="">
-                            {!! RecaptchaV3::field('contact') !!}
-                            @if ($errors->has('g-recaptcha-response'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
-                                </span>
-                            @endif
+                            <input type="hidden" name="g-recaptcha-response" id="recaptcha">
                         </div>
                     </div>
 
@@ -102,11 +97,13 @@
         </div>
     </div>
 </div>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script type="text/javascript">
-    var onloadCallback = function() {
-      grecaptcha.render('html_element', {
-        'sitekey' : '6LdrZbYfAAAAAFpDOFcWIhUzppUiU6bJAKwypyeQ'
-      });
-    };
+<script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.sitekey') }}"></script>
+<script>
+         grecaptcha.ready(function() {
+             grecaptcha.execute('{{ config('services.recaptcha.sitekey') }}', {action: 'contact'}).then(function(token) {
+                if (token) {
+                  document.getElementById('recaptcha').value = token;
+                }
+             });
+         });
 </script>

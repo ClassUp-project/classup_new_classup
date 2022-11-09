@@ -27,4 +27,9 @@ class Enquete extends Model
 
            return $this->hasMany(ReponseEnquete::class);
    }
+
+   public function showUser()
+    {
+        return $this->belongsTo(Utilisateur::class);
+    }
 }

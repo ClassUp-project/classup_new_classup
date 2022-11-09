@@ -28,9 +28,13 @@
                         <form action="/resultat" method="post">
                             @csrf
                             <div class="flex flex-wrap -mx-3 mb-6">
-                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for=nom">nom- prenom</label>
-                                <input name="nom" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-blue-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="nom" aria-describedby="nomHelp" placeholder="Entrez un nom">
-                                <small id="titleHelp" class="form-text text-muted">Quel est le nom de votre élève</small>
+                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for=nom">nom - prenom</label>
+                                <small id="titleHelp" class="form-text text-muted"></small>
+                                <select name="eleve_ideleve" class="form-select appearance-none block w-full bg-gray-200 text-gray-700 border border-green-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+                                    @foreach ( $utilisateur as $utilisateurs )
+                                    <option value="{{ $utilisateurs->ideleve }}">{{ $utilisateurs->nom }} {{$utilisateurs->prenom}}</option>
+                                    @endforeach
+                                </select>
                                 @error('nom')
                             <small class="text-danger">{{ $message}}</small>
                                 @enderror

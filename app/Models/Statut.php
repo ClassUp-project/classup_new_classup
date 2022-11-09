@@ -28,36 +28,29 @@ class Statut extends model
 
     public function utilisateur()
     {
-
-        return $this->belongsToMany(App\models\Utilisateur::class, 'statut_utilisateur', 'statut_idstatut' );
+        return $this->belongsToMany(Utilisateur::class, 'statut_utilisateur', 'statut_idstatut', 'utilisateur_idutilisateur');
     }
-
-
 
 
     public function groupe()
     {
-        return $this->belongsToMany(App\models\Groupe::class);
+        return $this->belongsToMany(Groupe::class);
     }
 
 
     public function matiereProf()
     {
-        return $this->hasMany(App\models\Matiere::class);
+        return $this->hasMany(Matiere::class);
     }
 
     public function questionnaire()
     {
-        return $this->hasMany(App\models\Questionnaire::class);
+        return $this->hasMany(Questionnaire::class);
     }
 
-
-
-
-
-
-
-
-
+    public function ResultatEleve()
+    {
+        return $this->hasMany(Resultat::class, 'statut_idstatut');
+    }
 
 }

@@ -26,7 +26,6 @@
             </thead>
             <tbody>
             <tr class="bg-blue-200 align-items-center">
-                <td>{{ $resultat->nom }}</td>
                 <td>{{ $resultat->note }}</td>
             </tr>
             </tbody>

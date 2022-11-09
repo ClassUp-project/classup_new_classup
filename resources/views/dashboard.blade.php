@@ -215,22 +215,32 @@
                             La liste des résultats
                         </h2>
                         <img class="w-full" src="/img/board-note.jpg" alt="Sunset in the mountains">
-                        <div class="overflow-y-scroll h-80 justify-center items-center">
-                            <ul class="list-none pl-4">
-                                @foreach($resultat as $resultats)
-                                <li class="list-group-item mt-8">
-                                    <p class="text-blue-800 font-bold">
-                                        {{ $resultats->nom }} | {{ $resultats->note }}
-                                    </p>
-                                    <form action="/notedelete/{{$resultats->idresultat}}" method="post">
-                                        @method('DELETE')
-                                        @csrf
-                                        <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold px-2 mt-2 rounded-full w-20 h-5" style="font-size: 12px;">Supprimer</button>
-                                    </form>
-                                </li>
-                                <hr class="mt-4">
+                        <div class="overflow-y-scroll h-20 justify-center items-center mt-10">
+                            <select onchange="window.location.href=this.value" class="form-select appearance-none block w-full bg-gray-200 text-gray-700 border border-green-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+                                <option>liste des élèves</option>
+                                @foreach($user as $resultats)
+                                    <option value="{{ route('resultat_detail', $resultats->ideleve ) }}">
+                                        {{ $resultats->nom }} {{$resultats->prenom}}
+                                    </option>
                                 @endforeach
-                            </ul>
+                            </select>
+                        </div>
+                        <div class="flex flex-wrap -mx-3 mb-4 justify-center">
+                            <h3 class="flex py-5 lg:px-2 md:px-5 px-5 md:mx-10 mx-5 font-bold text-2xl text-gray-800 text-center">enregistrer un.e nouvel.le élève</h3>
+                            <form action="" method="post">
+                                @csrf
+                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="nom">Nom de l'éléve</label>
+                                    <input name="nom" type="nom" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-blue-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="nom" aria-describedby="nomHelp" placeholder="le nom">
+                                        @error('nom')
+                                        <small class="text-danger">{{ $message}}</small>
+                                        @enderror
+                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="prenom">Prenom de l'éléve</label>
+                                    <input name="prenom" type="nom" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-blue-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="prenom" aria-describedby="prenomHelp" placeholder="le prenom">
+                                        @error('prenom')
+                                        <small class="text-danger">{{ $message}}</small>
+                                        @enderror
+                                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">enregistrer l'élève</button>
+                            </form>
                         </div>
                     </div>
 

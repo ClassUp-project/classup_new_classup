@@ -166,7 +166,7 @@
         <p
           class="leading-normal text-gray-800 text-base md:text-xl lg:text-2xl mb-8"
         >
-          Tests toi, réponds aux questionnaires, révise tes cours !
+          Réponds aux questionnaires et révise tes cours
         </p>
 
         <button
@@ -273,7 +273,7 @@
         <h2
           class="w-full my-2 text-5xl font-black leading-tight text-center text-gray-800"
         >
-          Partager vos connaissances !
+          Des cours personnalisés !
         </h2>
         <div class="w-full mb-4">
           <div
@@ -695,7 +695,7 @@
               <p class="text-gray-600 mb-8">
                 Class'Up permet de se tester avec les niveaux similaires à travers le monde.
                 Et découvrir ce que font les autres étudiants dans la matière.<br />
-                Réponds aux tests et acqiuerts de nouveaux savoir !
+                Réponds aux tests et renforce tes connaissances !
               </p>
             </div>
           </div>
@@ -757,7 +757,7 @@
                 LES COURS
               </p>
               <div class="w-full font-bold text-xl text-gray-800 px-6">
-                Révise à partir petits cours.
+                Révise à partir de petits cours.
               </div>
               <p class="text-gray-600 text-base px-6 mb-5">
                Selectionne les cours postés et révise tes matières.

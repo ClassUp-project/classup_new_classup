@@ -92,9 +92,8 @@ class Utilisateur extends Authenticatable implements MustVerifyEmail
 
     public function eleve(){
 
-        return $this->belongsToMany(Eleve::class, 'eleve_utilisateur');
+        return $this->hasMany(Eleve::class, 'utilisateur_idutilisateur');
     }
-
 
 
 
@@ -121,6 +120,9 @@ class Utilisateur extends Authenticatable implements MustVerifyEmail
     }
 
 
-
+    public function question()
+    {
+        return $this->hasMany(Enquete::class);
+    }
 
 }

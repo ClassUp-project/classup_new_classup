@@ -28,6 +28,7 @@ Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')
 Route::delete('/dashboard/{questionnaire}', 'App\Http\Controllers\DashboardController@destroy');
 Route::delete('/filedelete/{dropzone}', 'App\Http\Controllers\DashboardController@delete')->name('filedelete');
 Route::delete('/notedelete/{resultat}', 'App\Http\Controllers\DashboardController@deletenote')->name('notedelete');
+Route::post('/dashboard', 'App\Http\Controllers\DashboardController@storeEleve');
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -87,6 +88,7 @@ Route::get('/download/{iddropzone}/download','App\Http\Controllers\DashboardCont
 Route::get('/resultat/create', 'App\Http\Controllers\ResultatController@create');
 Route::post('/resultat', 'App\Http\Controllers\ResultatController@store');
 Route::get('/resultat/{resultat}', 'App\Http\Controllers\ResultatController@show' );
+Route::get('/resultat_detail/{idresultat}', 'App\Http\Controllers\ResultatController@show_detail')->name('resultat_detail');
 
 //Route dasboard eleve
 Route::get('/eleves/', 'App\Http\Controllers\EleveController@index')->name('dashboardEleve');

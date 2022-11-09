@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Utilisateur;
 use App\Models\Questionnaire;
 
 
