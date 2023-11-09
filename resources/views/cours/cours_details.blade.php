@@ -69,25 +69,25 @@
                     Bon cours !
 				</p>
 
-				<p class="py-6">{{ $drop->description }}</p>
+				<p class="py-6">{!! nl2br($drop->description) !!}</p>
 
-				<blockquote class="border-l-4 border-green-500 italic my-8 pl-8 md:pl-12">
+				<blockquote class="border-l-4 border-green-500 italic text-gray-500 my-8 pl-8 md:pl-12">
                     Document joint au cours à consulter/télécharger :<br><br>
 					@if ($drop->original)
 						<a href="{{ route('download', $drop)}}" download="{{ $drop->original }}" class="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500" target="_blank">
 							{{ $drop->thumbnail }}
 						</a>
 					@else
-					  	Aucun document joint
+                    <p class="bg bg-orange-200 p-1 rounded-lg">Aucun document joint</p>
 					@endif
                 </blockquote>
 
-                <blockquote class="border-l-4 border-green-500 italic my-8 pl-8 md:pl-12">
+                <blockquote class="border-l-4 border-green-500 italic text-gray-500 my-8 pl-8 md:pl-12">
                     Répondez à ce questionnaire :<br><br>
 					@if ($drop->questionnaire_idquestionnaire)
                             <a class="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500" href="{{ $drop->questionnaireid->publicPath() }}">{{ $drop->questionnaireid->proposition }}</a>
 					@else
-					  	Pas de questionnaire joint
+					  	<p class="bg bg-orange-200 p-1 rounded-lg">Pas de questionnaire joint</p>
 					@endif
                 </blockquote>
 
