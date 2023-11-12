@@ -2,7 +2,7 @@
 
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Chargez vos fichiers ici') }} &#128071;
+            {{ __('Chargez vos cours et fichiers ici') }} &#128071;
         </h2>
     </x-slot>
 @section('content')
@@ -27,16 +27,33 @@
         @endif
     </div>
 
-    <!--Title-->
-	<div class="text-center pt-16">
-		<h1 class="text-gray-600 md:text-5xl">Enregistrez votre cours</h1>
+    <!--explication-->
+    <div class="flex items-center justify-center pt-16 pb-10">
+		<h4 class="text-gray-600 md:text-3xl">
+            Bienvenue dans l'espace de création de micro-cours !
+            <br>
+            Partagez votre expertise en quelques étapes simples :
+        </h4>
+    </div>
+    <div class="flex items-center justify-center">
+        <p class="bg-indigo-200 p-5 text-left rounded-md shadow-md text-xl text-purple-800"> Choisissez un titre percutant.<br>
+            Décrivez le contenu en quelques lignes.<br>
+            Utilisez texte et images<br>
+            Organisez votre cours en sections grâce à l'éditeur intégré.<br>
+            Ajoutez des docs et vos quiz créés.<br>
+            Partagez votre savoir et inspirez !
+        </p>
 	</div>
+
+
+     <!-- Insert the blade containing the TinyMCE configuration and source script -->
+     <x-head.tinymce-config/>
 
 
     <form action="{{route('telechargement')}}" enctype='multipart/form-data' method="post" >
         @csrf
 
-        <div class="flex items-center justify-center mt-40 upload-file">
+        <div class="flex items-center justify-center mt-28 upload-file">
 
             <div class="content-center form-telechargement">
                 <div class="mb-6">
@@ -45,7 +62,8 @@
                 </div>
                 <div class="mb-6">
                     <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Description</label>
-                    <textarea id="description" name="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Donnez toutes les explications necessaires"></textarea>
+                    <!--<textarea id="description" name="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Donnez toutes les explications necessaires"></textarea>-->
+                    <x-forms.tinymce-editor/>
                 </div>
 
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Fichier <span class="italic text-sm">optionnel</span></label>
@@ -56,7 +74,7 @@
                     <span class="errormsg text-danger">{{ $errors->first('file') }}</span>
                     @endif
                 </div>
-                <label class="bblock uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="questionnaire_idquestionnaire">Questionnaire à joindre</label>
+                <label class="bblock uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="questionnaire_idquestionnaire">Questionnaire à joindre</label> <span class="italic text-sm"> optionnel</span>
                                     <select name="questionnaire_idquestionnaire" id="questionnaire_idquestionnaire" class="form-select appearance-none block w-full bg-gray-200 text-gray-700 border border-blue-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
                                         <option value="">pas de quiz à joindre</option>
                                         @foreach ( $questionnaire as $questionnaires )

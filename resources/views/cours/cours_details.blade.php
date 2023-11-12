@@ -64,12 +64,14 @@
 
 
 				<!--Lead Para-->
-				<p class="text-2xl md:text-3xl mb-5">
+				<p class="text-2xl md:text-3xl mb-5 text-green-500">
 					👋 Suis le cours ci-dessous. Lis bien la description et jete un  oeil au document à télécharger et au quiz si il y en a un.<br>
                     Bon cours !
 				</p>
 
-				<p class="py-6">{!! nl2br($drop->description) !!}</p>
+				<p class="py-6">{!! html_entity_decode(nl2br($drop->description)) !!}</p>
+
+                <br><br>
 
 				<blockquote class="border-l-4 border-green-500 italic text-gray-500 my-8 pl-8 md:pl-12">
                     Document joint au cours à consulter/télécharger :<br><br>

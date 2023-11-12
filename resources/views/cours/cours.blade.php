@@ -27,7 +27,7 @@
                     <a class="bg bg-green-200 p-1 rounded-lg" href="{{route('cours_details', $cours)}}">{{ $cours->titre }}</a>
                 </div>
                 <p class="text-gray-700 text-base">
-                    <p>{{ Str::limit( $cours->description, 150 ) }}</p>
+                    <p>{{ strip_tags(html_entity_decode(Str::limit($cours->description, 100 )))}}</p>
                     <div class="bg-purple-100 p-1 rounded-lg mt-2">
                     <a href="{{ route('download', $cours )}}" download="{{ $cours->original }}" class="text-blue-500 hover:text-blue-700">{{ Str::limit( $cours->thumbnail, 35 ) }}</a>
                     </div>
