@@ -38,7 +38,7 @@
     <div class="flex items-center justify-center">
         <p class="bg-indigo-200 p-5 text-left rounded-md shadow-md text-xl text-purple-800"> Choisissez un titre percutant.<br>
             Décrivez le contenu en quelques lignes.<br>
-            Utilisez texte et images<br>
+            Utilisez texte, images et vidéos<br>
             Organisez votre cours en sections grâce à l'éditeur intégré.<br>
             Ajoutez des docs et vos quiz créés.<br>
             Partagez votre savoir et inspirez !
@@ -111,7 +111,7 @@
 
             <div class="px-6 py-4 border-t border-gray-200">
             <div class="border rounded-lg p-4 bg-gray-200">
-                <a href="{{$item->publicPath()}}">{{ Str::limit($item->description,30) }}</a>
+                <a href="{{$item->publicPath()}}">{{ strip_tags(html_entity_decode(Str::limit($item->description,30))) }}</a>
             </div>
             </div>
 
