@@ -48,7 +48,7 @@ class DashboardController extends Controller
      }
 
 
-    
+
     public function storeEleve(){
 
         $data = request()->validate([

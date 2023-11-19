@@ -27,16 +27,16 @@ class AuthServiceProvider extends ServiceProvider
 
         $this->registerPolicies();
 
-        Passport::routes();
+        /*Passport::routes();
 
-        Passport::personalAccessTokensExpireIn(now()->addDays(1));
+        Passport::personalAccessTokensExpireIn(now()->addDays(1));*/
 
         Gate::define('isAdmin', function($user) {
             return $user->statut == 'professeur';
         });
 
         Gate::define('isUser', function($user) {
-            return $user->status == 'eleve';
+            return $user->statut == 'eleve';
         });
     }
 }

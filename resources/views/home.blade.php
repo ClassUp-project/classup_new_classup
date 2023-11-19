@@ -24,15 +24,12 @@
 
 
 
-            @if (Auth::user()->statut == 'professeur')
+            @if (Gate::allows('isAdmin'))
             <div class="flex justify-center mt-20 pb-20 button-return-home " >
                 <a id="navigation-to-dashboard" href="/dashboard" class="ml-40" ><x-button>Retour à votre tableau de bord</x-button></a>
             </div>
-            @else
-                <div class="flex justify-center mt-20 pb-20 button-return-home " >
-                    <a id="navigation-to-dashboard" href="/cours" class="ml-40"><x-button>Voir tous les cours</x-button></a>
-                </div>
             @endif
+
 
             <div class="flex align-items-center content-center justify-center">
                 <div class="flex flex-wrap -mx-3 mb-6 w-56">

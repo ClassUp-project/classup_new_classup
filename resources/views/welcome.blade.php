@@ -161,12 +161,12 @@
         <h1
           class="my-4 text-2xl md:text-3xl lg:text-5xl font-black leading-tight"
         >
-          Une nouvelle façon d'étudier !
+          Une autre façon d'étudier !
         </h1>
         <p
           class="leading-normal text-gray-800 text-base md:text-xl lg:text-2xl mb-8"
         >
-          Réponds aux questionnaires et révise tes cours
+          Réponds aux quiz et révise avec des micro-cours
         </p>
 
         <button
@@ -244,7 +244,7 @@
             C84.028,10.373,83.356,9.702,82.528,9.702z M81.028,12.702v4.451H18.973v-4.451C18.973,12.702,81.028,12.702,81.028,12.702z
              M81.028,67.921H18.973V20.153h62.055V67.921z"/>
             </svg>
-            >Cours</span
+            >Micro-cours</span
           >
 
           <span class="w-1/2 p-4 md:w-auto flex items-center"

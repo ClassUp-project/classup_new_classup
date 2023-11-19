@@ -23,7 +23,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')
-        ->middleware(['auth'])
+        ->middleware(['auth', 'can:isAdmin'])
         ->name('dashboard');
 Route::delete('/dashboard/{questionnaire}', 'App\Http\Controllers\DashboardController@destroy');
 Route::delete('/filedelete/{dropzone}', 'App\Http\Controllers\DashboardController@delete')->name('filedelete');
@@ -48,16 +48,19 @@ Route::get('/eleves/{idutilisateur}', 'App\Http\Controllers\EleveController@show
 
 //Route vers les questionnaires, questions, réponses, enquetes
 //Questionnaire
-Route::get('/questionnaires/create', 'App\Http\Controllers\QuestionnaireController@create');
+Route::get('/questionnaires/create', 'App\Http\Controllers\QuestionnaireController@create')
+        ->middleware(['auth', 'can:isAdmin']);
 Route::post('/questionnaires','App\Http\Controllers\QuestionnaireController@store');
 Route::get('/questionnaires/{questionnaire}','App\Http\Controllers\QuestionnaireController@show');
 
 //Questions
-Route::get('/questionnaires/{questionnaire}/questions/create', 'App\Http\Controllers\QuestionController@create');
+Route::get('/questionnaires/{questionnaire}/questions/create', 'App\Http\Controllers\QuestionController@create')
+        ->middleware(['auth', 'can:isAdmin']);
 Route::post('/questionnaires/{questionnaire}/questions', 'App\Http\Controllers\QuestionController@store');
 
 //Enquete
-Route::delete('/questionnaires/{questionnaire}/questions/{question}', 'App\Http\Controllers\QuestionController@destroy');
+Route::delete('/questionnaires/{questionnaire}/questions/{question}', 'App\Http\Controllers\QuestionController@destroy')
+        ->middleware(['auth', 'can:isAdmin']);
 Route::get('/surveys/{questionnaire}-{slug}','App\Http\Controllers\EnqueteController@show');
 Route::post('/surveys/{questionnaire}-{slug}', 'App\Http\Controllers\EnqueteController@store');
 
@@ -65,16 +68,18 @@ Route::get('/surveys/merci', 'App\Http\Controllers\EnqueteController@merci');
 
 
 //Route vers les choix et vue des matières
-Route::get('/matieres/create', 'App\Http\Controllers\MatiereController@create');
+Route::get('/matieres/create', 'App\Http\Controllers\MatiereController@create')
+        ->middleware(['auth', 'can:isAdmin']);
 Route::post('/matieres', 'App\Http\Controllers\MatiereController@store');
 Route::get('/matières/{matiere}', 'App\Http\Controllers\MatiereController@show');
 
 
 //route Dropzone
-Route::get('/telechargement', 'App\Http\Controllers\DropzoneController@index')->middleware(['auth'])->name('telechargement');
+Route::get('/telechargement', 'App\Http\Controllers\DropzoneController@index')->middleware(['auth', 'can:isAdmin'])->name('telechargement');
 Route::post('/telechargement','App\Http\Controllers\DropzoneController@store')->name('telechargement');
 //Route::get('/download/{iddropzone}','App\Http\Controllers\DropzoneController@store');
-Route::delete('/telechargement/{imageUpload}', 'App\Http\Controllers\DropzoneController@destroy');
+Route::delete('/telechargement/{imageUpload}', 'App\Http\Controllers\DropzoneController@destroy')
+        ->middleware(['auth', 'can:isAdmin']);;
 
 //download des documents home.blade
 Route::get('/download/{iddropzone}/download','App\Http\Controllers\HomeController@download')->name('download');
