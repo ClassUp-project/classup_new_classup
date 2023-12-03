@@ -31,7 +31,7 @@
             @endif
 
 
-            <div class="flex align-items-center content-center justify-center">
+            <div class="flex align-items-center content-center justify-center quiz-select">
                 <div class="flex flex-wrap -mx-3 mb-6 w-56">
                     <label class="bblock uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="categorie_idcategorie">Filtrez les quiz par catégorie</label>
                         <select onchange="window.location=this.options[this.selectedIndex].value;" name="categorie_idcategorie"  class="form-select appearance-none block w-full bg-gray-200 text-gray-700 border border-blue-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">

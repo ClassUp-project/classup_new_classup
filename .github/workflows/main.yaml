@@ -17,7 +17,7 @@ jobs:
           username: ${{ secrets.APP_USER }}
           key: ${{ secrets.SSH_PRIVATEKEY }}
           script: |
-            cd applications/fpfhmpexxg/public_html
+            cd httpdocs/classup_new_classup
             git pull
             composer install --no-dev --optimize-autoloader --no-interaction
             php artisan cache:clear
