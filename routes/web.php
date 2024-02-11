@@ -122,3 +122,11 @@ Route::get('/cours_details/{iddropzone}', 'App\Http\Controllers\CoursController@
 Route::get('/email/verify', 'App\Http\Controllers\Auth\VerificationController@show')->name('verification.notice');
 Route::get('/email/verify/{id}/{hash}', 'App\Http\Controllers\Auth\VerificationController@verify')->name('verification.verify')->middleware(['signed']);
 Route::post('/email/resend', 'App\Http\Controllers\Auth\VerificationController@resend')->name('verification.resend');
+
+
+/**
+ * Route FormGPT
+ */
+Route::get('/formAI/', 'App\Http\Controllers\FormGPTController@index')->middleware(['auth', 'can:isAdmin'])->name('formAi');
+Route::get('/formAI/create', 'App\Http\Controllers\FormGPTController@create')->middleware(['auth', 'can:isAdmin'])->name('formAi');
+Route::post('/formAI', 'App\Http\Controllers\FormGPTController@SaveForm')->middleware(['auth', 'can:isAdmin'])->name('formAi');

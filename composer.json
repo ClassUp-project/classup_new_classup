@@ -19,6 +19,7 @@
         "laravel/passport": "^10.1",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.2",
+        "openai-php/client": "^0.8.0",
         "silviolleite/laravelpwa": "^2.0",
         "spatie/laravel-medialibrary": "^9.6.1",
         "symfony/apache-pack": "^1.0"
@@ -36,7 +37,10 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
     },
     "extra": {
         "laravel": {

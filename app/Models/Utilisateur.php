@@ -125,4 +125,9 @@ class Utilisateur extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(Enquete::class);
     }
 
+    public function formAi(){
+
+        return $this->hasMany(FormGPT::class);
+    }
+
 }

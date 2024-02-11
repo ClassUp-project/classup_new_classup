@@ -76,30 +76,16 @@ class DropzoneController extends Controller
 
                 ]);
             }
-
-
         return redirect('/telechargement')->with('success','Bien reçu!');
-
-
      }
-
-
-
 
 
      public function download(Dropzone $idFile, $iddropzone){
 
-
         $idFile = Dropzone::find($iddropzone);
 
-
         return Storage::disk('files')->download($idFile->original);
-
-
      }
-
-
-
 
 
         public function destroy(Dropzone $imageUpload){
@@ -110,13 +96,10 @@ class DropzoneController extends Controller
                 public_path($imageUpload->thumbnail),
             ]);
 
-
             //delete record database
             $imageUpload->delete();
 
             //redirect
             return redirect('/telechargement');
-
-
         }
 }
