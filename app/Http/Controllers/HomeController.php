@@ -60,9 +60,6 @@ class HomeController extends Controller
      }
 
 
-
-
-
     public function user(Utilisateur $user)
     {
 

@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FormGPTController;
 
 /*
 |--------------------------------------------------------------------------
@@ -128,5 +129,5 @@ Route::post('/email/resend', 'App\Http\Controllers\Auth\VerificationController@r
  * Route FormGPT
  */
 Route::get('/formAI/', 'App\Http\Controllers\FormGPTController@index')->middleware(['auth', 'can:isAdmin'])->name('formAi');
-Route::get('/formAI/create', 'App\Http\Controllers\FormGPTController@create')->middleware(['auth', 'can:isAdmin'])->name('formAi');
 Route::post('/formAI', 'App\Http\Controllers\FormGPTController@SaveForm')->middleware(['auth', 'can:isAdmin'])->name('formAi');
+Route::get('/formAI', [FormGPTController::class, 'showResponse'])->middleware(['auth', 'can:isAdmin'])->name('formAi');
